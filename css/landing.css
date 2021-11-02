@@ -90,17 +90,12 @@ button::-moz-focus-inner {
 body {
     min-width: 375px;
     background: #eeeff2;
-    font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #272e35;
-}
-
-button {
-    font-family: "Inter", sans-serif;
 }
 
 img {
@@ -221,6 +216,7 @@ img {
     -ms-flex-positive: 1;
     flex-grow: 1;
     padding-left: 55px;
+    justify-content: flex-end;
 }
 
 .header-btns {
