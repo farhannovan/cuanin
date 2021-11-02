@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sales — Cuanin</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#fff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+    <link rel="stylesheet" media="all" href="css/style.css" />
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="page">
+        <div class="sidebar">
+            <div class="sidebar-head">
+                <a class="sidebar-logo" href="index.html"><img src="img/logo-black.png" alt="Cuanin" /></a>
+            </div>
+            <div class="sidebar-body">
+                <nav class="sidebar-nav">
+                    <a class="sidebar-item" href="dashboard.html">
+                        <div class="sidebar-icon">
+                            <svg class="icon icon-home">
+									<use xlink:href="img/sprite.svg#icon-home"></use>
+								</svg>
+                        </div>
+                        <div class="sidebar-text">Home</div>
+                    </a>
+                    <a class="sidebar-item active" href="sales.html">
+                        <div class="sidebar-icon">
+                            <svg class="icon icon-activity">
+									<use xlink:href="img/sprite.svg#icon-activity"></use>
+								</svg>
+                        </div>
+                        <div class="sidebar-text">Sales</div>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="page-content">
+            <div class="header">
+                <form class="header-search">
+                    <input class="header-input" type="text" placeholder="Search" /><button class="header-start">
+							<svg class="icon icon-search">
+								<use xlink:href="img/sprite.svg#icon-search"></use>
+							</svg>
+						</button>
+                </form>
+                <a class="header-logo" href="index.html"><img src="img/logo-sm.svg" alt="" /></a>
+                <a class="header-user" href="sign-in.html"><img src="img/ava-header.png" alt="" /></a>
+            </div>
+
+            <!-- Content -->
+            <div class="sales">
+                <div class="sales-container">
+                    <!-- <div class="sales-sorting">
+                        <div class="sales-select tablet-show">
+                            <select class="select">
+									<option>All</option>
+									<option>Withdrawals</option>
+									<option>Deposit</option>
+									<option>Bank Withdraws</option>
+								</select>
+                        </div>
+                        <div class="sales-tags tablet-hide">
+                            <a class="sales-link active" href="#">All</a><a class="sales-link" href="#">Withdrawals</a
+								><a class="sales-link" href="#">Deposit</a><a class="sales-link" href="#">Bank Withdraws</a>
+                        </div>
+                        <div class="sales-select">
+                            <div class="sales-icon">
+                                <svg class="icon icon-calendar">
+										<use xlink:href="img/calendar.svg"></use>
+									</svg>
+                            </div>
+                            <select class="select">
+									<option>All Time</option>
+									<option>This past week</option>
+									<option>This Past Month</option>
+									<option>This Past Year</option>
+								</select>
+                        </div>
+                    </div> -->
+                    <div class="sales-stage h6 mobile-hide">Sales</div>
+                    <div class="sales-table">
+                        <div class="sales-row sales-row-head">
+                            <div class="sales-cell"></div>
+                            <div class="sales-cell">NAME</div>
+                            <div class="sales-cell">DATE</div>
+                            <div class="sales-cell">AMOUNT <span class="sales-hidden">/ DATE</span></div>
+                            <div class="sales-cell">TRANSACTION ID</div>
+                        </div>
+                        <div class="sales-row">
+                            <div class="sales-cell">
+                                <div class="sales-size"><img src="img/type-in.svg" alt="" /></div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-company">
+                                    <div class="sales-logo"><img src="img/buyer.png" alt="" /></div>
+                                    <div class="sales-name">Alpha</div>
+                                </div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-date">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-amount">Rp15.000.000</div>
+                                <div class="sales-date sales-hidden">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-transaction">JHAEIF6374NXY3484748949</div>
+                            </div>
+                        </div>
+                        <div class="sales-row">
+                            <div class="sales-cell">
+                                <div class="sales-size"><img src="img/type-in.svg" alt="" /></div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-company">
+                                    <div class="sales-logo"><img src="img/buyer.png" alt="" /></div>
+                                    <div class="sales-name">Alpha</div>
+                                </div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-date">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-amount">Rp15.000.000</div>
+                                <div class="sales-date sales-hidden">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-transaction">JHAEIF6374NXY3484748949</div>
+                            </div>
+                        </div>
+                        <div class="sales-row">
+                            <div class="sales-cell">
+                                <div class="sales-size"><img src="img/type-out.svg" alt="" /></div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-company">
+                                    <div class="sales-logo"><img src="img/buyer.png" alt="" /></div>
+                                    <div class="sales-name">Beta</div>
+                                </div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-date">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-amount">Rp7.500.000</div>
+                                <div class="sales-date sales-hidden">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-transaction">JHAEIF6374NXY3484748949</div>
+                            </div>
+                        </div>
+                        <div class="sales-row">
+                            <div class="sales-cell">
+                                <div class="sales-size"><img src="img/type-in.svg" alt="" /></div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-company">
+                                    <div class="sales-logo"><img src="img/buyer.png" alt="" /></div>
+                                    <div class="sales-name">Alpha</div>
+                                </div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-date">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-amount">Rp15.000.000</div>
+                                <div class="sales-date sales-hidden">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-transaction">JHAEIF6374NXY3484748949</div>
+                            </div>
+                        </div>
+                        <div class="sales-row">
+                            <div class="sales-cell">
+                                <div class="sales-size"><img src="img/type-out.svg" alt="" /></div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-company">
+                                    <div class="sales-logo"><img src="img/buyer.png" alt="" /></div>
+                                    <div class="sales-name">Beta</div>
+                                </div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-date">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-amount">Rp7.500.000</div>
+                                <div class="sales-date sales-hidden">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-transaction">JHAEIF6374NXY3484748949</div>
+                            </div>
+                        </div>
+                        <div class="sales-row">
+                            <div class="sales-cell">
+                                <div class="sales-size"><img src="img/type-in.svg" alt="" /></div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-company">
+                                    <div class="sales-logo"><img src="img/buyer.png" alt="" /></div>
+                                    <div class="sales-name">Alpha</div>
+                                </div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-date">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-amount">Rp15.000.000</div>
+                                <div class="sales-date sales-hidden">Nov 1st, 2021 10:56:41</div>
+                            </div>
+                            <div class="sales-cell">
+                                <div class="sales-transaction">JHAEIF6374NXY3484748949</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
