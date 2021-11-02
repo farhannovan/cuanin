@@ -144,13 +144,13 @@ img {
     margin-right: 11px;
 }
 
-.btn_orange {
-    background: #ff6e30;
+.btn_blue {
+    background: #355dff;
     color: #ffffff;
 }
 
-.btn_orange:hover {
-    background: #fc4b00;
+.btn-blue:hover {
+    background: #1140ff;
 }
 
 .btn_transparent {
@@ -177,6 +177,46 @@ img {
 
 .btn_border:hover .icon {
     fill: #ffffff;
+}
+
+
+/* Button */
+
+.btn {
+    min-width: 114px;
+    height: 48px;
+    padding: 0 24px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.btn-blue {
+    background: #6c5dd3;
+    color: #ffffff;
+}
+
+.btn-blue:hover {
+    background: #4936c9;
+}
+
+.btn-wide {
+    min-width: 100%;
+}
+
+.btn[href] {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .header {

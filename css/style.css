@@ -226,7 +226,7 @@ button {
     align-items: center;
     font-size: 13px;
     font-weight: 700;
-    color: #355dff;
+    color: #6c5dd3;
     -webkit-transition: color 0.2s;
     -o-transition: color 0.2s;
     transition: color 0.2s;
@@ -297,7 +297,7 @@ button {
 }
 
 .field-input:focus {
-    border-color: #355dff;
+    border-color: #6c5dd3;
     background: #ffffff;
 }
 
@@ -317,12 +317,12 @@ button {
 }
 
 .btn-blue {
-    background: #355dff;
+    background: #6c5dd3;
     color: #ffffff;
 }
 
 .btn-blue:hover {
-    background: #1140ff;
+    background: #4936c9;
 }
 
 .btn-wide {
@@ -475,12 +475,12 @@ button {
 
 .sidebar-item:hover,
 .sidebar-item.active {
-    color: #355dff;
+    color: #6c5dd3;
 }
 
 .sidebar-item:hover .icon,
 .sidebar-item.active .icon {
-    fill: #355dff;
+    fill: #6c5dd3;
 }
 
 .sidebar-item.active {
@@ -589,7 +589,7 @@ button {
 }
 
 .header-start:hover .icon {
-    fill: #355dff;
+    fill: #6c5dd3;
 }
 
 .header-logo {
@@ -790,8 +790,8 @@ button {
 }
 
 .sales-row:not(.sales-row-head):hover {
-    -webkit-box-shadow: 0 0 0 2px #355dff;
-    box-shadow: 0 0 0 2px #355dff;
+    -webkit-box-shadow: 0 0 0 2px #6c5dd3;
+    box-shadow: 0 0 0 2px #6c5dd3;
     background: none;
 }
 
