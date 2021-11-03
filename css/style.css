@@ -813,7 +813,7 @@ button {
 
 .sales-tags .sales-link.active {
     background: rgba(228, 228, 228, 0.3);
-    color: #355dff;
+    color: #4936c9;
 }
 
 .sales-select {
@@ -879,8 +879,8 @@ button {
 }
 
 .sales-row:not(.sales-row-head):hover {
-    -webkit-box-shadow: 0 0 0 2px #355dff;
-    box-shadow: 0 0 0 2px #355dff;
+    -webkit-box-shadow: 0 0 0 2px #4936c9;
+    box-shadow: 0 0 0 2px #4936c9;
     background: none;
 }
 
