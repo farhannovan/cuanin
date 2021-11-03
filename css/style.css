@@ -342,6 +342,34 @@ button {
 }
 
 
+/* History button */
+
+.more {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.more-btn {
+    position: relative;
+}
+
+.more-btn .loader {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 3px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-animation: load 1.1s infinite ease;
+    animation: load 1.1s infinite ease;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+
 /* -- Content -- */
 
 
@@ -734,14 +762,6 @@ button {
 }
 
 
-/* Last Transaction */
-
-.history-btns {
-    margin-top: 40px;
-    text-align: center;
-}
-
-
 /* Sales */
 
 .sales {
@@ -755,6 +775,75 @@ button {
     -ms-flex-positive: 1;
     flex-grow: 1;
     padding: 0 64px 64px;
+}
+
+.sales-sorting {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 48px;
+}
+
+.sales-tags {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    margin-right: auto;
+    padding-top: 12px;
+}
+
+.sales-tags .sales-link {
+    padding: 0 16px;
+    border-radius: 20px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #808191;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.sales-tags .sales-link:hover {
+    color: #11142d;
+}
+
+.sales-tags .sales-link.active {
+    background: rgba(228, 228, 228, 0.3);
+    color: #355dff;
+}
+
+.sales-select {
+    position: relative;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 230px;
+    margin-left: 50px;
+}
+
+.sales-select .select {
+    padding-left: 43px;
+}
+
+.sales-select .sales-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 2;
+    pointer-events: none;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 0;
+}
+
+.sales-select .sales-icon .icon {
+    font-size: 16px;
 }
 
 .sales-stage {
@@ -790,8 +879,8 @@ button {
 }
 
 .sales-row:not(.sales-row-head):hover {
-    -webkit-box-shadow: 0 0 0 2px #6c5dd3;
-    box-shadow: 0 0 0 2px #6c5dd3;
+    -webkit-box-shadow: 0 0 0 2px #355dff;
+    box-shadow: 0 0 0 2px #355dff;
     background: none;
 }
 
@@ -801,6 +890,14 @@ button {
 
 .sales-hidden {
     display: none;
+}
+
+.sales-table.small .sales-hidden {
+    display: block;
+}
+
+.sales-table.small .sales-row-head .sales-hidden {
+    display: inline;
 }
 
 .sales-cell {
@@ -817,6 +914,10 @@ button {
 
 .sales-cell:last-child {
     border-radius: 0 12px 12px 0;
+}
+
+.sales-table.small .sales-cell:nth-child(3) {
+    display: none;
 }
 
 .sales-size img {
@@ -856,6 +957,183 @@ button {
 .sales-amount,
 .sales-transaction {
     font-weight: 600;
+}
+
+.sales-sidebar {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 364px;
+    margin-right: -364px;
+    padding: 0 64px 64px 0;
+    -webkit-transition: margin 0.2s;
+    -o-transition: margin 0.2s;
+    transition: margin 0.2s;
+}
+
+.sales-sidebar.visible {
+    margin-right: 0;
+}
+
+.sales-wrap {
+    position: relative;
+}
+
+.sales-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-right: 30px;
+}
+
+.sales-head .sales-logo {
+    width: 42px;
+    height: 42px;
+    margin-right: 24px;
+}
+
+.sales-info {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 1.33333;
+    font-weight: 500;
+}
+
+.sales-head .sales-date {
+    font-size: 13px;
+    line-height: 1.23077;
+    font-weight: 500;
+    color: #808191;
+}
+
+.sales-close {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+}
+
+.sales-close .icon {
+    font-size: 14px;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.sales-close:hover .icon {
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.sales-line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.sales-money {
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+
+.sales-currency {
+    margin-left: 20px;
+    padding: 0 13px;
+    border-radius: 16px;
+    background: #3dbaa2;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #ffffff;
+}
+
+.sales-code {
+    font-size: 18px;
+    line-height: 1.33333;
+    font-weight: 500;
+    color: #808191;
+}
+
+.sales-parameters {
+    margin-top: 32px;
+}
+
+.sales-parameter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 32px 0;
+    border-top: 1px solid #e4e4e4;
+}
+
+.sales-preview {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 24px;
+    border-radius: 50%;
+    background: rgba(228, 228, 228, 0.5);
+}
+
+.sales-box {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.sales-category {
+    margin-bottom: 8px;
+    font-size: 12px;
+    line-height: 1.33333;
+    font-weight: 500;
+    color: #808191;
+}
+
+.sales-status {
+    display: inline-block;
+    padding: 0 8px;
+    border-radius: 12px;
+    background: rgba(79, 191, 103, 0.2);
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #4fbf67;
+}
+
+.sales-value {
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 600;
+}
+
+.home {
+    padding: 0;
 }
 
 
@@ -1134,7 +1412,7 @@ screen and (max-height: 300px) {
     .banner:not(:last-child) {
         margin-bottom: 32px;
     }
-    .history-btns {
+    .history-btn {
         margin-top: 16px;
     }
     .mobile-hide {
