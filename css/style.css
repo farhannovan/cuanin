@@ -690,7 +690,7 @@ button {
 }
 
 .banner:not(:last-child) {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 
