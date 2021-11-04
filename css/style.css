@@ -690,7 +690,7 @@ button {
 }
 
 .banner:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 
 
@@ -698,7 +698,7 @@ button {
 
 .widgets-item {
     position: relative;
-    width: 500px;
+    width: 490px;
     -webkit-box-flex: 0;
     /* -ms-flex: 0 0 calc(50% - 32px); */
     /* flex: 25%; */
