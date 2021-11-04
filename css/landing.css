@@ -90,7 +90,7 @@ button {
 .icon-play {
     width: 0.67em;
     height: 1em;
-    fill: #272e35;
+    fill: var(--color-secondary-darker);
 }
 
 button::-moz-focus-inner {
@@ -100,13 +100,12 @@ button::-moz-focus-inner {
 
 body {
     min-width: 375px;
-    background: #eeeff2;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #272e35;
+    color: var(--color-secondary-darker);
 }
 
 img {
@@ -150,7 +149,7 @@ img {
 
 .btn_transparent {
     background: transparent;
-    color: #6e757c;
+    color: var(--color-secondary);
 }
 
 .btn_transparent:hover {
@@ -303,23 +302,9 @@ img {
 }
 
 .d1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-}
-
-.d1 {
     font-size: 72px;
+    font-weight: 600;
     line-height: 1.11111;
-}
-
-.stage {
-    margin-bottom: 24px;
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    line-height: 1.33333;
-    text-transform: uppercase;
-    color: #748fb5;
 }
 
 @media only screen and (max-width: 1179px) {
@@ -346,7 +331,6 @@ img {
         -ms-flex-align: start;
         align-items: flex-start;
         overflow: hidden;
-        background: #eeeff2;
         visibility: hidden;
         opacity: 0;
         -webkit-transition: all 0.2s;
@@ -401,13 +385,13 @@ img {
         padding: 0 20px;
     }
     .btn_transparent {
-        -webkit-box-shadow: inset 0 0 0 2px #272e35;
-        box-shadow: inset 0 0 0 2px #272e35;
-        color: #272e35;
+        -webkit-box-shadow: inset 0 0 0 2px var(--color-secondary-darker);
+        box-shadow: inset 0 0 0 2px var(--color-secondary-darker);
+        color: var(--color-secondary-darker);
     }
     .btn_transparent:hover {
-        background: #272e35;
-        color: #ffffff;
+        background: var(--color-secondary-darker);
+        color: var(--color-white);
     }
     .header {
         padding: 48px 0 40px;
