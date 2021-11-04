@@ -416,8 +416,7 @@ button {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    padding-top: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
     justify-content: space-between;
 }
 
@@ -690,7 +689,7 @@ button {
 }
 
 .banner:not(:last-child) {
-    margin-bottom: 48px;
+    margin-bottom: 64px;
 }
 
 
