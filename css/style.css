@@ -418,6 +418,7 @@ button {
     flex-grow: 1;
     padding-top: 24px;
     margin-bottom: 48px;
+    justify-content: space-between;
 }
 
 
@@ -697,10 +698,11 @@ button {
 
 .widgets-item {
     position: relative;
+    width: 500px;
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 calc(50% - 32px);
-    flex: 25%;
-    max-width: calc(100% - 32px);
+    /* -ms-flex: 0 0 calc(50% - 32px); */
+    /* flex: 25%; */
+    /* max-width: calc(100% - 32px); */
     /* margin: 32px 16px 0; */
     border-radius: 24px;
     background: var(--color-white);
@@ -1411,6 +1413,7 @@ screen and (max-height: 300px) {
     }
     .banner-container {
         height: 590px;
+        padding: 32px;
         overflow: hidden;
     }
     .banner-preview {
