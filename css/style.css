@@ -1223,7 +1223,6 @@ screen and (max-height: 300px) {
         padding: 0 64px 64px;
     }
     .banner-container {
-        padding: 32px;
         height: 317px;
     }
     .banner-preview {
