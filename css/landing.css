@@ -6,6 +6,17 @@
     font-family: "Poppins", sans-serif !important;
 }
 
+:root {
+    --color-black: #11142d !important;
+    --color-white: #fff !important;
+    --color-primary: #6c5dd3 !important;
+    --color-primary-darker: #3a2ca0 !important;
+    --color-secondary: #808191 !important;
+    --color-secondary-darker: #1b1d21 !important;
+    --color-secondary-lighter: #e4e4e4 !important;
+    --color-gradient: radial-gradient(103.03% 103.03% at 0% 0%, #d080ff 0%, #6c5dd3 100%);
+}
+
 html,
 body,
 div,
@@ -113,80 +124,14 @@ img {
     padding: 0 64px;
 }
 
-.btn {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    min-width: 124px;
-    height: 56px;
-    padding: 0 24px;
-    border-radius: 16px;
-    font-size: 16px;
-    font-weight: 700;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-}
-
-.btn .icon {
-    -webkit-transition: fill 0.2s;
-    -o-transition: fill 0.2s;
-    transition: fill 0.2s;
-}
-
-.btn .icon:not(:last-child) {
-    margin-right: 11px;
-}
-
-.btn_blue {
-    background: #355dff;
-    color: #ffffff;
-}
-
-.btn-primary:hover {
-    background: #1140ff;
-}
-
-.btn_transparent {
-    background: transparent;
-    color: #6e757c;
-}
-
-.btn_transparent:hover {
-    color: #272e35;
-}
-
-.btn-secondary {
-    -webkit-box-shadow: inset 0 0 0 2px rgba(39, 46, 53, 0.75);
-    box-shadow: inset 0 0 0 2px rgba(39, 46, 53, 0.75);
-    color: #272e35;
-}
-
-.btn-secondary:hover {
-    background: #272e35;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    color: #ffffff;
-}
-
-.btn-secondary:hover .icon {
-    fill: #ffffff;
-}
-
 
 /* Button */
 
 .btn {
     min-width: 114px;
-    height: 48px;
+    height: 56px;
     padding: 0 24px;
-    border-radius: 12px;
+    border-radius: 16px;
     font-size: 14px;
     font-weight: 600;
     -webkit-transition: all 0.2s;
@@ -195,12 +140,38 @@ img {
 }
 
 .btn-primary {
-    background: #6c5dd3;
-    color: #ffffff;
+    background: var(--color-primary);
+    color: var(--color-white);
 }
 
 .btn-primary:hover {
-    background: #4936c9;
+    background: var(--color-primary-darker);
+}
+
+.btn_transparent {
+    background: transparent;
+    color: #6e757c;
+}
+
+.btn_transparent:hover {
+    color: var(--color-secondary-darker);
+}
+
+.btn-secondary {
+    -webkit-box-shadow: inset 0 0 0 2px rgba(39, 46, 53, 0.75);
+    box-shadow: inset 0 0 0 2px rgba(39, 46, 53, 0.75);
+    color: var(--color-secondary-darker);
+}
+
+.btn-secondary:hover {
+    background: var(--color-secondary-darker);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: var(--color-white);
+}
+
+.btn-secondary:hover .icon {
+    fill: var(--color-white);
 }
 
 .btn-wide {
@@ -296,7 +267,7 @@ img {
     font-size: 20px;
     font-weight: 400;
     line-height: 1.2;
-    color: #6e757c;
+    color: var(--color-secondary);
 }
 
 .main-btns {
