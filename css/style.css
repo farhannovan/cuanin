@@ -716,7 +716,7 @@ button {
     padding: 24px;
 }
 
-.widget-company {
+.widget-type {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -764,7 +764,7 @@ button {
 }
 
 
-/* sale */
+/* Sale */
 
 .sale {
     display: -webkit-box;
