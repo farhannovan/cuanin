@@ -116,32 +116,29 @@ button {
 
 /* Typography */
 
-.h1,
-.h4,
-.h5,
-.h6 {
-    font-weight: 600;
-}
-
 .h1 {
     font-size: 56px;
+    font-weight: 600;
     line-height: 1.14286;
     letter-spacing: -1px;
 }
 
 .h4 {
     font-size: 32px;
+    font-weight: 500;
     line-height: 1.25;
     letter-spacing: -0.5px;
 }
 
 .h5 {
     font-size: 24px;
+    font-weight: 500;
     line-height: 1.33333;
 }
 
 .h6 {
     font-size: 18px;
+    font-weight: 500;
     line-height: 1.33333;
 }
 
@@ -416,7 +413,7 @@ button {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     /* flex-grow: 1; */
-    margin-bottom: 32px;
+    margin-bottom: 64px;
     justify-content: space-between;
 }
 
@@ -689,7 +686,7 @@ button {
 }
 
 .banner:not(:last-child) {
-    margin-bottom: 32px;
+    margin-bottom: 64px;
 }
 
 
@@ -1326,9 +1323,6 @@ screen and (max-height: 300px) {
         left: 52%;
         width: 550px;
     }
-    .banner:not(:last-child) {
-        margin-bottom: 80px;
-    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1407,9 +1401,6 @@ screen and (max-height: 300px) {
         left: -18%;
         bottom: -22%;
         width: 600px;
-    }
-    .banner:not(:last-child) {
-        margin-bottom: 32px;
     }
     .history-btn {
         margin-top: 16px;
