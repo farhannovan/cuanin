@@ -14,7 +14,7 @@
     --color-secondary: #808191 !important;
     --color-secondary-darker: #1b1d21 !important;
     --color-secondary-lighter: #e4e4e4 !important;
-    --color-tertiary: radial-gradient(103.03% 103.03% at 0% 0%, #d080ff 0%, var(--color-primary) 100%);
+    --color-gradient: radial-gradient(103.03% 103.03% at 0% 0%, #d080ff 0%, #6c5dd3 100%);
 }
 
 html,
@@ -660,10 +660,8 @@ button {
 .banner-container {
     position: relative;
     padding: 100px;
-    border-radius: 24px;
-    background: -webkit-radial-gradient(0% 0%, 103.03% 103.03%, #d080ff 0%, var(--color-primary) 100%);
-    background: -o-radial-gradient(0% 0%, 103.03% 103.03%, #d080ff 0%, var(--color-primary) 100%);
-    background: radial-gradient(103.03% 103.03% at 0% 0%, #d080ff 0%, var(--color-primary) 100%);
+    border-radius: 32px;
+    background: var(--color-gradient);
     color: var(--color-white);
 }
 
