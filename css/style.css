@@ -6,6 +6,17 @@
     font-family: "Poppins", sans-serif !important;
 }
 
+:root {
+    --color-black: #11142d !important;
+    --color-white: #fff !important;
+    --color-primary: #6c5dd3 !important;
+    --color-primary-darker: #3a2ca0 !important;
+    --color-secondary: #808191 !important;
+    --color-secondary-darker: #1b1d21 !important;
+    --color-secondary-lighter: #e4e4e4 !important;
+    --color-tertiary: radial-gradient(103.03% 103.03% at 0% 0%, #d080ff 0%, var(--color-primary) 100%);
+}
+
 html,
 body,
 div,
@@ -93,13 +104,13 @@ button {
 .icon-home {
     width: 1em;
     height: 1em;
-    fill: #808191;
+    fill: var(--color-secondary);
 }
 
 .icon-search {
     width: 1em;
     height: 1em;
-    fill: #11142d;
+    fill: var(--color-black);
 }
 
 
@@ -159,8 +170,8 @@ button {
     -ms-flex: 0 0 44%;
     flex: 0 0 44%;
     width: 44%;
-    background: #6c5dd3;
-    color: #ffffff;
+    background: var(--color-primary);
+    color: var(--color-white);
 }
 
 .login-col:nth-child(2) {
@@ -226,14 +237,14 @@ button {
     align-items: center;
     font-size: 13px;
     font-weight: 700;
-    color: #6c5dd3;
+    color: var(--color-primary);
     -webkit-transition: color 0.2s;
     -o-transition: color 0.2s;
     transition: color 0.2s;
 }
 
 .login-link:hover {
-    color: #11142d;
+    color: var(--color-black);
 }
 
 .login-flex {
@@ -272,7 +283,7 @@ button {
     line-height: 1.6;
     letter-spacing: 0.9px;
     text-transform: uppercase;
-    color: #808191;
+    color: var(--color-secondary);
     -webkit-transition: -webkit-transform 0.2s;
     transition: -webkit-transform 0.2s;
     -o-transition: transform 0.2s;
@@ -290,15 +301,15 @@ button {
     font-family: "Inter", sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #11142d;
+    color: var(--color-black);
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
 }
 
 .field-input:focus {
-    border-color: #6c5dd3;
-    background: #ffffff;
+    border-color: var(--color-primary);
+    background: var(--color-white);
 }
 
 
@@ -317,12 +328,12 @@ button {
 }
 
 .btn-primary {
-    background: #6c5dd3;
-    color: #ffffff;
+    background: var(--color-primary);
+    color: var(--color-white);
 }
 
 .btn-primary:hover {
-    background: #4936c9;
+    background: var(--color-primary-darker);
 }
 
 .btn-wide {
@@ -426,8 +437,8 @@ button {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 255px;
-    background: #ffffff;
-    border-right: 1px solid #e4e4e4;
+    background: var(--color-white);
+    border-right: 1px solid var(--color-secondary-lighter);
     padding: 132px 20px 72px;
     -webkit-transition: width 0.2s;
     -o-transition: width 0.2s;
@@ -495,7 +506,7 @@ button {
     border-radius: 12px;
     white-space: nowrap;
     font-weight: 600;
-    color: #808191;
+    color: var(--color-secondary);
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
@@ -503,12 +514,12 @@ button {
 
 .sidebar-item:hover,
 .sidebar-item.active {
-    color: #6c5dd3;
+    color: var(--color-primary);
 }
 
 .sidebar-item:hover .icon,
 .sidebar-item.active .icon {
-    fill: #6c5dd3;
+    fill: var(--color-primary);
 }
 
 .sidebar-item.active {
@@ -535,7 +546,7 @@ button {
 
 .sidebar-icon .icon {
     font-size: 22px;
-    fill: #808191;
+    fill: var(--color-secondary);
     -webkit-transition: fill 0.2s;
     -o-transition: fill 0.2s;
     transition: fill 0.2s;
@@ -588,15 +599,15 @@ button {
     border: none;
     font-size: 14px;
     font-weight: 600;
-    color: #11142d;
+    color: var(--color-black);
 }
 
 .header-input::-webkit-input-placeholder {
-    color: #808191;
+    color: var(--color-secondary);
 }
 
 .header-input::-ms-input-placeholder {
-    color: #808191;
+    color: var(--color-secondary);
 }
 
 .header-start {
@@ -610,14 +621,14 @@ button {
 
 .header-start .icon {
     font-size: 20px;
-    fill: #11142d;
+    fill: var(--color-black);
     -webkit-transition: fill 0.2s;
     -o-transition: fill 0.2s;
     transition: fill 0.2s;
 }
 
 .header-start:hover .icon {
-    fill: #6c5dd3;
+    fill: var(--color-primary);
 }
 
 .header-logo {
@@ -650,10 +661,10 @@ button {
     position: relative;
     padding: 100px;
     border-radius: 24px;
-    background: -webkit-radial-gradient(0% 0%, 103.03% 103.03%, #d080ff 0%, #6c5dd3 100%);
-    background: -o-radial-gradient(0% 0%, 103.03% 103.03%, #d080ff 0%, #6c5dd3 100%);
-    background: radial-gradient(103.03% 103.03% at 0% 0%, #d080ff 0%, #6c5dd3 100%);
-    color: #ffffff;
+    background: -webkit-radial-gradient(0% 0%, 103.03% 103.03%, #d080ff 0%, var(--color-primary) 100%);
+    background: -o-radial-gradient(0% 0%, 103.03% 103.03%, #d080ff 0%, var(--color-primary) 100%);
+    background: radial-gradient(103.03% 103.03% at 0% 0%, #d080ff 0%, var(--color-primary) 100%);
+    color: var(--color-white);
 }
 
 .banner-wrap {
@@ -693,7 +704,7 @@ button {
     max-width: calc(100% - 32px);
     /* margin: 32px 16px 0; */
     border-radius: 24px;
-    background: #ffffff;
+    background: var(--color-white);
     -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
 }
@@ -801,19 +812,19 @@ button {
     border-radius: 20px;
     line-height: 40px;
     font-weight: 600;
-    color: #808191;
+    color: var(--color-secondary);
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
 }
 
 .sales-tags .sales-link:hover {
-    color: #11142d;
+    color: var(--color-black);
 }
 
 .sales-tags .sales-link.active {
     background: rgba(228, 228, 228, 0.3);
-    color: #4936c9;
+    color: var(--color-primary-darker);
 }
 
 .sales-select {
@@ -870,7 +881,7 @@ button {
     font-size: 10px;
     letter-spacing: 1px;
     font-weight: 600;
-    color: #808191;
+    color: var(--color-secondary);
     text-transform: uppercase;
 }
 
@@ -879,8 +890,8 @@ button {
 }
 
 .sales-row:not(.sales-row-head):hover {
-    -webkit-box-shadow: 0 0 0 2px #4936c9;
-    box-shadow: 0 0 0 2px #4936c9;
+    -webkit-box-shadow: 0 0 0 2px var(--color-primary-darker);
+    box-shadow: 0 0 0 2px var(--color-primary-darker);
     background: none;
 }
 
@@ -951,7 +962,7 @@ button {
     font-size: 12px;
     line-height: 1.33333;
     font-weight: 500;
-    color: #808191;
+    color: var(--color-secondary);
 }
 
 .sales-amount,
@@ -1006,7 +1017,7 @@ button {
     font-size: 13px;
     line-height: 1.23077;
     font-weight: 500;
-    color: #808191;
+    color: var(--color-secondary);
 }
 
 .sales-close {
@@ -1057,14 +1068,14 @@ button {
     font-size: 16px;
     font-weight: 600;
     line-height: 32px;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .sales-code {
     font-size: 18px;
     line-height: 1.33333;
     font-weight: 500;
-    color: #808191;
+    color: var(--color-secondary);
 }
 
 .sales-parameters {
@@ -1079,7 +1090,7 @@ button {
     -ms-flex-align: center;
     align-items: center;
     padding: 32px 0;
-    border-top: 1px solid #e4e4e4;
+    border-top: 1px solid var(--color-secondary-lighter);
 }
 
 .sales-preview {
@@ -1112,7 +1123,7 @@ button {
     font-size: 12px;
     line-height: 1.33333;
     font-weight: 500;
-    color: #808191;
+    color: var(--color-secondary);
 }
 
 .sales-status {
