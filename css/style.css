@@ -116,6 +116,12 @@ button {
 
 /* Typography */
 
+.d1 {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1.11111;
+}
+
 .h1 {
     font-size: 56px;
     font-weight: 600;
@@ -151,6 +157,16 @@ button {
 
 .text-right {
     text-align: right;
+}
+
+
+/* Landing */
+
+.main-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: -100px;
 }
 
 
@@ -337,6 +353,23 @@ button {
 
 .btn-primary:hover {
     background: var(--color-primary-darker);
+}
+
+.btn-secondary {
+    -webkit-box-shadow: inset 0 0 0 2px rgba(39, 46, 53, 0.75);
+    box-shadow: inset 0 0 0 2px rgba(39, 46, 53, 0.75);
+    color: var(--color-secondary-darker);
+}
+
+.btn-secondary:hover {
+    background: var(--color-secondary-darker);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: var(--color-white);
+}
+
+.btn-secondary:hover .icon {
+    fill: var(--color-white);
 }
 
 .btn-wide {
