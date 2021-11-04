@@ -81,9 +81,18 @@ img {
     vertical-align: middle;
 }
 
+.d1 {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 1.11111;
+}
+
+.landing {
+    height: 100vh;
+}
+
 .page {
     overflow: hidden;
-    height: 100vh;
 }
 
 .center {
@@ -150,6 +159,9 @@ img {
     align-items: center;
 }
 
+
+/* Header */
+
 .header {
     padding: 50px 0;
 }
@@ -200,6 +212,9 @@ img {
     margin-bottom: 20px;
 }
 
+
+/* Content */
+
 .main {
     position: relative;
     padding-top: 117px;
@@ -242,12 +257,6 @@ img {
 
 .main-preview img {
     width: 100%;
-}
-
-.d1 {
-    font-size: 72px;
-    font-weight: 600;
-    line-height: 1.11111;
 }
 
 @media only screen and (max-width: 1179px) {
