@@ -663,6 +663,7 @@ button {
     border-radius: 32px;
     background: var(--color-gradient);
     color: var(--color-white);
+    overflow: hidden;
 }
 
 .banner-wrap {
@@ -1223,6 +1224,7 @@ screen and (max-height: 300px) {
     }
     .banner-container {
         padding: 32px;
+        height: 317px;
     }
     .banner-preview {
         width: 600px;
