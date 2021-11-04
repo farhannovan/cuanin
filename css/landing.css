@@ -20,7 +20,6 @@
 html,
 body,
 div,
-span,
 h1,
 a,
 img,
@@ -41,27 +40,9 @@ a img {
     border: none;
 }
 
-button {
-    cursor: pointer;
-    background: none;
-}
-
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-
-button {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
 div,
-button,
 h1,
 a,
-span,
 a:focus {
     outline: none;
 }
@@ -82,20 +63,8 @@ a {
     text-decoration: none;
 }
 
-a,
-button {
+a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.icon-play {
-    width: 0.67em;
-    height: 1em;
-    fill: var(--color-secondary-darker);
-}
-
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
 }
 
 body {
@@ -147,12 +116,12 @@ img {
     background: var(--color-primary-darker);
 }
 
-.btn_transparent {
+.btn-transparent {
     background: transparent;
     color: var(--color-secondary);
 }
 
-.btn_transparent:hover {
+.btn-transparent:hover {
     color: var(--color-secondary-darker);
 }
 
@@ -167,14 +136,6 @@ img {
     -webkit-box-shadow: none;
     box-shadow: none;
     color: var(--color-white);
-}
-
-.btn-secondary:hover .icon {
-    fill: var(--color-white);
-}
-
-.btn-wide {
-    min-width: 100%;
 }
 
 .btn[href] {
@@ -205,14 +166,6 @@ img {
 .header-logo {
     -ms-flex-negative: 0;
     flex-shrink: 0;
-}
-
-.header-pic {
-    width: 138px;
-}
-
-.header-pic_light {
-    display: none;
 }
 
 .header-wrapper {
@@ -287,18 +240,8 @@ img {
     pointer-events: none;
 }
 
-.main-preview:nth-child(2) {
-    top: 13.5%;
-    right: 27%;
-    width: 52%;
-}
-
 .main-preview img {
     width: 100%;
-}
-
-.main-preview:not(:first-child) {
-    position: absolute;
 }
 
 .d1 {
@@ -384,12 +327,12 @@ img {
     .center {
         padding: 0 20px;
     }
-    .btn_transparent {
+    .btn-transparent {
         -webkit-box-shadow: inset 0 0 0 2px var(--color-secondary-darker);
         box-shadow: inset 0 0 0 2px var(--color-secondary-darker);
         color: var(--color-secondary-darker);
     }
-    .btn_transparent:hover {
+    .btn-transparent:hover {
         background: var(--color-secondary-darker);
         color: var(--color-white);
     }
@@ -398,9 +341,6 @@ img {
     }
     .header-center {
         padding: 0 32px;
-    }
-    .header-pic {
-        width: 115px;
     }
     .header-wrapper {
         padding: 128px 32px 40px;
@@ -466,17 +406,9 @@ img {
     .main-bg img {
         max-width: 500px;
     }
-    .main-preview:nth-child(2) {
-        top: 12%;
-        right: 30%;
-        width: 45%;
-    }
     .d1 {
         font-size: 40px;
         line-height: 1.2;
-    }
-    .stage {
-        margin-bottom: 16px;
     }
 }
 
