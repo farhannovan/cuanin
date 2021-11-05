@@ -735,8 +735,7 @@ button {
     flex: 0 0 32%;
     border-radius: 24px;
     background: var(--color-white);
-    -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 10px 40px -10px rgb(0 0 0 / 12%);
 }
 
 .widget-head {
