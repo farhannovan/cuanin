@@ -58,8 +58,8 @@ button {
 
 div,
 button,
-a,
 span,
+a,
 a:focus {
 	outline: none;
 }
@@ -98,12 +98,6 @@ button {
 	font-weight: 500;
 	line-height: 1.33333;
 }
-
-/* Landing */
-
-/* Login */
-
-/* Field */
 
 /* Button */
 
@@ -346,10 +340,6 @@ header {
 	border-radius: 50%;
 	overflow: hidden;
 }
-
-/* Banner */
-
-/* Widget */
 
 /* Sale */
 

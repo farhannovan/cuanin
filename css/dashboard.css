@@ -59,9 +59,6 @@ html {
 
 a {
 	text-decoration: none;
-}
-
-a {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -92,16 +89,6 @@ a {
 	font-weight: 500;
 	line-height: 1.33333;
 }
-
-/* Landing */
-
-/* Login */
-
-/* Field */
-
-/* Button */
-
-/* History button */
 
 /* -- Content -- */
 
@@ -432,9 +419,6 @@ header {
 /* -- RWD -- */
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
-	/**
-       * Remove all paddings around the image on small screen
-       */
 }
 
 @media only screen and (max-width: 1419px) {
