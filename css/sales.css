@@ -58,8 +58,8 @@ button {
 
 div,
 button,
-span,
 a,
+span,
 a:focus {
 	outline: none;
 }
@@ -91,7 +91,7 @@ button {
 	fill: var(--color-secondary);
 }
 
-/* Typography */
+/* ----------- TYPOGRAPHY ----------- */
 
 .h5 {
 	font-size: 24px;
@@ -99,7 +99,13 @@ button {
 	line-height: 1.33333;
 }
 
-/* Button */
+/* ------------- LANDING ------------ */
+
+/* -------------- LOGIN ------------- */
+
+/* -------------- FIELD ------------- */
+
+/* ------------- BUTTON ------------- */
 
 .btn {
 	min-width: 114px;
@@ -122,7 +128,7 @@ button {
 	background: var(--color-primary-darker);
 }
 
-/* History button */
+/* --------- HISTORY BUTTON --------- */
 
 .more {
 	margin-top: 32px;
@@ -133,9 +139,7 @@ button {
 	position: relative;
 }
 
-/* -- Content -- */
-
-/* Page */
+/* -------------- PAGE -------------- */
 
 .page {
 	overflow: hidden;
@@ -156,7 +160,7 @@ button {
 	transition: padding 0.2s;
 }
 
-/* Sidebar */
+/* ------------- SIDEBAR ------------ */
 
 .sidebar {
 	position: fixed;
@@ -303,7 +307,7 @@ button {
 	margin-left: 16px;
 }
 
-/* Header */
+/* ------------- HEADER ------------- */
 
 header {
 	position: relative;
@@ -341,7 +345,11 @@ header {
 	overflow: hidden;
 }
 
-/* Sale */
+/* ------------- BANNER ------------- */
+
+/* ------------- WIDGET ------------- */
+
+/* -------------- SALE -------------- */
 
 .sale {
 	display: -webkit-box;
@@ -457,11 +465,13 @@ header {
 	font-weight: 600;
 }
 
-/* -- RWD -- */
+/* ---------------------------------- */
+/*                 RWD                */
+/* ---------------------------------- */
 
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
 	/**
-       * Remove all paddings around the image on small screen
+       * Delete all paddings around the image on small screen
        */
 }
 
