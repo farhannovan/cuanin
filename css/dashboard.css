@@ -72,7 +72,6 @@ a {
 }
 
 /* ----------- TYPOGRAPHY ----------- */
-
 .h2 {
 	font-size: 48px;
 	font-weight: 600;
@@ -93,18 +92,7 @@ a {
 	line-height: 1.33333;
 }
 
-/* ------------- LANDING ------------ */
-
-/* -------------- LOGIN ------------- */
-
-/* -------------- FIELD ------------- */
-
-/* ------------- BUTTON ------------- */
-
-/* --------- HISTORY BUTTON --------- */
-
 /* -------------- PAGE -------------- */
-
 .page {
 	overflow: hidden;
 }
@@ -129,7 +117,6 @@ a {
 }
 
 /* ------------- SIDEBAR ------------ */
-
 .sidebar {
 	position: fixed;
 	top: 0;
@@ -276,7 +263,6 @@ a {
 }
 
 /* ------------- HEADER ------------- */
-
 header {
 	position: relative;
 	z-index: 10;
@@ -314,7 +300,6 @@ header {
 }
 
 /* ------------- BANNER ------------- */
-
 .banner-container {
 	position: relative;
 	padding: 100px;
@@ -349,7 +334,6 @@ header {
 }
 
 /* ------------- WIDGET ------------- */
-
 .widget {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -427,64 +411,28 @@ header {
 	margin-bottom: 12px;
 }
 
-/* -------------- SALE -------------- */
-
 /* ---------------------------------- */
 /*                 RWD                */
 /* ---------------------------------- */
 
-@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
-	/**
-       * Delete all paddings around the image on small screen
-       */
-}
-
-@media only screen and (max-width: 1419px) {
-	.banner-preview {
-		left: 45%;
-	}
-}
-
-@media only screen and (max-width: 1339px) {
+/* -------------- TABLET -------------- */
+@media only screen and (max-width: 1024px) {
 	.page-container {
-		padding: 0 48px 64px;
+		padding: 0 32px 32px;
 	}
-	header {
-		padding: 48px 48px 36px;
-	}
-}
-
-@media only screen and (max-width: 1259px) {
-	.page-container {
-		padding: 0 64px 64px;
-	}
-	.widget {
-		display: block;
-	}
-	.widget-item {
-		margin-bottom: 24px;
-	}
-	.sidebar {
-		padding-top: 120px;
-	}
-	.sidebar-head {
-		height: 120px;
-		padding: 0;
-	}
-	header {
-		padding: 36px 64px;
-	}
-	.banner-container {
-		height: 317px;
-	}
-	.banner-preview {
-		width: 600px;
-	}
-}
-
-@media only screen and (max-width: 1179px) {
 	.page-content {
 		padding-left: 96px;
+		-webkit-transition: -webkit-transform 0.2s;
+		transition: -webkit-transform 0.2s;
+		-o-transition: transform 0.2s;
+		transition: transform 0.2s;
+		transition: transform 0.2s, -webkit-transform 0.2s;
+	}
+	.sidebar {
+		padding-bottom: 90px;
+		-webkit-transition: all 0.2s;
+		-o-transition: all 0.2s;
+		transition: all 0.2s;
 	}
 	.sidebar {
 		width: 96px;
@@ -495,35 +443,8 @@ header {
 	.sidebar-item {
 		padding: 0 16px;
 	}
-}
-
-@media only screen and (max-width: 1023px) {
-	.page-content {
-		padding-left: 0;
-		-webkit-transition: -webkit-transform 0.2s;
-		transition: -webkit-transform 0.2s;
-		-o-transition: transform 0.2s;
-		transition: transform 0.2s;
-		transition: transform 0.2s, -webkit-transform 0.2s;
-	}
-	.sidebar {
-		width: 255px;
-		padding-bottom: 90px;
-		-webkit-transform: translateX(-100%);
-		-ms-transform: translateX(-100%);
-		transform: translateX(-100%);
-		-webkit-transition: all 0.2s;
-		-o-transition: all 0.2s;
-		transition: all 0.2s;
-	}
-	.sidebar-logo {
-		display: inline-block;
-	}
-	.sidebar-item {
-		padding: 0 20px;
-	}
 	header {
-		padding: 32px 64px;
+		padding: 32px;
 	}
 	.header-logo {
 		display: inline-block;
@@ -532,29 +453,21 @@ header {
 		left: 52%;
 		width: 550px;
 	}
-}
-
-@media only screen and (max-width: 767px) {
-	.page-container {
-		padding: 0 24px 32px;
-	}
 	.widget {
 		display: block;
 	}
+}
+
+/* ------------- MOBILE ------------- */
+@media only screen and (max-width: 767px) {
+	.page-content {
+		padding: 0;
+	}
 	.sidebar {
-		padding: 94px 20px 72px;
-	}
-	.sidebar-head {
-		height: 94px;
-	}
-	.sidebar-nav {
-		margin-bottom: 16px;
-	}
-	.sidebar-item {
-		height: 52px;
+		display: none;
 	}
 	header {
-		padding: 24px 16px;
+		padding: 24px 32px;
 	}
 	.header-logo img {
 		width: 46px;
