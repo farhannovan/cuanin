@@ -469,40 +469,23 @@ header {
 /*                 RWD                */
 /* ---------------------------------- */
 
-@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
-	/**
-       * Delete all paddings around the image on small screen
-       */
-}
-
-@media only screen and (max-width: 1419px) {
-	.sale-cell {
-		padding-right: 25px;
+/* -------------- TABLET -------------- */
+@media only screen and (max-width: 1024px) {
+	.page-content {
+		-webkit-transition: -webkit-transform 0.2s;
+		transition: -webkit-transform 0.2s;
+		-o-transition: transform 0.2s;
+		transition: transform 0.2s;
+		transition: transform 0.2s, -webkit-transform 0.2s;
 	}
-}
-
-@media only screen and (max-width: 1339px) {
-	header {
-		padding: 48px 48px 36px;
-	}
-}
-
-@media only screen and (max-width: 1259px) {
-	.sidebar {
-		padding-top: 120px;
-	}
-	.sidebar-head {
-		height: 120px;
-		padding: 0;
-	}
-	header {
-		padding: 36px 64px;
-	}
-}
-
-@media only screen and (max-width: 1179px) {
 	.page-content {
 		padding-left: 96px;
+	}
+	.sidebar {
+		padding-bottom: 90px;
+		-webkit-transition: all 0.2s;
+		-o-transition: all 0.2s;
+		transition: all 0.2s;
 	}
 	.sidebar {
 		width: 96px;
@@ -513,38 +496,14 @@ header {
 	.sidebar-item {
 		padding: 0 16px;
 	}
-}
-
-@media only screen and (max-width: 1023px) {
-	.page-content {
-		padding-left: 0;
-		-webkit-transition: -webkit-transform 0.2s;
-		transition: -webkit-transform 0.2s;
-		-o-transition: transform 0.2s;
-		transition: transform 0.2s;
-		transition: transform 0.2s, -webkit-transform 0.2s;
-	}
-	.sidebar {
-		width: 255px;
-		padding-bottom: 90px;
-		-webkit-transform: translateX(-100%);
-		-ms-transform: translateX(-100%);
-		transform: translateX(-100%);
-		-webkit-transition: all 0.2s;
-		-o-transition: all 0.2s;
-		transition: all 0.2s;
-	}
-	.sidebar-logo {
-		display: inline-block;
-	}
-	.sidebar-item {
-		padding: 0 20px;
-	}
 	header {
-		padding: 32px 64px;
+		padding: 32px;
 	}
 	.header-logo {
 		display: inline-block;
+	}
+	.sale-container {
+		padding: 0 32px 32px;
 	}
 	.sale-row:not(.sale-row-head):hover {
 		-webkit-box-shadow: none;
@@ -567,18 +526,13 @@ header {
 	}
 }
 
+/* ------------- MOBILE ------------- */
 @media only screen and (max-width: 767px) {
 	.sidebar {
-		padding: 94px 20px 72px;
+		display: none;
 	}
-	.sidebar-head {
-		height: 94px;
-	}
-	.sidebar-nav {
-		margin-bottom: 16px;
-	}
-	.sidebar-item {
-		height: 52px;
+	.page-content {
+		padding: 0 32px;
 	}
 	header {
 		padding: 24px 16px;
