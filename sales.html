@@ -53,7 +53,34 @@
             <div class="sale">
                 <div class="sale-container">
                     <div class="sale-stage h5 mobile-show">History</div>
+                    <table>
+                        <tr>
+                            <th>No. </th>
+                            <th>Aksi</th>
+                            <th>Nama</th>
+                            <th>NIM</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Fakultas</th>
+                            <th>Alamat</th>
+                        </tr>
 
+                        <tr>
+                            <td class="index"><?= $i;?></td>
+                            <td class="index"><?= $row["nama"];?></td>
+                            <td class="index"><?= $row["nim"];?></td>
+                            <td class="index"><?= $row["tanggal_lahir"];?></td>
+                            <td class="index"><?= $row["jenis_kelamin"];?></td>
+                            <td class="index"><?= $row["fakultas"];?></td>
+                            <td class="index"><?= $row["alamat"];?></td>
+                            <td>
+                                <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> |
+                                <a href="edit.php?id=<?= $row["id"] ?>">Edit</a>
+                            </td>
+                        </tr>
+                        <?php $i++; ?>
+                        <?php endforeach; ?>
+                    </table>
                     <!--Table Mulai dari sini, jadi hapus aja -->
                     <div class="sale-table">
                         <div class="sale-row sale-row-head">
