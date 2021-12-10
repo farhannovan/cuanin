@@ -75,6 +75,8 @@ if (isset($_POST["submit"])) {
                                         <select name="tipe" value="tipe" id="tipe" required>
                                             <option value="Pengeluaran">Pengeluaran</option>
                                             <option value="Pemasukkan">Pemasukkan</option>
+                                            <option value="Hutang">Hutang</option>
+                                            <option value="Piutang">Piutang</option>
                                         </select>
                                     </td>
                                 </tr>
