@@ -20,7 +20,7 @@
     margin: 70px auto;
     padding: 20px;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 16px;
     width: 30%;
     position: relative;
     transition: all 5s ease-in-out;
@@ -44,12 +44,12 @@
 }
 
 .popup .close:hover {
-    color: #06d85f;
+    color: #6c5dd3;
 }
 
 .popup .content {
     max-height: 30%;
-    overflow: auto;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 700px) {

@@ -35,6 +35,7 @@ if (isset($_POST["submit"])) {
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="stylesheet" media="all" href="css/sales.css" />
     <link rel="stylesheet" href="css/input.css">
+    <link rel="stylesheet" href="css/in.css">
 </head>
 
 <body>
@@ -114,74 +115,36 @@ if (isset($_POST["submit"])) {
                             <a class="close" href="#">&times;</a>
                             <div class="content">
                                 <form action="" method="post">
-                                    <!-- <table>
-                                        <tr>
-                                            <td>Name</td>
-                                            <td>:</td>
-                                            <td><input type="text" name="nama" id="nama" required></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Date</td>
-                                            <td>:</td>
-                                            <td><input type="date" name="tanggal" id="tanggal" required>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type</td>
-                                            <td>:</td>
-                                            <td>
-                                                <select name="tipe" value="tipe" id="tipe" required>
-                                                    <option value="Pengeluaran">Pengeluaran</option>
-                                                    <option value="Pemasukkan">Pemasukkan</option>
-                                                    <option value="Hutang">Hutang</option>
-                                                    <option value="Piutang">Piutang</option>
-                                                </select>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Amount</td>
-                                            <td>:</td>
-                                            <td><input type="number" name="jumlah" id="jumlah" required>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>
-                                                <button type="submit" name="submit">Add</button>
-                                            </td>
-                                        </tr>
-                                    </table> -->
-                                    <div class="login-field">
-                                        <div class="field-label">Name</div>
-                                        <div class="field-wrap">
-                                            <td><input class="field-input" type="text" name="nama" id="nama" required></td>
+                                    <div class="input-fieldset">
+                                        <div class="input-row">
+                                            <div class="input-field">
+                                                <div class="input-label">Name</div>
+                                                <div class="input-wrap"><input type="text" name="nama" id="nama" required></div>
+                                            </div>
+                                            <div class="input-field">
+                                                <div class="input-label">Amount</div>
+                                                <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="login-field">
-                                        <div class="field-label">Amount</div>
-                                        <div class="field-wrap">
-                                            <input class="field-input" type="number" name="jumlah" id="jumlah" required>
+                                        <div class="input-row">
+                                            <div class="input-field">
+                                                <div class="input-label">Date</div>
+                                                <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required>
+                                                </div>
+                                            </div>
+                                            <div class="input-field">
+                                                <div class="input-label">Type</div>
+                                                <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required>
+                                                        <option value="Pengeluaran">Pengeluaran</option>
+                                                        <option value="Pemasukkan">Pemasukkan</option>
+                                                        <option value="Hutang">Hutang</option>
+                                                        <option value="Piutang">Piutang</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <button class="add-btn btn btn-primary" type="submit">Submit</button>
                                     </div>
-                                    <div class="login-field">
-                                        <div class="field-label">Date</div>
-                                        <div class="field-wrap">
-                                            <input class="field-input" type="date" name="tanggal" id="tanggal" required>
-                                        </div>
-                                    </div>
-                                    <div class="login-field">
-                                        <div class="field-label">Type</div>
-                                        <div class="field-wrap">
-                                            <select class="field-input" name="tipe" value="tipe" id="tipe" required>
-                                                <option value="Pengeluaran">Pengeluaran</option>
-                                                <option value="Pemasukkan">Pemasukkan</option>
-                                                <option value="Hutang">Hutang</option>
-                                                <option value="Piutang">Piutang</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <!-- <a class="btn btn-primary btn-wide" href="dashboard.html">Sign in</a> -->
-                                    <button type="submit" name="submit">Add</button>
                                 </form>
                             </div>
                         </div>
