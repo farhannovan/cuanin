@@ -21,7 +21,6 @@
 html,
 body,
 div,
-span,
 a,
 img,
 nav {
@@ -60,7 +59,6 @@ button {
 div,
 button,
 a,
-span,
 a:focus {
 	outline: none;
 }
@@ -414,103 +412,6 @@ table tr:hover td {
 	margin-bottom: 16px;
 }
 
-.sale-table {
-	display: table;
-	width: 100%;
-}
-
-.sale-row {
-	display: table-row;
-	border-radius: 12px;
-	cursor: pointer;
-	-webkit-transition: all 0.2s;
-	-o-transition: all 0.2s;
-	transition: all 0.2s;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-.sale-row-head {
-	background: rgba(228, 228, 228, 0.2);
-	font-size: 10px;
-	letter-spacing: 1px;
-	font-weight: 600;
-	color: var(--color-secondary);
-	text-transform: uppercase;
-}
-
-.sale-row:nth-child(2n + 1) {
-	background: rgba(228, 228, 228, 0.2);
-}
-
-.sale-row:not(.sale-row-head):hover {
-	-webkit-box-shadow: 0 0 0 2px var(--color-primary-darker);
-	box-shadow: 0 0 0 2px var(--color-primary-darker);
-	background: none;
-}
-
-.sale-row-head .sale-cell {
-	height: 40px;
-}
-
-.sale-hidden {
-	display: none;
-}
-
-.sale-cell {
-	display: table-cell;
-	vertical-align: middle;
-	height: 80px;
-	padding-right: 30px;
-}
-
-.sale-cell:first-child {
-	padding-left: 25px;
-	border-radius: 12px 0 0 12px;
-}
-
-.sale-cell:last-child {
-	border-radius: 0 12px 12px 0;
-}
-
-.sale-size img {
-	min-width: 15px;
-}
-
-.sale-company {
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	font-weight: 600;
-}
-
-.sale-logo {
-	-ms-flex-negative: 0;
-	flex-shrink: 0;
-	width: 32px;
-	height: 32px;
-	margin-right: 16px;
-}
-
-.sale-logo img {
-	width: 100%;
-	min-height: 100%;
-}
-
-.sale-table .sale-date {
-	font-size: 12px;
-	line-height: 1.33333;
-	font-weight: 500;
-	color: var(--color-secondary);
-}
-
-.sale-amount,
-.sale-transaction {
-	font-weight: 600;
-}
-
 /* ---------------------------------- */
 /*                 RWD                */
 /* ---------------------------------- */
@@ -551,25 +452,6 @@ table tr:hover td {
 	.sale-container {
 		padding: 0 32px 32px;
 	}
-	.sale-row:not(.sale-row-head):hover {
-		-webkit-box-shadow: none;
-		box-shadow: none;
-	}
-	.sale-table .sale-hidden {
-		display: block;
-	}
-	.sale-table .sale-row-head .sale-hidden {
-		display: inline;
-	}
-	.sale-cell {
-		padding-right: 16px;
-	}
-	.sale-cell:first-child {
-		padding-left: 16px;
-	}
-	.sale-cell:nth-child(3) {
-		display: none;
-	}
 }
 
 /* ------------- MOBILE ------------- */
@@ -591,24 +473,5 @@ table tr:hover td {
 	}
 	.sale-container {
 		padding: 0 16px 32px;
-	}
-	.sale-cell:first-child {
-		display: none;
-	}
-	.sale-cell:nth-child(2) {
-		border-radius: 12px 0 0 12px;
-		padding-left: 16px;
-	}
-	.sale-cell:nth-child(4) {
-		border-radius: 0 12px 12px 0;
-	}
-	.sale-cell:nth-child(n + 5) {
-		display: none;
-	}
-	.sale-logo {
-		margin-right: 10px;
-	}
-	.sale-amount {
-		font-size: 13px;
 	}
 }

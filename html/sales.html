@@ -1,8 +1,3 @@
-<?php
-require 'function.php';
-$transaksi = query("SELECT * FROM transaksi");
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +22,7 @@ $transaksi = query("SELECT * FROM transaksi");
             </div>
             <div class="sidebar-body">
                 <nav class="sidebar-nav">
-                    <a class="sidebar-item" href="dashboard.php">
+                    <a class="sidebar-item" href="dashboard.html">
                         <div class="sidebar-icon">
                             <svg class="icon icon-home">
                                 <use xlink:href="assets/sprite.svg#icon-home"></use>
@@ -35,7 +30,7 @@ $transaksi = query("SELECT * FROM transaksi");
                         </div>
                         <div class="sidebar-text">Home</div>
                     </a>
-                    <a class="sidebar-item active" href="sales.html">
+                    <a class="sidebar-item active" href="sales.php">
                         <div class="sidebar-icon">
                             <svg class="icon icon-sale">
                                 <use xlink:href="assets/sprite.svg#icon-activity"></use>
@@ -67,26 +62,25 @@ $transaksi = query("SELECT * FROM transaksi");
                             <th>Amount</th>
                             <th>Action</th>
                         </tr>
-                        <?php $i = 1 ?>
-                        <?php foreach ($transaksi as $row) : ?>
-                            <tr>
-                                <td class="index"><?= $i; ?></td>
-                                <td class="index"><?= $row["nama"]; ?></td>
-                                <td class="index"><?= $row["tanggal"]; ?></td>
-                                <td class="index"><?= $row["tipe"]; ?></td>
-                                <td class="index"><?= $row["jumlah"]; ?></td>
-                                <td>
-                                    <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> |
-                                    <a href="delete.php?id=<?= $row["id"]; ?>" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
-                                </td>
-                            </tr>
-                            <?php $i++; ?>
+
+                        <tr>
+                            <td class="index"><?= $i;?></td>
+                            <td class="index"><?= $row["nama"];?></td>
+                            <td class="index"><?= $row["tangal"];?></td>
+                            <td class="index"><?= $row["tipe"];?></td>
+                            <td class="index"><?= $row["jumlah"];?></td>
+                            <td>
+                                <!-- <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> |
+                                <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> -->
+                                <a href="edit.php">Edit</a> |
+                                <a href="edit.php">Delete</a>
+                            </td>
+                        </tr>
+                        <?php $i++; ?>
                         <?php endforeach; ?>
                     </table>
                     <div class="more">
-                        <!-- <button class="more-btn btn btn-primary">Add transaction</button> -->
-                        <button class="more-btn btn btn-primary" onclick=" window.location.href='insert.php'">Add Transaction</button>
-                        <!-- <a class=" button" href="insert.php">Add Transaction</a> -->
+                        <button class="more-btn btn btn-primary">Add transaction</button>
                     </div>
                 </div>
             </div>
