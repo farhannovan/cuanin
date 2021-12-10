@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="input.css">
+</head>
+
+<body>
+    <a class="button" href="#input">Let me Pop up</a>
+
+    <div id="input" class="overlay">
+        <div class="popup">
+            <h2>Add Transaction</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+                <form action="" method="post">
+                    <table>
+                        <tr>
+                            <td>Name</td>
+                            <td>:</td>
+                            <td><input type="text" name="nama" id="nama" required></td>
+                        </tr>
+                        <tr>
+                            <td>Date</td>
+                            <td>:</td>
+                            <td><input type="date" name="tanggal" id="tanggal" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Type</td>
+                            <td>:</td>
+                            <td>
+                                <select name="tipe" value="tipe" id="tipe" required>
+                                    <option value="Pengeluaran">Pengeluaran</option>
+                                    <option value="Pemasukkan">Pemasukkan</option>
+                                    <option value="Hutang">Hutang</option>
+                                    <option value="Piutang">Piutang</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Amount</td>
+                            <td>:</td>
+                            <td><input type="number" name="jumlah" id="jumlah" required>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button type="submit" name="submit">Add</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- <div class="popup__field">
+                        <div class="popup__label">Deposit Assets</div>
+                        <div class="popup__wrap"><select class="select select_arrows select_sm">
+                                <option>Enabled</option>
+                                <option>Disabled</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button type="submit" name="submit">Add</button>
+                        </div> -->
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
