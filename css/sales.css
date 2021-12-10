@@ -358,12 +358,6 @@ table tr {
 	padding-left: 20px;
 }
 
-table td:first-child {
-	text-align: left;
-	padding-left: 20px;
-	border-left: 0;
-}
-
 td {
 	padding: 16px 36px;
 	background-color: var(--color-white);
@@ -373,6 +367,10 @@ table td {
 	background: #fafafa;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
 	background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
+}
+
+table td:first-child {
+	width: 5%;
 }
 
 table tr:last-child td {
