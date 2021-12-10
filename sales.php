@@ -112,7 +112,7 @@ if (isset($_POST["submit"])) {
                     <div id="input" class="overlay">
                         <div class="popup">
                             <h2>Add Transaction</h2>
-                            <a class="close" href="#">&times;</a>
+                            <a class="close" href="">&times;</a>
                             <div class="content">
                                 <form action="" method="post">
                                     <div class="input-fieldset">
@@ -135,6 +135,7 @@ if (isset($_POST["submit"])) {
                                             <div class="input-field">
                                                 <div class="input-label">Type</div>
                                                 <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required>
+                                                        <option value="none" selected disabled hidden>Select a type</option>
                                                         <option value="Pengeluaran">Pengeluaran</option>
                                                         <option value="Pemasukkan">Pemasukkan</option>
                                                         <option value="Hutang">Hutang</option>
@@ -143,7 +144,7 @@ if (isset($_POST["submit"])) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="add-btn btn btn-primary" type="submit">Submit</button>
+                                        <button class="add-btn btn btn-primary" type="submit" name="submit">Submit</button>
                                     </div>
                                 </form>
                             </div>
