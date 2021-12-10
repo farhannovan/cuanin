@@ -67,6 +67,7 @@ $transaksi = query("SELECT * FROM transaksi");
                             <th>Amount</th>
                             <th>Action</th>
                         </tr>
+
                         <?php $i = 1 ?>
                         <?php foreach ($transaksi as $row) : ?>
                             <tr>
@@ -83,11 +84,11 @@ $transaksi = query("SELECT * FROM transaksi");
                             <?php $i++; ?>
                         <?php endforeach; ?>
                     </table>
-                    <div class="more">
-                        <!-- <button class="more-btn btn btn-primary">Add transaction</button> -->
-                        <button class="more-btn btn btn-primary" onclick=" window.location.href='insert.php'">Add Transaction</button>
-                        <!-- <a class=" button" href="insert.php">Add Transaction</a> -->
+
+                    <div class="add">
+                        <button class="add-btn btn btn-primary" onclick=" window.location.href='insert.php'">Add Transaction</button>
                     </div>
+
                 </div>
             </div>
         </div>
