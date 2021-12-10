@@ -1,0 +1,19 @@
+.h2 {
+	font-size: 48px;
+	font-weight: 600;
+	line-height: 1.14286;
+	letter-spacing: -1px;
+}
+
+.h4 {
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1.25;
+	letter-spacing: -0.5px;
+}
+
+.h5 {
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.33333;
+}

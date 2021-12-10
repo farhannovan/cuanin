@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 @import "variables.css";
 @import "sidebar.css";
+@import "header.css";
+@import "page.css";
+@import "typography.css";
 
 * {
 	-webkit-font-smoothing: antialiased !important;
@@ -61,88 +64,6 @@ a {
 	width: 1em;
 	height: 1em;
 	fill: var(--color-secondary);
-}
-
-/* ----------- TYPOGRAPHY ----------- */
-.h2 {
-	font-size: 48px;
-	font-weight: 600;
-	line-height: 1.14286;
-	letter-spacing: -1px;
-}
-
-.h4 {
-	font-size: 32px;
-	font-weight: 600;
-	line-height: 1.25;
-	letter-spacing: -0.5px;
-}
-
-.h5 {
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 1.33333;
-}
-
-/* -------------- PAGE -------------- */
-.page {
-	overflow: hidden;
-}
-
-.page-content {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	min-height: 100vh;
-	padding-left: 255px;
-	-webkit-transition: padding 0.2s;
-	-o-transition: padding 0.2s;
-	transition: padding 0.2s;
-}
-
-.page-container {
-	padding: 0 64px 64px;
-}
-
-/* ------------- HEADER ------------- */
-header {
-	position: relative;
-	z-index: 10;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	justify-content: end;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	padding: 48px 64px 36px;
-}
-
-.header-logo {
-	display: none;
-	margin-right: auto;
-}
-
-.header-logo img {
-	width: 60px;
-}
-
-.header-user {
-	-ms-flex-negative: 0;
-	flex-shrink: 0;
-	width: 48px;
-	margin-left: 36px;
-}
-
-.header-user img {
-	min-width: 100%;
-	height: 48px;
-	border-radius: 50%;
-	overflow: hidden;
 }
 
 /* ------------- BANNER ------------- */
