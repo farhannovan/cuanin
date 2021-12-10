@@ -1,6 +1,24 @@
 <?php
 require 'function.php';
 $transaksi = query("SELECT * FROM transaksi");
+
+if (isset($_POST["submit"])) {
+    if (insert($_POST) > 0) {
+        echo "
+            <script>
+                alert('Data berhasil ditambahkan!');
+                document.location.href = 'sales.php';
+            </script>
+        ";
+    } else {
+        echo "
+            <script>
+                alert('Data gagal ditambahkan!');
+                document.location.href = 'insert.php';
+            </script>
+        ";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -92,13 +110,11 @@ $transaksi = query("SELECT * FROM transaksi");
 
                     <div id="input" class="overlay">
                         <div class="popup">
-                            <h2>I am a popup, just fill up the form :)</h2>
+                            <h2>Add Transaction</h2>
                             <a class="close" href="#">&times;</a>
                             <div class="content">
-                                <p>We love helping small businesses succeed, and by letting us know who you are, we will include you in our mailing list so that you can keep up to date on what is happening in Central Alberta.</p>
-                                <p>Don't forget to follow us on Social Media as well!</p>
                                 <form action="" method="post">
-                                    <table>
+                                    <!-- <table>
                                         <tr>
                                             <td>Name</td>
                                             <td>:</td>
@@ -134,7 +150,38 @@ $transaksi = query("SELECT * FROM transaksi");
                                                 <button type="submit" name="submit">Add</button>
                                             </td>
                                         </tr>
-                                    </table>
+                                    </table> -->
+                                    <div class="login-field">
+                                        <div class="field-label">Name</div>
+                                        <div class="field-wrap">
+                                            <td><input class="field-input" type="text" name="nama" id="nama" required></td>
+                                        </div>
+                                    </div>
+                                    <div class="login-field">
+                                        <div class="field-label">Amount</div>
+                                        <div class="field-wrap">
+                                            <input class="field-input" type="number" name="jumlah" id="jumlah" required>
+                                        </div>
+                                    </div>
+                                    <div class="login-field">
+                                        <div class="field-label">Date</div>
+                                        <div class="field-wrap">
+                                            <input class="field-input" type="date" name="tanggal" id="tanggal" required>
+                                        </div>
+                                    </div>
+                                    <div class="login-field">
+                                        <div class="field-label">Type</div>
+                                        <div class="field-wrap">
+                                            <select class="field-input" name="tipe" value="tipe" id="tipe" required>
+                                                <option value="Pengeluaran">Pengeluaran</option>
+                                                <option value="Pemasukkan">Pemasukkan</option>
+                                                <option value="Hutang">Hutang</option>
+                                                <option value="Piutang">Piutang</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- <a class="btn btn-primary btn-wide" href="dashboard.html">Sign in</a> -->
+                                    <button type="submit" name="submit">Add</button>
                                 </form>
                             </div>
                         </div>
