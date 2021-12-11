@@ -1,5 +1,6 @@
 <?php
 require 'function.php';
+
 $transaksi = query("SELECT * FROM transaksi");
 
 if (isset($_POST["submit"])) {
@@ -35,6 +36,7 @@ if (isset($_POST["submit"])) {
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="stylesheet" media="all" href="css/sales.css" />
     <link rel="stylesheet" media="all" href="css/insert.css" />
+    <link rel="stylesheet" media="all" href="css/button.css" />
 </head>
 
 <body>
@@ -116,6 +118,7 @@ if (isset($_POST["submit"])) {
                         <button class="add-btn btn btn-primary" onclick=" window.location.href='#input'">Add Transaction</button>
                     </div>
 
+                    <!-- Input -->
                     <div id="input" class="overlay">
                         <div class="popup">
                             <h2>Add Transaction</h2>
@@ -157,9 +160,53 @@ if (isset($_POST["submit"])) {
                             </div>
                         </div>
                     </div>
+
+                    <!-- Edit -->
+                    <!-- <div id="edit" class="overlay">
+                        <div class="popup">
+                            <h2>Add Transaction</h2>
+                            <a class="close" href="">&times;</a>
+                            <div class="content">
+                                <form action="edit.php" method="post">
+                                    <input type="hidden" name="id" value="<?= $edit["id"]; ?>">
+                                    <div class="input-fieldset">
+                                        <div class="input-row">
+                                            <div class="input-field">
+                                                <div class="input-label">Name</div>
+                                                <div class="input-wrap"><input type="text" name="nama" id="nama" required value="<?= $edit["nama"]; ?>"></div>
+                                            </div>
+                                            <div class="input-field">
+                                                <div class="input-label">Amount</div>
+                                                <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required value="<?= $edit["jumlah"]; ?>"></div>
+                                            </div>
+                                        </div>
+                                        <div class="input-row">
+                                            <div class="input-field">
+                                                <div class="input-label">Date</div>
+                                                <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required value="<?= $edit["tanggal"]; ?>">
+                                                </div>
+                                            </div>
+                                            <div class="input-field">
+                                                <div class="input-label">Type</div>
+                                                <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required value="<?= $edit["tipe"]; ?>">
+                                                        <option value="none" selected disabled hidden>Select a type</option>
+                                                        <option value="Pengeluaran">Pengeluaran</option>
+                                                        <option value="Pemasukkan">Pemasukkan</option>
+                                                        <option value="Hutang">Hutang</option>
+                                                        <option value="Piutang">Piutang</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="add-btn btn btn-primary" type="submit" name="submit">Submit</button>
+                                    </div>
+                                </form> -->
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
 </body>
 

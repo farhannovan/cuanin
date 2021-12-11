@@ -32,3 +32,25 @@ function delete($id)
     mysqli_query($conn, "DELETE FROM transaksi WHERE id = $id");
     return mysqli_affected_rows($conn);
 }
+
+function edit($data)
+{
+    global $conn;
+    $id = $data["id"];
+    $nama = htmlspecialchars($data["nama"]);
+    $tanggal = htmlspecialchars($data["tanggal"]);
+    $tipe = htmlspecialchars($data["tipe"]);
+    $jumlah = htmlspecialchars($data["jumlah"]);
+
+    $query = "UPDATE transaksi SET 
+                nama = '$nama',
+                tanggal = '$tanggal',
+                tipe = '$tipe',
+                jumlah = '$jumlah',
+            WHERE id = $id
+                ";
+
+    mysqli_query($conn, $query);
+
+    return mysqli_affected_rows($conn);
+}
