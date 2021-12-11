@@ -1,0 +1,32 @@
+.btn {
+    min-width: 114px;
+    height: 56px;
+    padding: 0 24px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-darker);
+}
+
+
+/* --------- HISTORY BUTTON --------- */
+
+.add {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.add-btn {
+    position: relative;
+}
