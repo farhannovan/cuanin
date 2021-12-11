@@ -55,13 +55,21 @@ if (isset($_POST["submit"])) {
                         </div>
                         <div class="sidebar-text">Home</div>
                     </a>
-                    <a class="sidebar-item active" href="sales.html">
+                    <a class="sidebar-item active" href="sales.php">
                         <div class="sidebar-icon">
                             <svg class="icon icon-sale">
                                 <use xlink:href="assets/sprite.svg#icon-activity"></use>
                             </svg>
                         </div>
                         <div class="sidebar-text">Sales</div>
+                    </a>
+                    <a class="sidebar-item active" href="setting.php">
+                        <div class="sidebar-icon">
+                            <svg class="icon icon-sale">
+                                <use xlink:href="assets/sprite.svg#icon-activity"></use>
+                            </svg>
+                        </div>
+                        <div class="sidebar-text">Setting</div>
                     </a>
                 </nav>
             </div>
