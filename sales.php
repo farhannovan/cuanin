@@ -34,7 +34,7 @@ if (isset($_POST["submit"])) {
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="stylesheet" media="all" href="css/sales.css" />
-    <link rel="stylesheet" href="css/in.css">
+    <link rel="stylesheet" media="all" href="css/insert.css" />
 </head>
 
 <body>
@@ -62,10 +62,10 @@ if (isset($_POST["submit"])) {
                         </div>
                         <div class="sidebar-text">Sales</div>
                     </a>
-                    <a class="sidebar-item active" href="setting.php">
+                    <a class="sidebar-item" href="setting.php">
                         <div class="sidebar-icon">
-                            <svg class="icon icon-sale">
-                                <use xlink:href="assets/sprite.svg#icon-activity"></use>
+                            <svg class="icon icon-home">
+                                <use xlink:href="assets/sprite.svg#icon-settings"></use>
                             </svg>
                         </div>
                         <div class="sidebar-text">Setting</div>

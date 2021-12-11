@@ -38,6 +38,14 @@
                         </div>
                         <div class="sidebar-text">Sales</div>
                     </a>
+                    <a class="sidebar-item" href="setting.php">
+                        <div class="sidebar-icon">
+                            <svg class="icon icon-home">
+                                <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                            </svg>
+                        </div>
+                        <div class="sidebar-text">Setting</div>
+                    </a>
                 </nav>
             </div>
         </div>
