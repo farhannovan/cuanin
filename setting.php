@@ -49,7 +49,7 @@
                                 <use xlink:href="assets/sprite.svg#icon-settings"></use>
                             </svg>
                         </div>
-                        <div class="sidebar-text">Setting</div>
+                        <div class="sidebar-text">Settings</div>
                     </a>
                 </nav>
             </div>

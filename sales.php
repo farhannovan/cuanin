@@ -3,7 +3,7 @@ require 'function.php';
 
 $transaksi = query("SELECT * FROM transaksi");
 
-if (isset($_POST["submit"])) {
+if (isset($_POST["add"])) {
     if (insert($_POST) > 0) {
         echo "
             <script>
@@ -35,8 +35,6 @@ if (isset($_POST["submit"])) {
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="stylesheet" media="all" href="css/sales.css" />
-    <link rel="stylesheet" media="all" href="css/insert.css" />
-    <link rel="stylesheet" media="all" href="css/button.css" />
 </head>
 
 <body>
@@ -70,7 +68,7 @@ if (isset($_POST["submit"])) {
                                 <use xlink:href="assets/sprite.svg#icon-settings"></use>
                             </svg>
                         </div>
-                        <div class="sidebar-text">Setting</div>
+                        <div class="sidebar-text">Settings</div>
                     </a>
                 </nav>
             </div>
@@ -106,7 +104,7 @@ if (isset($_POST["submit"])) {
                                 <td class="index"><?= $row["tipe"]; ?></td>
                                 <td class="index"><?= $row["jumlah"]; ?></td>
                                 <td>
-                                    <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> |
+                                    <a href="#edit?id=<?= $row["id"] ?>">Edit</a> |
                                     <a href="delete.php?id=<?= $row["id"]; ?>" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
                                 </td>
                             </tr>
@@ -145,16 +143,16 @@ if (isset($_POST["submit"])) {
                                             <div class="input-field">
                                                 <div class="input-label">Type</div>
                                                 <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required>
-                                                        <option value="none" selected disabled hidden>Select a type</option>
+                                                        <!-- <option value="none" selected disabled hidden>Select a type</option> -->
                                                         <option value="Pengeluaran">Pengeluaran</option>
-                                                        <option value="Pemasukkan">Pemasukkan</option>
+                                                        <option value="Pemasukan">Pemasukan</option>
                                                         <option value="Hutang">Hutang</option>
                                                         <option value="Piutang">Piutang</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="add-btn btn btn-primary" type="submit" name="submit">Submit</button>
+                                        <button class="add-btn btn btn-primary" type="add" name="add">Add Transaction</button>
                                     </div>
                                 </form>
                             </div>
@@ -162,33 +160,33 @@ if (isset($_POST["submit"])) {
                     </div>
 
                     <!-- Edit -->
-                    <!-- <div id="edit" class="overlay">
+                    <div id="edit" class="overlay">
                         <div class="popup">
-                            <h2>Add Transaction</h2>
+                            <h2>Edit Transaction</h2>
                             <a class="close" href="">&times;</a>
                             <div class="content">
-                                <form action="edit.php" method="post">
-                                    <input type="hidden" name="id" value="<?= $edit["id"]; ?>">
+                                <form action="" method="post">
+                                    <input type="hidden" name="id" value="<?= $upd["id"]; ?>">
                                     <div class="input-fieldset">
                                         <div class="input-row">
                                             <div class="input-field">
                                                 <div class="input-label">Name</div>
-                                                <div class="input-wrap"><input type="text" name="nama" id="nama" required value="<?= $edit["nama"]; ?>"></div>
+                                                <div class="input-wrap"><input type="text" name="nama" id="nama" required value="<?= $upd["nama"]; ?>"></div>
                                             </div>
                                             <div class="input-field">
                                                 <div class="input-label">Amount</div>
-                                                <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required value="<?= $edit["jumlah"]; ?>"></div>
+                                                <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required value="<?= $upd["jumlah"]; ?>"></div>
                                             </div>
                                         </div>
                                         <div class="input-row">
                                             <div class="input-field">
                                                 <div class="input-label">Date</div>
-                                                <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required value="<?= $edit["tanggal"]; ?>">
+                                                <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required value="<?= $upd["tanggal"]; ?>">
                                                 </div>
                                             </div>
                                             <div class="input-field">
                                                 <div class="input-label">Type</div>
-                                                <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required value="<?= $edit["tipe"]; ?>">
+                                                <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required value="<?= $upd["tipe"]; ?>">
                                                         <option value="none" selected disabled hidden>Select a type</option>
                                                         <option value="Pengeluaran">Pengeluaran</option>
                                                         <option value="Pemasukkan">Pemasukkan</option>
@@ -198,15 +196,15 @@ if (isset($_POST["submit"])) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="add-btn btn btn-primary" type="submit" name="submit">Submit</button>
+                                        <button class="add-btn btn btn-primary" type="submit" name="update" value="update">Edit</button>
                                     </div>
-                                </form> -->
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    </div>
     </div>
 </body>
 

@@ -4,6 +4,8 @@
 @import "header.css";
 @import "page.css";
 @import "typography.css";
+@import "button.css";
+@import "insert.css";
 * {
     -webkit-font-smoothing: antialiased !important;
     text-rendering: optimizeSpeed !important;
