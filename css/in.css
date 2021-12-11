@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
+@import "variables.css";
 input,
 select {
     width: 100%;
@@ -52,26 +53,62 @@ input:focus {
     outline: 0;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999999;
+}
 
-/* ------------- BUTTON ------------- */
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
 
-.btn {
-    min-width: 114px;
-    height: 56px;
-    padding: 0 24px;
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
     border-radius: 16px;
-    font-size: 14px;
-    font-weight: 600;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
 }
 
-.btn-primary {
-    background: var(--color-primary);
-    color: var(--color-white);
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
 }
 
-.btn-primary:hover {
-    background: var(--color-primary-darker);
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #6c5dd3;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 700px) {
+    .popup {
+        width: 70%;
+    }
 }
