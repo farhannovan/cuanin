@@ -160,7 +160,7 @@ if (isset($_POST["add"])) {
                     </div>
 
                     <!-- Edit -->
-                    <div id="edit" class="overlay">
+                    <!-- <div id="edit" class="overlay">
                         <div class="popup">
                             <h2>Edit Transaction</h2>
                             <a class="close" href="">&times;</a>
@@ -201,7 +201,7 @@ if (isset($_POST["add"])) {
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
