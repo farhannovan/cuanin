@@ -3,7 +3,7 @@ require 'function.php';
 
 $transaksi = query("SELECT * FROM transaksi");
 
-if (isset($_POST["add"])) {
+if (isset($_POST["tambah"])) {
     if (insert($_POST) > 0) {
         echo "
             <script>
@@ -104,7 +104,7 @@ if (isset($_POST["add"])) {
                                 <td class="index"><?= $row["tipe"]; ?></td>
                                 <td class="index"><?= $row["jumlah"]; ?></td>
                                 <td>
-                                    <a href="#edit?id=<?= $row["id"] ?>">Edit</a> |
+                                    <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> |
                                     <a href="delete.php?id=<?= $row["id"]; ?>" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
                                 </td>
                             </tr>
@@ -152,7 +152,7 @@ if (isset($_POST["add"])) {
                                                 </div>
                                             </div>
                                         </div>
-                                        <button class="add-btn btn btn-primary" type="add" name="add">Add Transaction</button>
+                                        <button class="add-btn btn btn-primary" type="submit" name="tambah" value="tambah">Add Transaction</button>
                                     </div>
                                 </form>
                             </div>
