@@ -35,6 +35,7 @@ if (isset($_POST["tambah"])) {
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="stylesheet" media="all" href="css/sales.css" />
+    <link rel="stylesheet" media="all" href="css/input.css" />
 </head>
 
 <body>
@@ -158,58 +159,6 @@ if (isset($_POST["tambah"])) {
                             </div>
                         </div>
                     </div>
-
-                    <!-- Edit -->
-                    <? /*
-                        require "function.php";
-                        $id = $_GET["id"];
-                        $ambildata = mysqli_query($conn, "SELECT * FROM transaksi WHERE id = $id");
-                        $upd = mysqli_fetch_array($ambildata);
-                        */
-                    ?>
-
-                    <!-- <div id="edit" class="overlay">
-                        <div class="popup">
-                            <h2>Edit Transaction</h2>
-                            <a class="close" href="">&times;</a>
-                            <div class="content">
-                                <form action="" method="post">
-                                    <input type="hidden" name="id" value="<?php echo $upd["id"] ?>">
-                                    <div class="input-fieldset">
-                                        <div class="input-row">
-                                            <div class="input-field">
-                                                <div class="input-label">Name</div>
-                                                <div class="input-wrap"><input type="text" name="nama" id="nama" required value="<?php echo $upd["nama"] ?>"></div>
-                                            </div>
-                                            <div class="input-field">
-                                                <div class="input-label">Amount</div>
-                                                <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required vvalue="<?php echo $upd["jumlah"] ?>"></div>
-                                            </div>
-                                        </div>
-                                        <div class="input-row">
-                                            <div class="input-field">
-                                                <div class="input-label">Date</div>
-                                                <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required value="<?php echo $upd["tanggal"] ?>">
-                                                </div>
-                                            </div>
-                                            <div class="input-field">
-                                                <div class="input-label">Type</div>
-                                                <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required value="<?php echo $upd["tipe"] ?>">
-                                                        <option value="none" selected disabled hidden>Select a type</option>
-                                                        <option value="Pengeluaran">Pengeluaran</option>
-                                                        <option value="Pemasukkan">Pemasukkan</option>
-                                                        <option value="Hutang">Hutang</option>
-                                                        <option value="Piutang">Piutang</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="add-btn btn btn-primary" type="submit" name="update" value="update">Edit</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -217,24 +166,3 @@ if (isset($_POST["tambah"])) {
 </body>
 
 </html>
-
-<?php
-/*
-if (isset($_POST["update"])) {
-    $id = $_POST["id"];
-    $nama = $_POST["nama"];
-    $jumlah = $_POST["jumlah"];
-    $tanggal = $_POST["tanggal"];
-    $tipe = $_POST["tipe"];
-
-    mysqli_query($conn, "UPDATE transaksi SET nama = '$nama', jumlah = '$jumlah', tanggal = '$tanggal', tipe = '$tipe' WHERE id = $id") or die(mysqli_error($conn));
-
-    echo "
-        <script>
-            alert('Data berhasil diedit!');
-            document.location.href = 'Sales.php';
-        </script>
-    ";
-}
-*/
-?>
