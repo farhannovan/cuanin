@@ -55,7 +55,7 @@ if (isset($_POST["update"])) {
             <div class="form">
                 <div>
                     <div>
-                        <h4>Edit Data Mahasiswa</h4>
+                        <h4>Edit Data Transaksi</h4>
                         <form action="" method="post">
                             <input type="hidden" name="id" value="<?php echo $upd["id"] ?>">
                             <table>
