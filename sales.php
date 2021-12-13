@@ -163,6 +163,9 @@ if (isset($_POST["tambah"])) {
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById("tipe").selectedIndex = -1;
+    </script>
 </body>
 
 </html>
