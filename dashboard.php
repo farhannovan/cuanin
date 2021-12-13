@@ -1,3 +1,8 @@
+<?php
+require 'function.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -118,7 +123,12 @@
                         </div>
                         <div class="widget-body">
                             <div class="widget-line">
-                                <div class="h4">Rp5.000.000</div>
+                                <?php
+                                $user = "SELECT id FROM transaksi ORDER BY id";
+                                $usr = mysqli_query($conn, $user);
+                                $jml = mysqli_num_rows($usr);
+                                echo "<div class='h4'>$jml Customer</div>";
+                                ?>
                             </div>
                         </div>
                     </div>
