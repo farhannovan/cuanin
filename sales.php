@@ -160,33 +160,41 @@ if (isset($_POST["tambah"])) {
                     </div>
 
                     <!-- Edit -->
+                    <? /*
+                        require "function.php";
+                        $id = $_GET["id"];
+                        $ambildata = mysqli_query($conn, "SELECT * FROM transaksi WHERE id = $id");
+                        $upd = mysqli_fetch_array($ambildata);
+                        */
+                    ?>
+
                     <!-- <div id="edit" class="overlay">
                         <div class="popup">
                             <h2>Edit Transaction</h2>
                             <a class="close" href="">&times;</a>
                             <div class="content">
                                 <form action="" method="post">
-                                    <input type="hidden" name="id" value="<?= $upd["id"]; ?>">
+                                    <input type="hidden" name="id" value="<?php echo $upd["id"] ?>">
                                     <div class="input-fieldset">
                                         <div class="input-row">
                                             <div class="input-field">
                                                 <div class="input-label">Name</div>
-                                                <div class="input-wrap"><input type="text" name="nama" id="nama" required value="<?= $upd["nama"]; ?>"></div>
+                                                <div class="input-wrap"><input type="text" name="nama" id="nama" required value="<?php echo $upd["nama"] ?>"></div>
                                             </div>
                                             <div class="input-field">
                                                 <div class="input-label">Amount</div>
-                                                <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required value="<?= $upd["jumlah"]; ?>"></div>
+                                                <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required vvalue="<?php echo $upd["jumlah"] ?>"></div>
                                             </div>
                                         </div>
                                         <div class="input-row">
                                             <div class="input-field">
                                                 <div class="input-label">Date</div>
-                                                <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required value="<?= $upd["tanggal"]; ?>">
+                                                <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required value="<?php echo $upd["tanggal"] ?>">
                                                 </div>
                                             </div>
                                             <div class="input-field">
                                                 <div class="input-label">Type</div>
-                                                <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required value="<?= $upd["tipe"]; ?>">
+                                                <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required value="<?php echo $upd["tipe"] ?>">
                                                         <option value="none" selected disabled hidden>Select a type</option>
                                                         <option value="Pengeluaran">Pengeluaran</option>
                                                         <option value="Pemasukkan">Pemasukkan</option>
@@ -209,3 +217,24 @@ if (isset($_POST["tambah"])) {
 </body>
 
 </html>
+
+<?php
+/*
+if (isset($_POST["update"])) {
+    $id = $_POST["id"];
+    $nama = $_POST["nama"];
+    $jumlah = $_POST["jumlah"];
+    $tanggal = $_POST["tanggal"];
+    $tipe = $_POST["tipe"];
+
+    mysqli_query($conn, "UPDATE transaksi SET nama = '$nama', jumlah = '$jumlah', tanggal = '$tanggal', tipe = '$tipe' WHERE id = $id") or die(mysqli_error($conn));
+
+    echo "
+        <script>
+            alert('Data berhasil diedit!');
+            document.location.href = 'Sales.php';
+        </script>
+    ";
+}
+*/
+?>
