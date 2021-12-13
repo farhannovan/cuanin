@@ -2,7 +2,7 @@
 require 'function.php';
 
 if (isset($_POST["submit"])) {
-    if (insert($_POST) > 0) {
+    if (input($_POST) > 0) {
         echo "
             <script>
                 alert('Data berhasil ditambahkan!');
@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
         echo "
             <script>
                 alert('Data gagal ditambahkan!');
-                document.location.href = 'insert.php';
+                document.location.href = 'input.php';
             </script>
         ";
     }
@@ -25,14 +25,14 @@ if (isset($_POST["submit"])) {
 
 <head>
     <meta charset="utf-8" />
-    <title>Insert — Cuanin</title>
+    <title>Input — Cuanin</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#fff" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
-    <link rel="stylesheet" href="css/insert.css">
+    <link rel="stylesheet" href="css/input.css">
 </head>
 
 <body>

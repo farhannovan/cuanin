@@ -4,7 +4,7 @@ require 'function.php';
 $transaksi = query("SELECT * FROM transaksi");
 
 if (isset($_POST["tambah"])) {
-    if (insert($_POST) > 0) {
+    if (input($_POST) > 0) {
         echo "
             <script>
                 alert('Data berhasil ditambahkan!');
@@ -15,7 +15,7 @@ if (isset($_POST["tambah"])) {
         echo "
             <script>
                 alert('Data gagal ditambahkan!');
-                document.location.href = 'insert.php';
+                document.location.href = 'input.php';
             </script>
         ";
     }

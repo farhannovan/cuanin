@@ -12,7 +12,7 @@ function query($query)
     return $rows;
 }
 
-function insert($data)
+function input($data)
 {
     global $conn;
     $nama = htmlspecialchars($data["nama"]);

@@ -15,7 +15,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="stylesheet" media="all" href="css/sales.css" />
-    <link rel="stylesheet" media="all" href="css/insert.css" />
+    <link rel="stylesheet" media="all" href="css/input.css" />
 </head>
 
 <body>
