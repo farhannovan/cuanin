@@ -89,7 +89,15 @@ require 'function.php';
                         </div>
                         <div class="widget-body">
                             <div class="widget-line">
-                                <div class="h4">Rp100.570.000</div>
+                                <?php
+                                error_reporting(E_ALL ^ E_NOTICE);
+                                $sales = mysqli_query($conn, "SELECT jumlah FROM transaksi");
+                                while ($result = mysqli_fetch_array($sales)) {
+                                    $total += $result['jumlah'];
+                                }
+                                echo "<div class='h4'>Rp$total</div>";
+                                ?>
+                                <!-- <div class="h4">Rp100.570.000</div> -->
                             </div>
                         </div>
                     </div>
