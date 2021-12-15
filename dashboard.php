@@ -83,7 +83,7 @@ require 'function.php';
                                     <img src="assets/widget-sales.png" alt="" />
                                 </div>
                                 <div class="widget-details">
-                                    <div class="widget-category">Sales</div>
+                                    <div class="widget-category">Transaction</div>
                                 </div>
                             </div>
                         </div>
