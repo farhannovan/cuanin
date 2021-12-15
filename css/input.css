@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import "font.css";
 @import "variables.css";
 * {
     -webkit-font-smoothing: antialiased !important;
