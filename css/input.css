@@ -10,7 +10,7 @@
 input,
 select {
     width: 100%;
-    height: 56px;
+    height: 64px;
     padding: 0 20px;
     border-radius: 8px;
     border: 0;
@@ -55,13 +55,14 @@ select {
     position: relative;
 }
 
-input:focus {
+
+/* input:focus {
     border: 3px solid var(--color-primary);
 }
 
 select:focus {
     border: 3px solid var(--color-primary);
-}
+} */
 
 .overlay {
     position: fixed;

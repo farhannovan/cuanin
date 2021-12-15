@@ -28,7 +28,7 @@ if (isset($_POST["update"])) {
 
 <head>
     <meta charset="utf-8" />
-    <title>Input Transaction — Cuanin</title>
+    <title>Edit Transaction — Cuanin</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#fff" />
