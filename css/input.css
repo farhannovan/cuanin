@@ -119,12 +119,20 @@ select:focus {
 }
 
 @media screen and (max-width: 1024px) {
+    .input-row {
+        display: block;
+        margin: 0 -8px;
+    }
     .popup {
         width: 90%;
     }
 }
 
 @media screen and (max-width: 767px) {
+    .input-row {
+        display: block;
+        margin: 0 -8px;
+    }
     .popup {
         width: 70%;
     }

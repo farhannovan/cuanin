@@ -35,7 +35,6 @@ if (isset($_POST["tambah"])) {
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="stylesheet" media="all" href="css/sales.css" />
-    <link rel="stylesheet" media="all" href="css/input.css" />
 </head>
 
 <body>
@@ -114,15 +113,12 @@ if (isset($_POST["tambah"])) {
                     </table>
 
                     <div class="btn-center">
-                        <button class="btn btn-primary" onclick=" window.location.href='#input'">Add Transaction</button>
+                        <button class="btn btn-primary" onclick=" window.location.href='input.php'">Add Transaction</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById("tipe").selectedIndex = -1;
-    </script>
 </body>
 
 </html>
