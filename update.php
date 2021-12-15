@@ -1,24 +1,25 @@
 <?php
 require 'function.php';
 
-$transaksi = query("SELECT * FROM transaksi");
+$id = $_GET["id"];
+$ambildata = mysqli_query($conn, "SELECT * FROM transaksi WHERE id = $id");
+$upd = mysqli_fetch_array($ambildata);
 
-if (isset($_POST["tambah"])) {
-    if (input($_POST) > 0) {
-        echo "
-            <script>
-                alert('Data berhasil ditambahkan!');
-                document.location.href = 'sales.php';
-            </script>
-        ";
-    } else {
-        echo "
-            <script>
-                alert('Data gagal ditambahkan!');
-                document.location.href = 'input.php';
-            </script>
-        ";
-    }
+if (isset($_POST["update"])) {
+    $id = $_POST["id"];
+    $nama = $_POST["nama"];
+    $jumlah = $_POST["jumlah"];
+    $tanggal = $_POST["tanggal"];
+    $tipe = $_POST["tipe"];
+
+    mysqli_query($conn, "UPDATE transaksi SET nama = '$nama', jumlah = '$jumlah', tanggal = '$tanggal', tipe = '$tipe' WHERE id = $id") or die(mysqli_error($conn));
+
+    echo "
+        <script>
+            alert('Data berhasil diedit!');
+            document.location.href = 'Sales.php';
+        </script>
+    ";
 }
 ?>
 
@@ -86,26 +87,27 @@ if (isset($_POST["tambah"])) {
                 <div class="sale-container">
                     <div class="sale-stage h5 mobile-show"><strong>Input Transaction</strong></div>
                     <form action="" method="post">
+                        <input type="hidden" name="id" value="<?php echo $upd["id"] ?>">
                         <div class="input-fieldset">
                             <div class="input-row">
                                 <div class="input-field">
                                     <div class="input-label">Name</div>
-                                    <div class="input-wrap"><input type="text" name="nama" id="nama" required></div>
+                                    <div class="input-wrap"><input type="text" name="nama" id="nama" required value="<?php echo $upd["nama"] ?>"></div>
                                 </div>
                                 <div class="input-field">
                                     <div class="input-label">Amount</div>
-                                    <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required></div>
+                                    <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required value="<?php echo $upd["jumlah"] ?>"></div>
                                 </div>
                             </div>
                             <div class="input-row">
                                 <div class="input-field">
                                     <div class="input-label">Date</div>
-                                    <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required>
+                                    <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required value="<?php echo $upd["tanggal"] ?>">
                                     </div>
                                 </div>
                                 <div class="input-field">
                                     <div class="input-label">Type</div>
-                                    <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required>
+                                    <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required value="<?php echo $upd["tipe"] ?>">
                                             <!-- <option value="none" selected disabled hidden>Select a type</option> -->
                                             <option value="Pengeluaran">Pengeluaran</option>
                                             <option value="Pemasukan">Pemasukan</option>
@@ -116,7 +118,7 @@ if (isset($_POST["tambah"])) {
                                 </div>
                             </div>
                             <div class="btn-right">
-                                <button class="btn btn-primary" type="submit" name="tambah" value="tambah">Add Transaction</button>
+                                <button class="btn btn-primary" type="submit" name="update" value="update">Update Transaction</button>
                             </div>
                         </div>
                     </form>
@@ -124,9 +126,6 @@ if (isset($_POST["tambah"])) {
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById("tipe").selectedIndex = -1;
-    </script>
 </body>
 
 </html>
