@@ -2,8 +2,8 @@
 require 'function.php';
 
 $id = $_GET["id"];
-$ambildata = mysqli_query($conn, "SELECT * FROM transaksi WHERE id = $id");
-$upd = mysqli_fetch_array($ambildata);
+$update = mysqli_query($conn, "SELECT * FROM transaksi WHERE id = $id");
+$upd = mysqli_fetch_array($update);
 
 if (isset($_POST["update"])) {
     $id = $_POST["id"];
