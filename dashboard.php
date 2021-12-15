@@ -82,7 +82,7 @@ require 'function.php';
                                     <img src="assets/widget-sales.png" alt="" />
                                 </div>
                                 <div class="widget-details">
-                                    <div class="widget-category">Sales</div>
+                                    <div class="widget-category">Transaction</div>
                                 </div>
                             </div>
                         </div>
@@ -93,8 +93,9 @@ require 'function.php';
                                 $sales = mysqli_query($conn, "SELECT jumlah FROM transaksi");
                                 while ($result = mysqli_fetch_array($sales)) {
                                     $total += $result['jumlah'];
+                                    $rupiah = rupiah($total);
                                 }
-                                echo "<div class='h4'>Rp$total</div>";
+                                echo "<div class='h4'>$rupiah</div>";
                                 ?>
                                 <!-- <div class="h4">Rp100.570.000</div> -->
                             </div>
