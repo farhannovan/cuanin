@@ -1,6 +1,5 @@
 <?php
 require 'function.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -90,7 +89,7 @@ require 'function.php';
                         <div class="widget-body">
                             <div class="widget-line">
                                 <?php
-                                error_reporting(E_ALL ^ E_NOTICE);
+                                error_reporting(0);
                                 $sales = mysqli_query($conn, "SELECT jumlah FROM transaksi");
                                 while ($result = mysqli_fetch_array($sales)) {
                                     $total += $result['jumlah'];
