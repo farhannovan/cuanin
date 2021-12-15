@@ -85,7 +85,7 @@ if (isset($_POST["update"])) {
             <!-- Content -->
             <div class="sale">
                 <div class="sale-container">
-                    <div class="sale-stage h5 mobile-show"><strong>Input Transaction</strong></div>
+                    <div class="sale-stage h5 mobile-show"><strong>Edit Transaction</strong></div>
                     <form action="" method="post">
                         <input type="hidden" name="id" value="<?php echo $upd["id"] ?>">
                         <div class="input-fieldset">
@@ -118,7 +118,7 @@ if (isset($_POST["update"])) {
                                 </div>
                             </div>
                             <div class="btn-right">
-                                <button class="btn btn-primary" type="submit" name="update" value="update">Update Transaction</button>
+                                <button class="btn btn-primary" type="submit" name="update" value="update">Save</button>
                             </div>
                         </div>
                     </form>
