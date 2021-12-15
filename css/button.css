@@ -19,14 +19,17 @@
     background: var(--color-primary-darker);
 }
 
-
-/* --------- HISTORY BUTTON --------- */
-
-.add {
+.btn-center {
     margin-top: 32px;
     text-align: center;
 }
 
-.add-btn {
-    position: relative;
+.btn-right {
+    margin-top: 32px;
+    text-align: right;
 }
+
+
+/* .add-btn {
+    position: relative;
+} */
