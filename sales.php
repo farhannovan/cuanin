@@ -113,51 +113,8 @@ if (isset($_POST["tambah"])) {
                         <?php endforeach; ?>
                     </table>
 
-                    <div class="add">
-                        <button class="add-btn btn btn-primary" onclick=" window.location.href='#input'">Add Transaction</button>
-                    </div>
-
-                    <!-- Input -->
-                    <div id="input" class="overlay">
-                        <div class="popup">
-                            <h2>Add Transaction</h2>
-                            <a class="close" href="">&times;</a>
-                            <div class="content">
-                                <form action="" method="post">
-                                    <div class="input-fieldset">
-                                        <div class="input-row">
-                                            <div class="input-field">
-                                                <div class="input-label">Name</div>
-                                                <div class="input-wrap"><input type="text" name="nama" id="nama" required></div>
-                                            </div>
-                                            <div class="input-field">
-                                                <div class="input-label">Amount</div>
-                                                <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required></div>
-                                            </div>
-                                        </div>
-                                        <div class="input-row">
-                                            <div class="input-field">
-                                                <div class="input-label">Date</div>
-                                                <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required>
-                                                </div>
-                                            </div>
-                                            <div class="input-field">
-                                                <div class="input-label">Type</div>
-                                                <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required>
-                                                        <!-- <option value="none" selected disabled hidden>Select a type</option> -->
-                                                        <option value="Pengeluaran">Pengeluaran</option>
-                                                        <option value="Pemasukan">Pemasukan</option>
-                                                        <option value="Hutang">Hutang</option>
-                                                        <option value="Piutang">Piutang</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="add-btn btn btn-primary" type="submit" name="tambah" value="tambah">Add Transaction</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                    <div class="btn-center">
+                        <button class="btn btn-primary" onclick=" window.location.href='#input'">Add Transaction</button>
                     </div>
                 </div>
             </div>
