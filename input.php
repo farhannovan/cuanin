@@ -1,5 +1,25 @@
 <?php
+require 'function.php';
 
+$transaksi = query("SELECT * FROM transaksi");
+
+if (isset($_POST["tambah"])) {
+    if (input($_POST) > 0) {
+        echo "
+            <script>
+                alert('Data berhasil ditambahkan!');
+                document.location.href = 'sales.php';
+            </script>
+        ";
+    } else {
+        echo "
+            <script>
+                alert('Data gagal ditambahkan!');
+                document.location.href = 'input.php';
+            </script>
+        ";
+    }
+}
 ?>
 
 <!DOCTYPE html>
