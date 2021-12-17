@@ -30,6 +30,7 @@ nav {
     padding: 0;
     border: 0;
     vertical-align: baseline;
+    overflow: hidden;
 }
 
 html {
@@ -219,6 +220,7 @@ button {
 .login-preview {
     pointer-events: none;
     max-width: 600px;
+    overflow: visible;
 }
 
 .login-preview img {
@@ -269,6 +271,7 @@ button {
     -webkit-transition: color 0.2s;
     -o-transition: color 0.2s;
     transition: color 0.2s;
+    cursor: pointer;
 }
 
 .login-link:hover {

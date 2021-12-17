@@ -1,34 +1,87 @@
-<?php
-session_start();
-$namaServer = "localhost";
-$namaPengguna = "root";
-$password = "";
-$db_name = "cuanin";
+<!DOCTYPE html>
+<html lang="en">
 
-$link = mysqli_connect($namaServer, $namaPengguna, $password);
-mysqli_select_db($link, $db_name);
+<head>
+    <meta charset="utf-8" />
+    <title>Sign Up — Cuanin</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#fff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="stylesheet" media="all" href="css/style.css" />
+</head>
 
-if (isset($_POST['submit'])) {
-  $username = mysqli_real_escape_string($link, $_POST['user']);
-  $password = mysqli_real_escape_string($link, $_POST['pass']);
-  $nohp = mysqli_real_escape_string($link, $_POST['nohp']);
-  $toko = mysqli_real_escape_string($link, $_POST['toko']);
-  $email = mysqli_real_escape_string($link, $_POST['email']);
-  $repass = mysqli_real_escape_string($link, $_POST['repass']);
-  // $pass = hash($pass);
+<body scroll="no">
+    <div class="login">
+        <div class="login-row">
+            <div class="login-col">
+                <a class="login-logo" href="landing.html"><img src="assets/logo-white.png" alt="Cuanin" /></a>
+                <h1 class="login-title h1">Make your <br />business more <br />powerfull</h1>
+                <div class="login-preview">
+                    <img src="assets/bg-signup.png" alt="gambar signup">
+                </div>
+            </div>
 
-  if ($repass != $password) {
-    echo '<script> alert ("Password yang dimasukan berbeda")</script>';
-    header("Refresh:0; url=signup.html");
-  } else {
-    $sql = "INSERT INTO user (noHp,username,password,nama_toko,email) VALUES ('$nohp','$username','$password','$toko','$email')";
-    $result = mysqli_query($link, $sql);
-    if ($result) {
-      session_start();
-      $_SESSION['username'] = $username;
-      header('location:signin.html');
-    } else {
-      echo "Cek data anda";
-    }
-  }
-}
+            <!-- Form -->
+            <div class="login-col">
+                <a class="login-logo"><img src="assets/logo-sm.svg" alt="" /></a>
+                <form action="register.php" method="post">
+                    <div class="login-form">
+                        <div class="login-stage h4">Create an Account</div>
+                        <div class="login-field">
+                            <div class="field-label">Full Name</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="text" name="user" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">Email</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="email" name="email" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">No. HP</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="text" name="nohp" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">Store</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="text" name="toko" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">Password</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="password" name="pass" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">Confirm Password</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="password" name="repass" />
+                            </div>
+                        </div>
+                        <!-- <a class="btn btn-primary btn-wide" href="signin.php">Sign Up</a> -->
+                        <button class="btn btn-primary btn-wide" type="submit" name="submit">Sign
+                            Up</button>
+                        <div class="login-flex">
+                            <a class="login-link" href="signin.php">Already have account?</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function goTo() {
+            location.replace("index.html");
+        }
+    </script>
+</body>
+
+</html>
