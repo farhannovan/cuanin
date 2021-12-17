@@ -67,9 +67,12 @@ html {
     box-sizing: border-box;
 }
 
-a,
-a:visited {
+a {
     text-decoration: none;
+}
+
+a:hover {
+    color: black;
 }
 
 a,

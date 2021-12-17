@@ -104,8 +104,8 @@ if (isset($_POST["tambah"])) {
                                 <td class="index"><?= $row["tipe"]; ?></td>
                                 <td class="index"><?= $row["jumlah"]; ?></td>
                                 <td>
-                                    <a href="update.php?id=<?= $row["id"] ?>">Edit</a> |
-                                    <a href="delete.php?id=<?= $row["id"]; ?>" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
+                                    <a href="update.php?id=<?= $row["id"] ?>" style="color: var(--color-primary);">Edit</a> |
+                                    <a href="delete.php?id=<?= $row["id"]; ?>" style="color: var(--color-primary); onclick=" return confirm('Yakin ingin menghapus data?')">Delete</a>
                                 </td>
                             </tr>
                             <?php $i++; ?>
