@@ -90,8 +90,8 @@ require 'function.php';
                             <div class="widget-line">
                                 <?php
                                 error_reporting(0);
-                                $sales = mysqli_query($conn, "SELECT jumlah FROM transaksi");
-                                while ($result = mysqli_fetch_array($sales)) {
+                                $transaction = mysqli_query($conn, "SELECT jumlah FROM transaksi");
+                                while ($result = mysqli_fetch_array($transaction)) {
                                     $total += $result['jumlah'];
                                     $rupiah = rupiah($total);
                                 }
