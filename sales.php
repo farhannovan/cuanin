@@ -105,7 +105,7 @@ if (isset($_POST["tambah"])) {
                                     <td data-label="Type" class="index"><?= $row["tipe"]; ?></td>
                                     <td data-label="Amount" class="index"><?= $row["jumlah"]; ?></td>
                                     <td data-label="Action">
-                                        <a href="update.php?id=<?= $row["id"] ?>">Edit</a> |
+                                        <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> |
                                         <a href="delete.php?id=<?= $row["id"]; ?>" onclick=" return confirm('Yakin ingin menghapus data?')">Delete</a>
                                     </td>
                                 </tr>
