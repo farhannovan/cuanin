@@ -17,7 +17,7 @@ if (isset($_POST["update"])) {
     echo "
         <script>
             alert('Data berhasil diedit!');
-            document.location.href = 'Sales.php';
+            document.location.href = 'sales.php';
         </script>
     ";
 }
