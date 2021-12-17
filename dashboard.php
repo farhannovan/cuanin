@@ -1,5 +1,12 @@
 <?php
+session_start();
 require 'function.php';
+if (empty($_SESSION['username'])) {
+    echo '<script language="javascript">';
+    echo 'alert("belum login bro ?")';
+    header("Refresh:0; url=signin.html");
+    echo '</script>';
+}
 ?>
 
 <!DOCTYPE html>
