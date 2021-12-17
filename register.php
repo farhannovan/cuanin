@@ -19,14 +19,14 @@ if (isset($_POST['submit'])) {
 
   if ($repass != $password) {
     echo '<script> alert ("Password yang dimasukan berbeda")</script>';
-    header("Refresh:0; url=signup.html");
+    header("Refresh:0; url=register.html");
   } else {
     $sql = "INSERT INTO user (noHp,username,password,nama_toko,email) VALUES ('$nohp','$username','$password','$toko','$email')";
     $result = mysqli_query($link, $sql);
     if ($result) {
       session_start();
       $_SESSION['username'] = $username;
-      header('location:signin.html');
+      header('location:login.html');
     } else {
       echo "Cek data anda";
     }
