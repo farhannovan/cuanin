@@ -50,7 +50,7 @@ require 'function.php';
                         </div>
                         <div class="sidebar-text">Settings</div>
                     </a>
-                    <a class="sidebar-item" href="logout.php">
+                    <a class="sidebar-item" href="signout.php">
                         <div class="sidebar-icon">
                             <svg class="icon icon-home" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
                                 <g>
