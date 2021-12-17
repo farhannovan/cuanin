@@ -62,7 +62,7 @@
                                 </g>
                             </svg>
                         </div>
-                        <div class="sidebar-text">Log Out</div>
+                        <div class="sidebar-text">Sign Out</div>
                     </a>
                 </nav>
             </div>
