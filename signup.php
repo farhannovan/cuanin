@@ -1,3 +1,39 @@
+<?php
+session_start();
+$namaServer = "localhost";
+$namaPengguna = "root";
+$password = "";
+$db_name = "cuanin";
+
+$link = mysqli_connect($namaServer, $namaPengguna, $password);
+mysqli_select_db($link, $db_name);
+
+if (isset($_POST['submit'])) {
+    $username = mysqli_real_escape_string($link, $_POST['user']);
+    $password = mysqli_real_escape_string($link, $_POST['pass']);
+    $nohp = mysqli_real_escape_string($link, $_POST['nohp']);
+    $toko = mysqli_real_escape_string($link, $_POST['toko']);
+    $email = mysqli_real_escape_string($link, $_POST['email']);
+    $repass = mysqli_real_escape_string($link, $_POST['repass']);
+    // $pass = hash($pass);
+
+    if ($repass != $password) {
+        echo '<script> alert ("Password yang dimasukan berbeda")</script>';
+        header("Refresh:0; url=signup.php");
+    } else {
+        $sql = "INSERT INTO user (noHp,username,password,nama_toko,email) VALUES ('$nohp','$username','$password','$toko','$email')";
+        $result = mysqli_query($link, $sql);
+        if ($result) {
+            session_start();
+            $_SESSION['username'] = $username;
+            header('location:signin.php');
+        } else {
+            echo "Cek data anda";
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +63,7 @@
             <!-- Form -->
             <div class="login-col">
                 <a class="login-logo"><img src="assets/logo-sm.svg" alt="" /></a>
-                <form action="register.php" method="post">
+                <form action="" method="post">
                     <div class="login-form">
                         <div class="login-stage h4">Create an Account</div>
                         <div class="login-field">
