@@ -1,18 +1,20 @@
-*{
-    font-family:'Poppins', sans-serif;
+* {
+    font-family: "Poppins", sans-serif;
 }
+
 ::selection {
     color: #ff4fc4;
     background: #ffed9d;
-  }
-body{
+}
+
+body {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    background-image: linear-gradient(90deg,#ffffff,#e8f7ff,#ffffff)
-
+    background-image: linear-gradient(90deg, #ffffff, #e8f7ff, #ffffff);
 }
-.container{
+
+.container {
     max-width: 95%;
     margin: 40px auto;
     display: flex;
@@ -23,52 +25,58 @@ body{
 .container .left {
     padding: 0px 30px;
     width: 60%;
-    background-image: linear-gradient(45deg,#d080ff,#6c5dd3);
+    background-image: linear-gradient(45deg, #d080ff, #6c5dd3);
 }
-.container .left .nama p{
+
+.container .left .nama p {
     color: white;
     font-size: 30px;
 }
-.container .left .nama span{
-    color:white;
+
+.container .left .nama span {
+    color: white;
 }
-.container .left .gambar{
+
+.container .left .gambar {
     display: flex;
     justify-content: center;
 }
-.container .left .gambar img{
+
+.container .left .gambar img {
     width: 60%;
     animation: upDown 5s infinite ease;
 }
+
 @keyframes upDown {
-    0%, 100%{
+    0%,
+    100% {
         transform: translateY(0px);
     }
-    50%{
+    50% {
         transform: translateY(-15px);
     }
 }
 
-.container .left .tulisan{
+.container .left .tulisan {
     color: white;
     text-align: center;
 }
-.container .right{
+
+.container .right {
     display: block;
     width: 40%;
     text-align: center;
     padding: 70px 0px;
     background-color: white;
-    
 }
-.container .right .form form{
+
+.container .right .form form {
     display: block;
     justify-content: center;
-    padding: 60px ;
-    
-    
+    padding: 60px;
 }
-.container .right .form input{
+
+.container .right .form input {
     text-align: center;
     border: none;
     background-color: rgba(208, 128, 255, 0.241);
@@ -76,73 +84,75 @@ body{
     padding: 20px 0px 20px 0px;
     border-radius: 15px;
     margin-bottom: 25px;
-    
-    
 }
-.container .right .form .btn{
+
+.container .right .form .btn {
     color: rgb(255, 255, 255);
     background-color: rgb(208, 128, 255);
-    font-weight:600;
-    
+    font-weight: 600;
 }
-.container .right .form .btn:hover{
+
+.container .right .form .btn:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.05);
 }
-.container .right .kaki{
+
+.container .right footer {
     padding: 0px 60px;
-    
 }
-.container .right .kaki input{
+
+.container .right footer input {
     color: white;
     text-decoration: none;
     width: 70%;
     background-color: rgb(208, 128, 255);
     border-radius: 15px;
-    border:none;
+    border: none;
     font-weight: 600;
     padding: 20px 0px 20px 0px;
 }
 
-.container .right .kaki input:hover{
+.container .right footer input:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.05);
 }
-@media (max-width:1300px) {
+
+@media (max-width: 1300px) {
     .container {
         display: block;
     }
-    .container .left{
+    .container .left {
         width: 95%;
     }
-    .container .right{
+    .container .right {
         width: 100%;
     }
-    .container .right .form input{
+    .container .right .form input {
         width: 60%;
     }
 }
-@media (max-width:960px){
-    .container{
+
+@media (max-width: 960px) {
+    .container {
         display: block;
     }
-    .container .left{
+    .container .left {
         width: 93%;
         position: absolute;
         visibility: hidden;
     }
-    .container .right{
+    .container .right {
         width: 100%;
     }
     .container .right .form input {
         width: 100%;
     }
-    #back{
+    #back {
         width: 100%;
     }
 }
-#mirror{
-    
+
+#mirror {
     -webkit-transform: scale(-1, -1);
     transform: scale(-1, -1);
 }
