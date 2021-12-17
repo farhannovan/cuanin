@@ -84,30 +84,32 @@ if (isset($_POST["tambah"])) {
             <!-- Content -->
             <div class="sale">
                 <div class="sale-container">
-                    <div class="sale-stage h5 mobile-show">History</div>
+                    <div class="sale-stage h5 mobile-show">History Transaction</div>
                     <table cellspacing="0" cellpadding="0">
-                        <tr>
+                        <thead>
                             <th>No. </th>
                             <th>Name</th>
                             <th>Date</th>
                             <th>Type</th>
                             <th>Amount</th>
                             <th>Action</th>
-                        </tr>
+                        </thead>
 
                         <?php $i = 1 ?>
                         <?php foreach ($transaksi as $row) : ?>
-                            <tr>
-                                <td class="index"><?= $i; ?></td>
-                                <td class="index"><?= $row["nama"]; ?></td>
-                                <td class="index"><?= $row["tanggal"]; ?></td>
-                                <td class="index"><?= $row["tipe"]; ?></td>
-                                <td class="index"><?= $row["jumlah"]; ?></td>
-                                <td>
-                                    <a href="update.php?id=<?= $row["id"] ?>" style="color: var(--color-primary);">Edit</a> |
-                                    <a href="delete.php?id=<?= $row["id"]; ?>" style="color: var(--color-primary) onclick=" return confirm('Yakin ingin menghapus data?')">Delete</a>
-                                </td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td data-label="No." class="index"><?= $i; ?></td>
+                                    <td data-label="Nama" class="index"><?= $row["nama"]; ?></td>
+                                    <td data-label="Date" class="index"><?= $row["tanggal"]; ?></td>
+                                    <td data-label="Type" class="index"><?= $row["tipe"]; ?></td>
+                                    <td data-label="Amount" class="index"><?= $row["jumlah"]; ?></td>
+                                    <td data-label="Action">
+                                        <a href="update.php?id=<?= $row["id"] ?>">Edit</a> |
+                                        <a href="delete.php?id=<?= $row["id"]; ?>" onclick=" return confirm('Yakin ingin menghapus data?')">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
                             <?php $i++; ?>
                         <?php endforeach; ?>
                     </table>
