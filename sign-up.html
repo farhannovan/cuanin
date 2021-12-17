@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Sign Up — Cuanin</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#fff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="stylesheet" media="all" href="css/style.css" />
+</head>
+
+<body>
+    <div class="login">
+        <div class="login-row">
+            <div class="login-col">
+                <a class="login-logo" href="landing.html"><img src="assets/logo-white.png" alt="Cuanin" /></a>
+                <h1 class="login-title h1">Make your <br />business more <br />powerfull</h1>
+                <div class="login-preview"><img src="assets/figures-2.png" alt="" /></div>
+            </div>
+
+            <!-- Form -->
+            <div class="login-col">
+                <a class="login-logo"><img src="assets/logo-sm.svg" alt="" /></a>
+                <form action="signup.php" method="post">
+                    <div class="login-form">
+                        <div class="login-stage h4">Create an Account</div>
+                        <div class="login-field">
+                            <div class="field-label">Full Name</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="text" name="user" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">Email</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="email" name="email" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">No. HP</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="text" name="nohp" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">Store</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="text" name="toko" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">Password</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="password" name="pass" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">Confirm Password</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="password" name="repass" />
+                            </div>
+                        </div>
+                        <!-- <a class="btn btn-primary btn-wide" href="sign-in.html">Sign Up</a> -->
+                        <button class="btn btn-primary btn-wide" type="submit" name="submit">Sign Up</button>
+                        <div class="login-flex">
+                            <button class="login-link" id="back" type="submit" value="Back" onclick="goTo()">Back</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function goTo() {
+            location.replace("index.html");
+        }
+    </script>
+</body>
+
+</html>
