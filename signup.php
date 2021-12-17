@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     if ($result) {
       session_start();
       $_SESSION['username'] = $username;
-      header('location:sign-in.html');
+      header('location:signin.html');
     } else {
       echo "Cek data anda";
     }
