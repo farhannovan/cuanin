@@ -1,3 +1,36 @@
+<?php
+session_start();
+$namaServer = "localhost";
+$namaPengguna = "root";
+$password = "";
+$db_name = "cuanin";
+
+$link = mysqli_connect($namaServer, $namaPengguna, $password);
+mysqli_select_db($link, $db_name);
+
+// menangkap data yang dikirim dari form login
+$username = $_POST['user'];
+$password = $_POST['pass'];
+
+// menyeleksi data user dengan username dan password yang sesuai
+$login = mysqli_query($link, "SELECT * FROM user WHERE username='$username' and password='$password'");
+// menghitung jumlah data yang ditemukan
+$cek = mysqli_num_rows($login);
+
+// cek apakah username dan password di temukan pada database
+if ($cek > 0) {
+
+    $data = mysqli_fetch_assoc($login);
+    $_SESSION['username'] = $username;
+    header('location:dashboard.php');
+} else {
+    echo '<script language="javascript">';
+    echo 'alert("Password atau Username yang dimasukan salah")';
+    echo '</script>';
+    header("Refresh:0; url=signin.html");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +60,7 @@
             <!-- Form -->
             <div class="login-col">
                 <a class="login-logo"><img src="assets/logo-sm.svg" alt="" /></a>
-                <form action="signin.php" method="post">
+                <form action="" method="post">
                     <div class="login-form">
                         <div class="login-stage h4">Sign in to Cuanin</div>
                         <div class="login-field">
@@ -42,17 +75,17 @@
                                 <input class="field-input" type="password" name="pass" />
                             </div>
                         </div>
-                        <div class="login-links text-right">
+                        <!-- <div class="login-links text-right">
                             <a class="login-link" href="#">Forgot Password?</a>
-                        </div>
+                        </div> -->
                         <!-- <a class="btn btn-primary btn-wide" type="submit" name="submit" href="dashboard.html">Sign
                             in</a> -->
-                        <button class="btn btn-primary btn-wide" type="submit" name="submit">sign-in</button>
+                        <button class="btn btn-primary btn-wide" type="submit" name="submit">Sign In</button>
                         <div class="login-flex">
                             <div class="login-text">Not a member?</div>
                             <!-- <a class="login-link" href="sign-up.html">Click here to sign up</a> -->
-                            <button class="login-link" type="submit" name="signup" id="" onclick="goTo2()">Click here to
-                                signup</button>
+                            <a class="login-link" type="submit" name="signup" id="" onclick="goTo2()">Click here to
+                                signup</a>
                         </div>
                     </div>
                 </form>
@@ -61,7 +94,7 @@
     </div>
     <script>
         function goTo2() {
-            location.replace("signup.html");
+            location.replace("sign-up.html");
         }
 
         function back() {

@@ -1,3 +1,39 @@
+<?php
+session_start();
+$namaServer = "localhost";
+$namaPengguna = "root";
+$password = "";
+$db_name = "cuanin";
+
+$link = mysqli_connect($namaServer, $namaPengguna, $password);
+mysqli_select_db($link, $db_name);
+
+if (isset($_POST['submit'])) {
+    $username = mysqli_real_escape_string($link, $_POST['user']);
+    $password = mysqli_real_escape_string($link, $_POST['pass']);
+    $nohp = mysqli_real_escape_string($link, $_POST['nohp']);
+    $toko = mysqli_real_escape_string($link, $_POST['toko']);
+    $email = mysqli_real_escape_string($link, $_POST['email']);
+    $repass = mysqli_real_escape_string($link, $_POST['repass']);
+    // $pass = hash($pass);
+
+    if ($repass != $password) {
+        echo '<script> alert ("Password yang dimasukan berbeda")</script>';
+        header("Refresh:0; url=signup.html");
+    } else {
+        $sql = "INSERT INTO user (noHp,username,password,nama_toko,email) VALUES ('$nohp','$username','$password','$toko','$email')";
+        $result = mysqli_query($link, $sql);
+        if ($result) {
+            session_start();
+            $_SESSION['username'] = $username;
+            header('location:sign-in.html');
+        } else {
+            echo "Cek data anda";
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +49,7 @@
     <link rel="stylesheet" media="all" href="css/style.css" />
 </head>
 
-<body>
+<body scroll="no">
     <div class="login">
         <div class="login-row">
             <div class="login-col">
@@ -27,7 +63,7 @@
             <!-- Form -->
             <div class="login-col">
                 <a class="login-logo"><img src="assets/logo-sm.svg" alt="" /></a>
-                <form action="signup.php" method="post">
+                <form action="" method="post">
                     <div class="login-form">
                         <div class="login-stage h4">Create an Account</div>
                         <div class="login-field">
@@ -67,9 +103,10 @@
                             </div>
                         </div>
                         <!-- <a class="btn btn-primary btn-wide" href="sign-in.html">Sign Up</a> -->
-                        <button class="btn btn-primary btn-wide" type="submit" name="submit">Sign Up</button>
+                        <button class="btn btn-primary btn-wide" type="submit" name="submit">Sign
+                            Up</button>
                         <div class="login-flex">
-                            <button class="login-link" id="back" type="submit" value="Back" onclick="goTo()">Back</button>
+                            <a class="login-link" href="sign-in.html">Already have account?</a>
                         </div>
                     </div>
                 </form>
