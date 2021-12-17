@@ -13,6 +13,13 @@
     font-family: "Poppins", sans-serif !important;
 }
 
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
 html,
 body,
 div,
@@ -38,15 +45,12 @@ a img {
 button {
     cursor: pointer;
     background: none;
-}
-
-button::-moz-focus-inner {
+    margin: 0;
     padding: 0;
     border: 0;
 }
 
-button {
-    margin: 0;
+button::-moz-focus-inner {
     padding: 0;
     border: 0;
 }
@@ -63,14 +67,8 @@ html {
     box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-
-a {
+a,
+a:visited {
     text-decoration: none;
 }
 
