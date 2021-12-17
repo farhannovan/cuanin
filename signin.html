@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <title>Cuanin</title>
+    <link rel="stylesheet" href="css/signin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="nama">
+                <p>Cuan<span>in</span></p>
+            </div>
+            <div class="gambar">
+                <img src="assets/bg2.png" alt="gambar-2">
+            </div>
+            <div class="tulisan">
+                <h2>We are here to help you on your work</h2>
+                <p>Get ready to take off</p>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Welcome</h2>
+            <h4>Sign in to your account</h4>
+            <div class="form">
+
+                <form action="signin.php" method="post">
+                    <div class="txtfld">
+                        <label for="username">Username</label>
+                        <br>
+                        <input type="text" name="user" placeholder="Username"></td>
+                        </tr>
+                    </div>
+                    <div class="txtfld">
+                        <label for="password">Password</label>
+                        <br>
+                        <input type="password" name="pass" placeholder="Password"></td>
+                        </tr>
+                    </div>
+                    <input class="btn" type="submit" value="Login" name="submit" id="">
+                    <p>Dont have an account?</p>
+                </form>
+
+                <div class="kaki">
+                    <input type="submit" value="Sign Up" name="signup" id="" onclick="goTo2()">
+                    <input id="back" type="submit" value="Back" onclick="back()">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function goTo2() {
+            location.replace("signup.html");
+        }
+
+        function back() {
+            location.replace("index.html");
+        }
+    </script>
+</body>
+
+</html>
