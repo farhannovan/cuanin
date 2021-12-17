@@ -217,15 +217,23 @@ button {
 }
 
 .login-preview {
-    position: absolute;
-    top: 270px;
-    left: -370px;
-    width: 1380px;
     pointer-events: none;
+    max-width: 600px;
 }
 
 .login-preview img {
     width: 100%;
+    animation: upDown 5s infinite ease;
+}
+
+@keyframes upDown {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 .login-form {
