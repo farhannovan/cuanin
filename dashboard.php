@@ -1,6 +1,7 @@
 <?php
-session_start();
 require 'function.php';
+/* ------------- SESSION ------------ */
+session_start();
 if (empty($_SESSION['username'])) {
     echo '<script language="javascript">';
     echo 'alert("belum login bro ?")';
