@@ -129,13 +129,19 @@ if (empty($_SESSION['username'])) {
                                     <img src="assets/widget-revenue.png" alt="" />
                                 </div>
                                 <div class="widget-details">
-                                    <div class="widget-category">Revenue</div>
+                                    <div class="widget-category">Admin</div>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-body">
                             <div class="widget-line">
-                                <div class="h4">Rp16.500.000</div>
+                                <?php
+                                $admin = "SELECT id FROM user ORDER BY id";
+                                $adm = mysqli_query($conn, $admin);
+                                $jml = mysqli_num_rows($adm);
+                                echo "<div class='h4'>$jml Admin</div>";
+                                ?>
+                                <!-- <div class="h4">Rp16.500.000</div> -->
                             </div>
                         </div>
                     </div>
@@ -146,17 +152,17 @@ if (empty($_SESSION['username'])) {
                                     <img src="assets/widget-customer.png" alt="" />
                                 </div>
                                 <div class="widget-details">
-                                    <div class="widget-category">Customer</div>
+                                    <div class="widget-category">Transaction</div>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-body">
                             <div class="widget-line">
                                 <?php
-                                $user = "SELECT id FROM transaksi ORDER BY id";
-                                $usr = mysqli_query($conn, $user);
-                                $jml = mysqli_num_rows($usr);
-                                echo "<div class='h4'>$jml Customer</div>";
+                                $transaksi = "SELECT id FROM transaksi ORDER BY id";
+                                $trans = mysqli_query($conn, $transaksi);
+                                $jml = mysqli_num_rows($trans);
+                                echo "<div class='h4'>$jml Transaction</div>";
                                 ?>
                             </div>
                         </div>
