@@ -9,10 +9,10 @@ $link = mysqli_connect($namaServer, $namaPengguna, $password);
 mysqli_select_db($link, $db_name);
 
 if (isset($_POST['submit'])) {
-    $nama = mysqli_real_escape_string($link, $_POST['nama']);
+    $fullname = mysqli_real_escape_string($link, $_POST['fullname']);
     $username = mysqli_real_escape_string($link, $_POST['username']);
     $email = mysqli_real_escape_string($link, $_POST['email']);
-    $noHp = mysqli_real_escape_string($link, $_POST['noHp']);
+    $no_hp = mysqli_real_escape_string($link, $_POST['no_hp']);
     $password = mysqli_real_escape_string($link, $_POST['password']);
     $repass = mysqli_real_escape_string($link, $_POST['repass']);
     // $pass = hash($pass);
@@ -21,8 +21,8 @@ if (isset($_POST['submit'])) {
         echo '<script> alert ("Password yang dimasukan berbeda")</script>';
         header("Refresh:0; url=signup.php");
     } else {
-        // $sql = "INSERT INTO user (noHp,username,password,nama,email) VALUES ('$nohp','$username','$password','$nama','$email')";
-        $sql = "INSERT INTO user (nama,username,noHp,email,password) VALUES ('$nama','$username','$noHp','$email','$password')";
+        // $sql = "INSERT INTO user (no_hp,username,password,fullname,email) VALUES ('$no_hp','$username','$password','$fullname','$email')";
+        $sql = "INSERT INTO user (fullname,username,no_hp,email,password) VALUES ('$fullname','$username','$no_hp','$email','$password')";
         $result = mysqli_query($link, $sql);
         if ($result) {
             session_start();
@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
                         <div class="login-field">
                             <div class="field-label">Full Name</div>
                             <div class="field-wrap">
-                                <input class="field-input" type="text" name="nama" />
+                                <input class="field-input" type="text" name="fullname" />
                             </div>
                         </div>
                         <div class="login-field">
@@ -82,7 +82,7 @@ if (isset($_POST['submit'])) {
                         <div class="login-field">
                             <div class="field-label">No. HP</div>
                             <div class="field-wrap">
-                                <input class="field-input" type="number" name="noHp" />
+                                <input class="field-input" type="number" name="no_hp" />
                             </div>
                         </div>
                         <div class="login-field">

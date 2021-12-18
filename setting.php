@@ -11,12 +11,12 @@ session_start();
 
 if (isset($_POST['update'])) {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $nama = mysqli_real_escape_string($conn, $_POST['nama']);
+    $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $nohp = mysqli_real_escape_string($conn, $_POST['noHp']);
+    $no_hp = mysqli_real_escape_string($conn, $_POST['no_hp']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    if (empty($username) or empty($nama)) {
+    if (empty($username) or empty($fullname)) {
         echo '<script language="javascript">';
         echo 'alert("data tidak boleh kosong")';
         echo '</script>';
@@ -28,12 +28,12 @@ if (isset($_POST['update'])) {
         } else {
             if (empty($password)) {
                 $id = $_SESSION['id'];
-                $query = "UPDATE user SET username='$username', nama='$nama', email='$email', noHp='$noHp' WHERE id='$id'";
+                $query = "UPDATE user SET username='$username', fullname='$fullname', email='$email', no_hp='$no_hp' WHERE id='$id'";
                 if (mysqli_query($conn, $query)) {
                     $_SESSION['username'] = $username;
-                    $_SESSION['nama'] = $nama;
+                    $_SESSION['fullname'] = $fullname;
                     $_SESSION['email'] = $email;
-                    $_SESSION['noHp'] = $noHp;
+                    $_SESSION['no_hp'] = $no_hp;
 
                     echo '<script language="javascript">';
                     echo 'alert("data berhasil diubah")';
@@ -47,7 +47,7 @@ if (isset($_POST['update'])) {
             } else {
                 $hash = password_hash($password, PASSWORD_DEFAULT);
                 $id = $_SESSION['id'];
-                $query2 = "UPDATE user SET username='$username', nama='$nama', email='$email', noHp='$noHp', password='$hash' WHERE id='$id'";
+                $query2 = "UPDATE user SET username='$username', fullname='$fullname', email='$email', no_hp='$no_hp', password='$hash' WHERE id='$id'";
                 if (mysqli_query($conn, $query2)) {
                     session_unset();
                     session_destroy();
@@ -149,7 +149,7 @@ if (isset($_POST['update'])) {
                             <div class="input-row">
                                 <div class="input-field">
                                     <div class="input-label">Full Name</div>
-                                    <div class="input-wrap"><input type="text" name="nama" id="nama" required value="<?php echo $_SESSION["nama"] ?>"></div>
+                                    <div class="input-wrap"><input type="text" name="fullname" id="fullname" required value="<?php echo $_SESSION["fullname"] ?>"></div>
                                 </div>
                                 <div class=" input-field">
                                     <div class="input-label">Username</div>
@@ -159,11 +159,11 @@ if (isset($_POST['update'])) {
                             <div class="input-row">
                                 <div class="input-field">
                                     <div class="input-label">Email</div>
-                                    <div class="input-wrap"><input type="email" name="email" id="email" required value="<?php echo $_SESSION["nama"] ?>"></div>
+                                    <div class="input-wrap"><input type="email" name="email" id="email" required value="<?php echo $_SESSION["email"] ?>"></div>
                                 </div>
                                 <div class=" input-field">
                                     <div class="input-label">No. Hp</div>
-                                    <div class="input-wrap"><input type="text" name="noHp" id="noHp" required value="<?php echo $_SESSION["noHp"] ?>"></div>
+                                    <div class="input-wrap"><input type="text" name="no_hp" id="no_hp" required value="<?php echo $_SESSION["no_hp"] ?>"></div>
                                 </div>
                             </div>
                             <div class="input-row">
