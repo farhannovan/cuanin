@@ -1,6 +1,6 @@
 <?php
-session_start();
 include 'connection.php';
+session_start();
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -9,15 +9,16 @@ if (isset($_POST['submit'])) {
     $row = mysqli_fetch_array($query);
     $_SESSION["id"] = $row['id'];
     if ($num_rows > 0) {
-?>
-        <script>
-            alert('Successfully Log In');
-            document.location = 'dashboard.php'
-        </script>
-<?php
+        echo "
+            <script>
+                alert('Successfully Log In');
+                document.location = 'dashboard.php'
+            </script>
+        ";
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
