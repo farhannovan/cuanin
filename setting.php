@@ -9,6 +9,7 @@ session_start();
 //     echo '</script>';
 // }
 
+/* ---------- UPDATE PROFIL --------- */
 if (isset($_POST['update'])) {
     $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
     $username = mysqli_real_escape_string($conn, $_POST['username']);
