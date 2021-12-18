@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($link, $_POST['user']);
     $password = mysqli_real_escape_string($link, $_POST['pass']);
     $nohp = mysqli_real_escape_string($link, $_POST['nohp']);
-    $toko = mysqli_real_escape_string($link, $_POST['toko']);
+    $nama = mysqli_real_escape_string($link, $_POST['nama']);
     $email = mysqli_real_escape_string($link, $_POST['email']);
     $repass = mysqli_real_escape_string($link, $_POST['repass']);
     // $pass = hash($pass);
@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
         echo '<script> alert ("Password yang dimasukan berbeda")</script>';
         header("Refresh:0; url=signup.php");
     } else {
-        $sql = "INSERT INTO user (noHp,username,password,nama_toko,email) VALUES ('$nohp','$username','$password','$toko','$email')";
+        $sql = "INSERT INTO user (noHp,username,password,nama,email) VALUES ('$nohp','$username','$password','$nama','$email')";
         $result = mysqli_query($link, $sql);
         if ($result) {
             session_start();
@@ -69,25 +69,25 @@ if (isset($_POST['submit'])) {
                         <div class="login-field">
                             <div class="field-label">Full Name</div>
                             <div class="field-wrap">
-                                <input class="field-input" type="text" name="user" />
+                                <input class="field-input" type="text" name="nama" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">Username</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="text" name="username" />
+                            </div>
+                        </div>
+                        <div class="login-field">
+                            <div class="field-label">No. HP</div>
+                            <div class="field-wrap">
+                                <input class="field-input" type="number" name="nohp" />
                             </div>
                         </div>
                         <div class="login-field">
                             <div class="field-label">Email</div>
                             <div class="field-wrap">
                                 <input class="field-input" type="email" name="email" />
-                            </div>
-                        </div>
-                        <div class="login-field">
-                            <div class="field-label">No. HP</div>
-                            <div class="field-wrap">
-                                <input class="field-input" type="text" name="nohp" />
-                            </div>
-                        </div>
-                        <div class="login-field">
-                            <div class="field-label">Store</div>
-                            <div class="field-wrap">
-                                <input class="field-input" type="text" name="toko" />
                             </div>
                         </div>
                         <div class="login-field">
