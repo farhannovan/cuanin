@@ -2,13 +2,13 @@
 require 'function.php';
 
 /* ------------- SESSION ------------ */
-session_start();
+/* session_start();
 if (empty($_SESSION['username'])) {
     echo '<script language="javascript">';
     echo 'alert("belum login bro ?")';
     header("Refresh:0; url=signin.php");
     echo '</script>';
-}
+} */
 
 $transaksi = query("SELECT * FROM transaksi");
 
