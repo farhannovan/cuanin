@@ -33,7 +33,7 @@
                         <div class="login-field">
                             <div class="field-label">Username</div>
                             <div class="field-wrap">
-                                <input class="field-input" type="text" name="user" />
+                                <input class="field-input" type="text" name="username" />
                             </div>
                         </div>
                         <div class="login-field">

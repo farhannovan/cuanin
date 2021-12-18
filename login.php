@@ -9,7 +9,7 @@ $link = mysqli_connect($namaServer, $namaPengguna, $password);
 mysqli_select_db($link, $db_name);
 
 // menangkap data yang dikirim dari form login
-$username = $_POST['user'];
+$username = $_POST['username'];
 $password = $_POST['pass'];
 
 
