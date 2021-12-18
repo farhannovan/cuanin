@@ -15,8 +15,8 @@ if (isset($_POST['update'])) {
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
     echo "
         <script type='text/javascript'>;
-            alert('Update berhasil. Silahkan login kembali');
-            window.location = 'signout.php';
+            alert('Update berhasil');
+            window.location = 'setting.php';
         </script>
     ";
 }
@@ -124,7 +124,7 @@ if (isset($_POST['update'])) {
                             <div class="input-row">
                                 <div class="input-field">
                                     <div class="input-label">Password</div>
-                                    <div class="input-wrap"><input type="password" name="pass" id="password" required value="<?php echo $row['password']; ?>"></div>
+                                    <div class="input-wrap"><input type="password" name="password" id="password" required value="<?php echo $row['password']; ?>"></div>
                                 </div>
                             </div>
                             <div class="btn-right">
