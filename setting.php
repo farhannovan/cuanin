@@ -170,7 +170,11 @@ if (isset($_POST['update'])) {
                             <div class="input-row">
                                 <div class="input-field">
                                     <div class="input-label">Password</div>
-                                    <div class="input-wrap"><input type="password" name="password" id="password" required value="<?php echo $_SESSION["password"] ?>"></div>
+                                    <div class="input-wrap"><input type="password" name="pass" id="password" required value="<?php echo $_SESSION["password"] ?>"></div>
+                                </div>
+                                <div class="input-field">
+                                    <div class="input-label">Password</div>
+                                    <div class="input-wrap"><input type="password" name="repass" id="password" required value="<?php echo $_SESSION["password"] ?>"></div>
                                 </div>
                             </div>
                             <div class="btn-right">
