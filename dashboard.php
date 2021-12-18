@@ -118,7 +118,6 @@ if (empty($_SESSION['username'])) {
                                 }
                                 echo "<div class='h4'>$rupiah</div>";
                                 ?>
-                                <!-- <div class="h4">Rp100.570.000</div> -->
                             </div>
                         </div>
                     </div>
@@ -141,7 +140,6 @@ if (empty($_SESSION['username'])) {
                                 $jml = mysqli_num_rows($adm);
                                 echo "<div class='h4'>$jml Admin</div>";
                                 ?>
-                                <!-- <div class="h4">Rp16.500.000</div> -->
                             </div>
                         </div>
                     </div>
