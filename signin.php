@@ -17,7 +17,7 @@
     <div class="login">
         <div class="login-row">
             <div class="login-col">
-                <a class="login-logo" href="landing.html"><img src="assets/logo-white.png" alt="Cuanin" /></a>
+                <a class="login-logo" href="index.html"><img src="assets/logo-white.png" alt="Cuanin" /></a>
                 <h1 class="login-title h1">Make your <br />business more <br />powerfull</h1>
                 <div class="login-preview">
                     <img src="assets/bg2.png" alt="gambar-2">
