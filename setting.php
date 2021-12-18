@@ -1,70 +1,24 @@
 <?php
-require 'function.php';
-/* ------------- SESSION ------------ */
+include 'connection.php';
 session_start();
-// if (empty($_SESSION['username']) || empty($_SESSION['password'])) {
-//     echo '<script language="javascript">';
-//     echo 'alert("belum login bro ?")';
-//     header("Refresh:0; url=signin.php");
-//     echo '</script>';
-// }
+$id = $_SESSION['id'];
+$query = mysqli_query($db, "SELECT * FROM user where id='$id'") or die(mysqli_error($db));
+$row = mysqli_fetch_array($query);
 
-/* ---------- UPDATE PROFIL --------- */
 if (isset($_POST['update'])) {
-    $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $no_hp = mysqli_real_escape_string($conn, $_POST['no_hp']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
-
-    if (empty($username) or empty($fullname)) {
-        echo '<script language="javascript">';
-        echo 'alert("data tidak boleh kosong")';
-        echo '</script>';
-    } else {
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo '<script language="javascript">';
-            echo 'alert("email tidak valid")';
-            echo '</script>';
-        } else {
-            if (empty($password)) {
-                $id = $_SESSION['id'];
-                $query = "UPDATE user SET username='$username', fullname='$fullname', email='$email', no_hp='$no_hp' WHERE id='$id'";
-                if (mysqli_query($conn, $query)) {
-                    $_SESSION['username'] = $username;
-                    $_SESSION['fullname'] = $fullname;
-                    $_SESSION['email'] = $email;
-                    $_SESSION['no_hp'] = $no_hp;
-
-                    echo '<script language="javascript">';
-                    echo 'alert("data berhasil diubah")';
-                    echo '</script>';
-                    echo '<script>window.location.href = "setting.php";</script>';
-                } else {
-                    echo '<script language="javascript">';
-                    echo 'alert("data gagal diubah")';
-                    echo '</script>';
-                }
-            } else {
-                $hash = password_hash($password, PASSWORD_DEFAULT);
-                $id = $_SESSION['id'];
-                $query2 = "UPDATE user SET username='$username', fullname='$fullname', email='$email', no_hp='$no_hp', password='$hash' WHERE id='$id'";
-                if (mysqli_query($conn, $query2)) {
-                    session_unset();
-                    session_destroy();
-
-                    echo '<script language="javascript">';
-                    echo 'alert("password berhasil diubah")';
-                    echo '</script>';
-                    echo '<script>window.location.href = "signin.php";</script>';
-                } else {
-                    echo '<script language="javascript">';
-                    echo 'alert("data gagal diubah")';
-                    echo '</script>';
-                }
-            }
-        }
-    }
+    $fullname = $_POST['fullname'];
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $no_hp = $_POST['no_hp'];
+    $password = $_POST['password'];
+    $query = "UPDATE user SET fullname = '$fullname', username = '$username', email = '$email', no_hp = $no_hp, password = '$password' WHERE id = '$id'";
+    $result = mysqli_query($db, $query) or die(mysqli_error($db));
+    echo "
+        <script type='text/javascript'>;
+            alert('Update berhasil. Silahkan login kembali');
+            window.location = 'signout.php';
+        </script>
+    ";
 }
 ?>
 
@@ -144,41 +98,37 @@ if (isset($_POST['update'])) {
             <!-- Content -->
             <div class="sale">
                 <div class="sale-container">
-                    <div class="sale-stage h5 mobile-show"><strong>Edit Profile</strong></div>
-                    <form action="" method="post">
+                    <div class="sale-stage h5 mobile-show"><strong>User Profile</strong></div>
+                    <form action="#" method="post">
                         <div class="input-fieldset">
                             <div class="input-row">
                                 <div class="input-field">
                                     <div class="input-label">Full Name</div>
-                                    <div class="input-wrap"><input type="text" name="fullname" id="fullname" required value="<?php echo $_SESSION["fullname"] ?>"></div>
+                                    <div class="input-wrap"><input type="text" name="fullname" id="fullname" required value="<?php echo $row['fullname']; ?>"></div>
                                 </div>
                                 <div class=" input-field">
-                                    <div class="input-label">Username</div>
-                                    <div class="input-wrap"><input type="text" name="username" id="username" required value="<?php echo $_SESSION["username"] ?>"></div>
+                                    <div class="input-label">User Name</div>
+                                    <div class="input-wrap"><input type="text" name="username" id="username" required value="<?php echo $row['username']; ?>"></div>
                                 </div>
                             </div>
                             <div class="input-row">
                                 <div class="input-field">
                                     <div class="input-label">Email</div>
-                                    <div class="input-wrap"><input type="email" name="email" id="email" required value="<?php echo $_SESSION["email"] ?>"></div>
+                                    <div class="input-wrap"><input type="email" name="email" id="email" required value="<?php echo $row['email']; ?>"></div>
                                 </div>
                                 <div class=" input-field">
                                     <div class="input-label">No. Hp</div>
-                                    <div class="input-wrap"><input type="text" name="no_hp" id="no_hp" required value="<?php echo $_SESSION["no_hp"] ?>"></div>
+                                    <div class="input-wrap"><input type="text" name="no_hp" id="no_hp" required value="<?php echo $row['no_hp']; ?>"></div>
                                 </div>
                             </div>
                             <div class="input-row">
                                 <div class="input-field">
                                     <div class="input-label">Password</div>
-                                    <div class="input-wrap"><input type="password" name="pass" id="password" required value="<?php echo $_SESSION["password"] ?>"></div>
-                                </div>
-                                <div class="input-field">
-                                    <div class="input-label">Password</div>
-                                    <div class="input-wrap"><input type="password" name="repass" id="password" required value="<?php echo $_SESSION["password"] ?>"></div>
+                                    <div class="input-wrap"><input type="password" name="pass" id="password" required value="<?php echo $row['password']; ?>"></div>
                                 </div>
                             </div>
                             <div class="btn-right">
-                                <button class="btn btn-primary" type="submit" name="update" value="update">Save</button>
+                                <button class="btn btn-primary" type="submit" name="update" value="">Save</button>
                             </div>
                         </div>
                     </form>
