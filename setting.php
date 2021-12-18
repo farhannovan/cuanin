@@ -1,13 +1,69 @@
 <?php
 require 'function.php';
-
 /* ------------- SESSION ------------ */
 session_start();
-if (empty($_SESSION['username'])) {
-    echo '<script language="javascript">';
-    echo 'alert("belum login bro ?")';
-    header("Refresh:0; url=signin.php");
-    echo '</script>';
+// if (empty($_SESSION['username']) || empty($_SESSION['password'])) {
+//     echo '<script language="javascript">';
+//     echo 'alert("belum login bro ?")';
+//     header("Refresh:0; url=signin.php");
+//     echo '</script>';
+// }
+
+if (isset($_POST['update'])) {
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $nama = mysqli_real_escape_string($conn, $_POST['nama']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $nohp = mysqli_real_escape_string($conn, $_POST['noHp']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+    if (empty($username) or empty($nama)) {
+        echo '<script language="javascript">';
+        echo 'alert("data tidak boleh kosong")';
+        echo '</script>';
+    } else {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo '<script language="javascript">';
+            echo 'alert("email tidak valid")';
+            echo '</script>';
+        } else {
+            if (empty($password)) {
+                $id = $_SESSION['id'];
+                $query = "UPDATE user SET username='$username', nama='$nama', email='$email', noHp='$noHp' WHERE id='$id'";
+                if (mysqli_query($conn, $query)) {
+                    $_SESSION['username'] = $username;
+                    $_SESSION['nama'] = $nama;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['noHp'] = $noHp;
+
+                    echo '<script language="javascript">';
+                    echo 'alert("data berhasil diubah")';
+                    echo '</script>';
+                    echo '<script>window.location.href = "setting.php";</script>';
+                } else {
+                    echo '<script language="javascript">';
+                    echo 'alert("data gagal diubah")';
+                    echo '</script>';
+                }
+            } else {
+                $hash = password_hash($password, PASSWORD_DEFAULT);
+                $id = $_SESSION['id'];
+                $query2 = "UPDATE user SET username='$username', nama='$nama', email='$email', noHp='$noHp', password='$hash' WHERE id='$id'";
+                if (mysqli_query($conn, $query2)) {
+                    session_unset();
+                    session_destroy();
+
+                    echo '<script language="javascript">';
+                    echo 'alert("password berhasil diubah")';
+                    echo '</script>';
+                    echo '<script>window.location.href = "signin.php";</script>';
+                } else {
+                    echo '<script language="javascript">';
+                    echo 'alert("data gagal diubah")';
+                    echo '</script>';
+                }
+            }
+        }
+    }
 }
 ?>
 
@@ -85,6 +141,44 @@ if (empty($_SESSION['username'])) {
             </header>
 
             <!-- Content -->
+            <div class="sale">
+                <div class="sale-container">
+                    <div class="sale-stage h5 mobile-show"><strong>Edit Profile</strong></div>
+                    <form action="" method="post">
+                        <div class="input-fieldset">
+                            <div class="input-row">
+                                <div class="input-field">
+                                    <div class="input-label">Full Name</div>
+                                    <div class="input-wrap"><input type="text" name="nama" id="nama" required value="<?php echo $_SESSION["nama"] ?>"></div>
+                                </div>
+                                <div class=" input-field">
+                                    <div class="input-label">Username</div>
+                                    <div class="input-wrap"><input type="text" name="username" id="username" required value="<?php echo $_SESSION["username"] ?>"></div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-field">
+                                    <div class="input-label">Email</div>
+                                    <div class="input-wrap"><input type="email" name="email" id="email" required value="<?php echo $_SESSION["nama"] ?>"></div>
+                                </div>
+                                <div class=" input-field">
+                                    <div class="input-label">No. Hp</div>
+                                    <div class="input-wrap"><input type="text" name="noHp" id="noHp" required value="<?php echo $_SESSION["noHp"] ?>"></div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-field">
+                                    <div class="input-label">Password</div>
+                                    <div class="input-wrap"><input type="password" name="password" id="password" required value="<?php echo $_SESSION["password"] ?>"></div>
+                                </div>
+                            </div>
+                            <div class="btn-right">
+                                <button class="btn btn-primary" type="submit" name="update" value="update">Save</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </body>

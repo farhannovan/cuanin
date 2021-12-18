@@ -9,11 +9,11 @@ $link = mysqli_connect($namaServer, $namaPengguna, $password);
 mysqli_select_db($link, $db_name);
 
 if (isset($_POST['submit'])) {
-    $username = mysqli_real_escape_string($link, $_POST['user']);
-    $password = mysqli_real_escape_string($link, $_POST['pass']);
-    $nohp = mysqli_real_escape_string($link, $_POST['nohp']);
     $nama = mysqli_real_escape_string($link, $_POST['nama']);
+    $username = mysqli_real_escape_string($link, $_POST['username']);
     $email = mysqli_real_escape_string($link, $_POST['email']);
+    $noHp = mysqli_real_escape_string($link, $_POST['noHp']);
+    $password = mysqli_real_escape_string($link, $_POST['password']);
     $repass = mysqli_real_escape_string($link, $_POST['repass']);
     // $pass = hash($pass);
 
@@ -21,7 +21,8 @@ if (isset($_POST['submit'])) {
         echo '<script> alert ("Password yang dimasukan berbeda")</script>';
         header("Refresh:0; url=signup.php");
     } else {
-        $sql = "INSERT INTO user (noHp,username,password,nama,email) VALUES ('$nohp','$username','$password','$nama','$email')";
+        // $sql = "INSERT INTO user (noHp,username,password,nama,email) VALUES ('$nohp','$username','$password','$nama','$email')";
+        $sql = "INSERT INTO user (nama,username,noHp,email,password) VALUES ('$nama','$username','$noHp','$email','$password')";
         $result = mysqli_query($link, $sql);
         if ($result) {
             session_start();
@@ -81,7 +82,7 @@ if (isset($_POST['submit'])) {
                         <div class="login-field">
                             <div class="field-label">No. HP</div>
                             <div class="field-wrap">
-                                <input class="field-input" type="number" name="nohp" />
+                                <input class="field-input" type="number" name="noHp" />
                             </div>
                         </div>
                         <div class="login-field">
@@ -93,7 +94,7 @@ if (isset($_POST['submit'])) {
                         <div class="login-field">
                             <div class="field-label">Password</div>
                             <div class="field-wrap">
-                                <input class="field-input" type="password" name="pass" />
+                                <input class="field-input" type="password" name="password" />
                             </div>
                         </div>
                         <div class="login-field">
