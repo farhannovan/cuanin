@@ -1,5 +1,6 @@
 <?php
 include 'connection.php';
+error_reporting(0);
 session_start();
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
@@ -11,8 +12,15 @@ if (isset($_POST['submit'])) {
     if ($num_rows > 0) {
         echo "
             <script>
-                alert('Successfully Log In');
+                alert('Berhasil Login');
                 document.location = 'dashboard.php'
+            </script>
+        ";
+    } else {
+        echo "
+            <script>
+                alert('Username atau Password salah');
+                document.location = 'signin.php'
             </script>
         ";
     }
