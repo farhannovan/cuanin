@@ -13,16 +13,16 @@ if (isset($_POST['submit'])) {
     $username = mysqli_real_escape_string($link, $_POST['username']);
     $email = mysqli_real_escape_string($link, $_POST['email']);
     $no_hp = mysqli_real_escape_string($link, $_POST['no_hp']);
-    $password = mysqli_real_escape_string($link, $_POST['password']);
+    $pass = mysqli_real_escape_string($link, $_POST['pass']);
     $repass = mysqli_real_escape_string($link, $_POST['repass']);
     // $pass = hash($pass);
 
-    if ($repass != $password) {
+    if ($repass != $pass) {
         echo '<script> alert ("Password yang dimasukan berbeda")</script>';
         header("Refresh:0; url=signup.php");
     } else {
         // $sql = "INSERT INTO user (no_hp,username,password,fullname,email) VALUES ('$no_hp','$username','$password','$fullname','$email')";
-        $sql = "INSERT INTO user (fullname,username,no_hp,email,password) VALUES ('$fullname','$username','$no_hp','$email','$password')";
+        $sql = "INSERT INTO user (fullname,username,no_hp,email,password) VALUES ('$fullname','$username','$no_hp','$email','$pass')";
         $result = mysqli_query($link, $sql);
         if ($result) {
             session_start();
@@ -94,7 +94,7 @@ if (isset($_POST['submit'])) {
                         <div class="login-field">
                             <div class="field-label">Password</div>
                             <div class="field-wrap">
-                                <input class="field-input" type="password" name="password" />
+                                <input class="field-input" type="password" name="pass" />
                             </div>
                         </div>
                         <div class="login-field">

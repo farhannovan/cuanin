@@ -10,8 +10,8 @@ session_start();
 // }
 
 if (isset($_POST['update'])) {
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
     $fullname = mysqli_real_escape_string($conn, $_POST['fullname']);
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $no_hp = mysqli_real_escape_string($conn, $_POST['no_hp']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
