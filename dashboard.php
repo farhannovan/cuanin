@@ -19,10 +19,10 @@ if (empty($_SESSION['id'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#fff" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
-    <link rel="stylesheet" media="all" href="css/dashboard.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+    <link rel="stylesheet" media="all" href="assets/css/dashboard.css" />
 </head>
 
 <body>
@@ -31,7 +31,7 @@ if (empty($_SESSION['id'])) {
         <div class="sidebar">
             <div class="sidebar-head">
                 <!-- <a class="sidebar-logo" href="index.html"> -->
-                <img src="assets/logo-black.png" alt="Cuanin" />
+                <img src="assets/img/logo-black.png" alt="Cuanin" />
                 <!-- </a> -->
             </div>
             <div class="sidebar-body">
@@ -39,7 +39,7 @@ if (empty($_SESSION['id'])) {
                     <a class="sidebar-item active" href="dashboard.php">
                         <div class="sidebar-icon">
                             <svg class="icon icon-home">
-                                <use xlink:href="assets/sprite.svg#icon-home"></use>
+                                <use xlink:href="assets/img/sprite.svg#icon-home"></use>
                             </svg>
                         </div>
                         <div class="sidebar-text">Home</div>
@@ -47,7 +47,7 @@ if (empty($_SESSION['id'])) {
                     <a class="sidebar-item" href="sales.php">
                         <div class="sidebar-icon">
                             <svg class="icon icon-sale">
-                                <use xlink:href="assets/sprite.svg#icon-activity"></use>
+                                <use xlink:href="assets/img/sprite.svg#icon-activity"></use>
                             </svg>
                         </div>
                         <div class="sidebar-text">Sales</div>
@@ -55,7 +55,7 @@ if (empty($_SESSION['id'])) {
                     <a class="sidebar-item" href="setting.php">
                         <div class="sidebar-icon">
                             <svg class="icon icon-home">
-                                <use xlink:href="assets/sprite.svg#icon-settings"></use>
+                                <use xlink:href="assets/img/sprite.svg#icon-settings"></use>
                             </svg>
                         </div>
                         <div class="sidebar-text">Settings</div>
@@ -80,8 +80,8 @@ if (empty($_SESSION['id'])) {
         <!-- Header -->
         <div class="page-content">
             <header>
-                <a class="header-logo" href=""><img src="assets/logo-sm.svg" alt="logo" /></a>
-                <a class="header-user" href="setting.php"><img src="assets/ava-header.png" alt="avatar" /></a>
+                <a class="header-logo" href=""><img src="assets/img/logo-sm.svg" alt="logo" /></a>
+                <a class="header-user" href="setting.php"><img src="assets/img/ava-header.png" alt="avatar" /></a>
             </header>
 
             <!-- Content -->
@@ -92,7 +92,7 @@ if (empty($_SESSION['id'])) {
                             <div class="banner-title h2">Dashboard</div>
                             <div class="banner-info h5">Look what you have made today!</div>
                         </div>
-                        <div class="banner-preview"><img src="assets/figures-2.png" alt="" /></div>
+                        <div class="banner-preview"><img src="assets/img/figures-2.png" alt="" /></div>
                     </div>
                 </div>
 
@@ -102,7 +102,7 @@ if (empty($_SESSION['id'])) {
                         <div class="widget-head">
                             <div class="widget-type">
                                 <div class="widget-logo">
-                                    <img src="assets/widget-sales.png" alt="" />
+                                    <img src="assets/img/widget-sales.png" alt="" />
                                 </div>
                                 <div class="widget-details">
                                     <div class="widget-category">Total Transaction</div>
@@ -127,7 +127,7 @@ if (empty($_SESSION['id'])) {
                         <div class="widget-head">
                             <div class="widget-type">
                                 <div class="widget-logo">
-                                    <img src="assets/widget-revenue.png" alt="" />
+                                    <img src="assets/img/widget-revenue.png" alt="" />
                                 </div>
                                 <div class="widget-details">
                                     <div class="widget-category">Admin</div>
@@ -149,7 +149,7 @@ if (empty($_SESSION['id'])) {
                         <div class="widget-head">
                             <div class="widget-type">
                                 <div class="widget-logo">
-                                    <img src="assets/widget-customer.png" alt="" />
+                                    <img src="assets/img/widget-customer.png" alt="" />
                                 </div>
                                 <div class="widget-details">
                                     <div class="widget-category">Transaction</div>

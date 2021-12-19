@@ -1,0 +1,276 @@
+@import "font.css";
+@import "variables.css";
+@import "sidebar.css";
+@import "header.css";
+@import "page.css";
+@import "typography.css";
+@import "button.css";
+@import "input.css";
+* {
+    -webkit-font-smoothing: antialiased !important;
+    text-rendering: optimizeSpeed !important;
+    scroll-behavior: smooth !important;
+    font-family: "Poppins", sans-serif !important;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html,
+body,
+div,
+a,
+img,
+nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+img,
+a img {
+    border: none;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+div,
+button,
+a,
+a:focus {
+    outline: none;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+a,
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.icon-home {
+    width: 1em;
+    height: 1em;
+    fill: var(--color-secondary);
+}
+
+
+/* -------------- SALE -------------- */
+
+.sale {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.sale-container {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 0 64px 64px;
+}
+
+.sale-stage {
+    margin-bottom: 16px;
+}
+
+
+/* -------------- TABLE ------------- */
+
+
+/* table {
+    width: -webkit-fill-available;
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+table th {
+    padding: 15px 35px;
+    background: #ededed;
+}
+
+table tr {
+    text-align: center;
+    padding-left: 20px;
+}
+
+td {
+    padding: 16px 36px;
+    background-color: var(--color-white);
+}
+
+table td {
+    padding: 16px 36px;
+    background: #fafafa;
+}
+
+table td:first-child {
+    width: 5%;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr:hover td {
+    background: #f2f2f2;
+} */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+table td,
+table th {
+    padding: 12px 15px;
+    /* border: 1px solid #ddd; */
+    text-align: center;
+    font-size: 16px;
+}
+
+table th {
+    background-color: #ededed;
+    color: #000;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #d1e8f5;
+}
+
+table td {
+    padding: 16px 36px;
+    background: #fafafa;
+}
+
+table tr:hover td {
+    background: #f2f2f2;
+}
+
+
+/* -------------- TABLET -------------- */
+
+@media only screen and (max-width: 1024px) {
+    .page-content {
+        -webkit-transition: -webkit-transform 0.2s;
+        transition: -webkit-transform 0.2s;
+        -o-transition: transform 0.2s;
+        transition: transform 0.2s;
+        transition: transform 0.2s, -webkit-transform 0.2s;
+    }
+    .page-content {
+        padding-left: 96px;
+    }
+    .sidebar {
+        padding-bottom: 90px;
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+    .sidebar {
+        width: 96px;
+    }
+    .sidebar-logo {
+        display: none;
+    }
+    .sidebar-item {
+        padding: 0 16px;
+    }
+    header {
+        padding: 32px;
+    }
+    .header-logo {
+        display: inline-block;
+    }
+    .sale-container {
+        padding: 0 32px 32px;
+    }
+}
+
+
+/* ------------- MOBILE ------------- */
+
+@media only screen and (max-width: 767px) {
+    .sidebar {
+        display: none;
+    }
+    .page-content {
+        padding: 0 32px;
+    }
+    header {
+        padding: 24px 16px;
+    }
+    .header-logo img {
+        width: 46px;
+    }
+    .header-user {
+        display: none;
+    }
+    .sale-container {
+        padding: 0 16px 32px;
+    }
+    /* -------------- TABLE ------------- */
+    table thead {
+        display: none;
+    }
+    table,
+    table tbody,
+    table tr,
+    table td {
+        display: block;
+        width: 100%;
+    }
+    table tr {
+        margin-bottom: 15px;
+    }
+    table td {
+        padding-left: 50%;
+        text-align: left;
+        position: relative;
+    }
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
