@@ -44,6 +44,7 @@ if (isset($_POST["tambah"])) {
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
     <link rel="stylesheet" media="all" href="assets/css/transaction.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -127,8 +128,8 @@ if (isset($_POST["tambah"])) {
                                     <td data-label="Type" class="index"><?= $row["tipe"]; ?></td>
                                     <td data-label="Amount" class="index"><?= rupiah($row["jumlah"]); ?></td>
                                     <td data-label="Action">
-                                        <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> |
-                                        <a href="config/delete.php?id=<?= $row["id"]; ?>" onclick=" return confirm('Yakin ingin menghapus data?')">Delete</a>
+                                        <a class="button green" href="edit.php?id=<?= $row["id"] ?>"><img class="icon-action" src="assets/img/edit.svg" alt=""></a>
+                                        <a class="button red" href="config/delete.php?id=<?= $row["id"]; ?>" onclick=" return confirm('Yakin ingin menghapus data?')"><img class="icon-action" src="assets/img/delete.svg" alt=""></a>
                                     </td>
                                 </tr>
                             </tbody>
