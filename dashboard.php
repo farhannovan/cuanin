@@ -30,7 +30,9 @@ if (empty($_SESSION['id'])) {
     <div class="page">
         <div class="sidebar">
             <div class="sidebar-head">
-                <a class="sidebar-logo" href="#"><img src="assets/logo-black.png" alt="Cuanin" /></a>
+                <!-- <a class="sidebar-logo" href="index.html"> -->
+                <img src="assets/logo-black.png" alt="Cuanin" />
+                <!-- </a> -->
             </div>
             <div class="sidebar-body">
                 <nav class="sidebar-nav">
@@ -78,8 +80,8 @@ if (empty($_SESSION['id'])) {
         <!-- Header -->
         <div class="page-content">
             <header>
-                <a class="header-logo" href="index.html"><img src="assets/logo-sm.svg" alt="" /></a>
-                <a class="header-user" href="sign-in.html"><img src="assets/ava-header.png" alt="" /></a>
+                <a class="header-logo" href=""><img src="assets/logo-sm.svg" alt="logo" /></a>
+                <a class="header-user" href="setting.php"><img src="assets/ava-header.png" alt="avatar" /></a>
             </header>
 
             <!-- Content -->

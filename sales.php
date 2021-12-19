@@ -51,7 +51,7 @@ if (isset($_POST["tambah"])) {
     <div class="page">
         <div class="sidebar">
             <div class="sidebar-head">
-                <a class="sidebar-logo" href="index.html"><img src="assets/logo-black.png" alt="Cuanin" /></a>
+                <img src="assets/logo-black.png" alt="Cuanin" />
             </div>
             <div class="sidebar-body">
                 <nav class="sidebar-nav">
@@ -99,8 +99,8 @@ if (isset($_POST["tambah"])) {
         <!-- Header -->
         <div class="page-content">
             <header>
-                <a class="header-logo" href="index.html"><img src="assets/logo-sm.svg" alt="" /></a>
-                <a class="header-user" href="sign-in.html"><img src="assets/ava-header.png" alt="" /></a>
+                <a class="header-logo" href=""><img src="assets/logo-sm.svg" alt="" /></a>
+                <a class="header-user" href="setting.php"><img src="assets/ava-header.png" alt="" /></a>
             </header>
 
             <!-- Content -->
@@ -125,7 +125,7 @@ if (isset($_POST["tambah"])) {
                                     <td data-label="Nama" class="index"><?= $row["nama"]; ?></td>
                                     <td data-label="Date" class="index"><?= $row["tanggal"]; ?></td>
                                     <td data-label="Type" class="index"><?= $row["tipe"]; ?></td>
-                                    <td data-label="Amount" class="index"><?= $row["jumlah"]; ?></td>
+                                    <td data-label="Amount" class="index"><?= rupiah($row["jumlah"]); ?></td>
                                     <td data-label="Action">
                                         <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> |
                                         <a href="delete.php?id=<?= $row["id"]; ?>" onclick=" return confirm('Yakin ingin menghapus data?')">Delete</a>
