@@ -805,29 +805,29 @@ header {
 }
 
 
-/* -------------- SALE -------------- */
+/* -------------- transaction -------------- */
 
-.sale {
+.transaction {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 
-.sale-container {
+.transaction-container {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
     padding: 0 64px 64px;
 }
 
-.sale-sorting {
+.transaction-sorting {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 48px;
 }
 
-.sale-tags {
+.transaction-tags {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -839,7 +839,7 @@ header {
     padding-top: 12px;
 }
 
-.sale-tags .sale-link {
+.transaction-tags .transaction-link {
     padding: 0 16px;
     border-radius: 20px;
     line-height: 40px;
@@ -850,16 +850,16 @@ header {
     transition: all 0.2s;
 }
 
-.sale-tags .sale-link:hover {
+.transaction-tags .transaction-link:hover {
     color: var(--color-black);
 }
 
-.sale-tags .sale-link.active {
+.transaction-tags .transaction-link.active {
     background: rgba(228, 228, 228, 0.3);
     color: var(--color-primary-darker);
 }
 
-.sale-select {
+.transaction-select {
     position: relative;
     -ms-flex-item-align: start;
     align-self: flex-start;
@@ -869,11 +869,11 @@ header {
     margin-left: 50px;
 }
 
-.sale-select .select {
+.transaction-select .select {
     padding-left: 43px;
 }
 
-.sale-select .sale-icon {
+.transaction-select .transaction-icon {
     position: absolute;
     top: 50%;
     left: 20px;
@@ -885,20 +885,20 @@ header {
     font-size: 0;
 }
 
-.sale-select .sale-icon .icon {
+.transaction-select .transaction-icon .icon {
     font-size: 16px;
 }
 
-.sale-stage {
+.transaction-stage {
     margin-bottom: 16px;
 }
 
-.sale-table {
+.transaction-table {
     display: table;
     width: 100%;
 }
 
-.sale-row {
+.transaction-row {
     display: table-row;
     border-radius: 12px;
     cursor: pointer;
@@ -908,7 +908,7 @@ header {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.sale-row-head {
+.transaction-row-head {
     background: rgba(228, 228, 228, 0.2);
     font-size: 10px;
     letter-spacing: 1px;
@@ -917,57 +917,57 @@ header {
     text-transform: uppercase;
 }
 
-.sale-row:nth-child(2n + 1) {
+.transaction-row:nth-child(2n + 1) {
     background: rgba(228, 228, 228, 0.2);
 }
 
-.sale-row:not(.sale-row-head):hover {
+.transaction-row:not(.transaction-row-head):hover {
     -webkit-box-shadow: 0 0 0 2px var(--color-primary-darker);
     box-shadow: 0 0 0 2px var(--color-primary-darker);
     background: none;
 }
 
-.sale-row-head .sale-cell {
+.transaction-row-head .transaction-cell {
     height: 40px;
 }
 
-.sale-hidden {
+.transaction-hidden {
     display: none;
 }
 
-.sale-table.small .sale-hidden {
+.transaction-table.small .transaction-hidden {
     display: block;
 }
 
-.sale-table.small .sale-row-head .sale-hidden {
+.transaction-table.small .transaction-row-head .transaction-hidden {
     display: inline;
 }
 
-.sale-cell {
+.transaction-cell {
     display: table-cell;
     vertical-align: middle;
     height: 80px;
     padding-right: 30px;
 }
 
-.sale-cell:first-child {
+.transaction-cell:first-child {
     padding-left: 25px;
     border-radius: 12px 0 0 12px;
 }
 
-.sale-cell:last-child {
+.transaction-cell:last-child {
     border-radius: 0 12px 12px 0;
 }
 
-.sale-table.small .sale-cell:nth-child(3) {
+.transaction-table.small .transaction-cell:nth-child(3) {
     display: none;
 }
 
-.sale-size img {
+.transaction-size img {
     min-width: 15px;
 }
 
-.sale-company {
+.transaction-company {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -977,7 +977,7 @@ header {
     font-weight: 600;
 }
 
-.sale-logo {
+.transaction-logo {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 32px;
@@ -985,24 +985,24 @@ header {
     margin-right: 16px;
 }
 
-.sale-logo img {
+.transaction-logo img {
     width: 100%;
     min-height: 100%;
 }
 
-.sale-table .sale-date {
+.transaction-table .transaction-date {
     font-size: 12px;
     line-height: 1.33333;
     font-weight: 500;
     color: var(--color-secondary);
 }
 
-.sale-amount,
-.sale-transaction {
+.transaction-amount,
+.transaction-transaction {
     font-weight: 600;
 }
 
-.sale-sidebar {
+.transaction-sidebar {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 364px;
@@ -1013,15 +1013,15 @@ header {
     transition: margin 0.2s;
 }
 
-.sale-sidebar.visible {
+.transaction-sidebar.visible {
     margin-right: 0;
 }
 
-.sale-wrap {
+.transaction-wrap {
     position: relative;
 }
 
-.sale-head {
+.transaction-head {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1032,27 +1032,27 @@ header {
     padding-right: 30px;
 }
 
-.sale-head .sale-logo {
+.transaction-head .transaction-logo {
     width: 42px;
     height: 42px;
     margin-right: 24px;
 }
 
-.sale-info {
+.transaction-info {
     margin-bottom: 4px;
     font-size: 18px;
     line-height: 1.33333;
     font-weight: 500;
 }
 
-.sale-head .sale-date {
+.transaction-head .transaction-date {
     font-size: 13px;
     line-height: 1.23077;
     font-weight: 500;
     color: var(--color-secondary);
 }
 
-.sale-close {
+.transaction-close {
     position: absolute;
     top: 12px;
     right: 0;
@@ -1061,7 +1061,7 @@ header {
     font-size: 0;
 }
 
-.sale-close .icon {
+.transaction-close .icon {
     font-size: 14px;
     -webkit-transition: -webkit-transform 0.2s;
     transition: -webkit-transform 0.2s;
@@ -1070,13 +1070,13 @@ header {
     transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
-.sale-close:hover .icon {
+.transaction-close:hover .icon {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
 
-.sale-line {
+.transaction-line {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1085,14 +1085,14 @@ header {
     align-items: center;
 }
 
-.sale-money {
+.transaction-money {
     font-size: 40px;
     line-height: 1.2;
     letter-spacing: -1px;
     font-weight: 600;
 }
 
-.sale-currency {
+.transaction-currency {
     margin-left: 20px;
     padding: 0 13px;
     border-radius: 16px;
@@ -1103,18 +1103,18 @@ header {
     color: var(--color-white);
 }
 
-.sale-code {
+.transaction-code {
     font-size: 18px;
     line-height: 1.33333;
     font-weight: 500;
     color: var(--color-secondary);
 }
 
-.sale-parameters {
+.transaction-parameters {
     margin-top: 32px;
 }
 
-.sale-parameter {
+.transaction-parameter {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1125,7 +1125,7 @@ header {
     border-top: 1px solid var(--color-secondary-lighter);
 }
 
-.sale-preview {
+.transaction-preview {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1144,13 +1144,13 @@ header {
     background: rgba(228, 228, 228, 0.5);
 }
 
-.sale-box {
+.transaction-box {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
 }
 
-.sale-category {
+.transaction-category {
     margin-bottom: 8px;
     font-size: 12px;
     line-height: 1.33333;
@@ -1158,7 +1158,7 @@ header {
     color: var(--color-secondary);
 }
 
-.sale-status {
+.transaction-status {
     display: inline-block;
     padding: 0 8px;
     border-radius: 12px;
@@ -1169,7 +1169,7 @@ header {
     color: #4fbf67;
 }
 
-.sale-value {
+.transaction-value {
     font-size: 16px;
     line-height: 1.25;
     font-weight: 600;
@@ -1196,7 +1196,7 @@ screen and (max-height: 300px) {
 }
 
 @media only screen and (max-width: 1419px) {
-    .sale-cell {
+    .transaction-cell {
         padding-right: 25px;
     }
     .banner-preview {
@@ -1341,23 +1341,23 @@ screen and (max-height: 300px) {
     .header-logo {
         display: inline-block;
     }
-    .sale-row:not(.sale-row-head):hover {
+    .transaction-row:not(.transaction-row-head):hover {
         -webkit-box-shadow: none;
         box-shadow: none;
     }
-    .sale-table .sale-hidden {
+    .transaction-table .transaction-hidden {
         display: block;
     }
-    .sale-table .sale-row-head .sale-hidden {
+    .transaction-table .transaction-row-head .transaction-hidden {
         display: inline;
     }
-    .sale-cell {
+    .transaction-cell {
         padding-right: 16px;
     }
-    .sale-cell:first-child {
+    .transaction-cell:first-child {
         padding-left: 16px;
     }
-    .sale-cell:nth-child(3) {
+    .transaction-cell:nth-child(3) {
         display: none;
     }
     .banner-preview {
@@ -1410,26 +1410,26 @@ screen and (max-height: 300px) {
     .widget-item:not(:last-child) {
         margin-bottom: 32px;
     }
-    .sale-container {
+    .transaction-container {
         padding: 0 16px 32px;
     }
-    .sale-cell:first-child {
+    .transaction-cell:first-child {
         display: none;
     }
-    .sale-cell:nth-child(2) {
+    .transaction-cell:nth-child(2) {
         border-radius: 12px 0 0 12px;
         padding-left: 16px;
     }
-    .sale-cell:nth-child(4) {
+    .transaction-cell:nth-child(4) {
         border-radius: 0 12px 12px 0;
     }
-    .sale-cell:nth-child(n + 5) {
+    .transaction-cell:nth-child(n + 5) {
         display: none;
     }
-    .sale-logo {
+    .transaction-logo {
         margin-right: 10px;
     }
-    .sale-amount {
+    .transaction-amount {
         font-size: 13px;
     }
     .banner-container {

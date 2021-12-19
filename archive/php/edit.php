@@ -49,7 +49,7 @@ if (isset($_POST["update"])) {
             <aside>
                 <ul>
                     <li><a href="dashboard.php">Dashboard</a></li>
-                    <li><a href="transaction.php">Sales</a></li>
+                    <li><a href="transaction.php">transaction</a></li>
                 </ul>
             </aside>
             <div class="form">

@@ -43,7 +43,7 @@ if (isset($_POST["tambah"])) {
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
-    <link rel="stylesheet" media="all" href="assets/css/sales.css" />
+    <link rel="stylesheet" media="all" href="assets/css/transaction.css" />
 </head>
 
 <body>
@@ -65,11 +65,11 @@ if (isset($_POST["tambah"])) {
                     </a>
                     <a class="sidebar-item active" href="transaction.php">
                         <div class="sidebar-icon">
-                            <svg class="icon icon-sale">
+                            <svg class="icon icon-transaction">
                                 <use xlink:href="assets/img/sprite.svg#icon-activity"></use>
                             </svg>
                         </div>
-                        <div class="sidebar-text">Sales</div>
+                        <div class="sidebar-text">Transaction</div>
                     </a>
                     <a class="sidebar-item" href="setting.php">
                         <div class="sidebar-icon">
@@ -104,9 +104,9 @@ if (isset($_POST["tambah"])) {
             </header>
 
             <!-- Content -->
-            <div class="sale">
-                <div class="sale-container">
-                    <div class="sale-stage h5 mobile-show"><strong>Input Transaction</strong></div>
+            <div class="transaction">
+                <div class="transaction-container">
+                    <div class="transaction-stage h5 mobile-show"><strong>Input Transaction</strong></div>
                     <form action="" method="post">
                         <div class="input-fieldset">
                             <div class="input-row">

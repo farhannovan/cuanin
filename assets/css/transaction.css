@@ -87,22 +87,22 @@ button {
 }
 
 
-/* -------------- SALE -------------- */
+/* -------------- transaction -------------- */
 
-.sale {
+.transaction {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
 }
 
-.sale-container {
+.transaction-container {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
     padding: 0 64px 64px;
 }
 
-.sale-stage {
+.transaction-stage {
     margin-bottom: 16px;
 }
 
@@ -217,7 +217,7 @@ table tr:hover td {
     .header-logo {
         display: inline-block;
     }
-    .sale-container {
+    .transaction-container {
         padding: 0 32px 32px;
     }
 }
@@ -241,7 +241,7 @@ table tr:hover td {
     .header-user {
         display: none;
     }
-    .sale-container {
+    .transaction-container {
         padding: 0 16px 32px;
     }
     /* -------------- TABLE ------------- */

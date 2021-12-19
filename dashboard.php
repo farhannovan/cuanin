@@ -46,11 +46,11 @@ if (empty($_SESSION['id'])) {
                     </a>
                     <a class="sidebar-item" href="transaction.php">
                         <div class="sidebar-icon">
-                            <svg class="icon icon-sale">
+                            <svg class="icon icon-transaction">
                                 <use xlink:href="assets/img/sprite.svg#icon-activity"></use>
                             </svg>
                         </div>
-                        <div class="sidebar-text">Sales</div>
+                        <div class="sidebar-text">Transaction</div>
                     </a>
                     <a class="sidebar-item" href="setting.php">
                         <div class="sidebar-icon">
@@ -102,7 +102,7 @@ if (empty($_SESSION['id'])) {
                         <div class="widget-head">
                             <div class="widget-type">
                                 <div class="widget-logo">
-                                    <img src="assets/img/widget-sales.png" alt="" />
+                                    <img src="assets/img/widget-transaction.png" alt="" />
                                 </div>
                                 <div class="widget-details">
                                     <div class="widget-category">Total Transaction</div>

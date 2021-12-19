@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
                             </div>
                         </div>
                         <div class="login-field">
-                            <div class="field-label">Username</div>
+                            <div class="field-label">User Name</div>
                             <div class="field-wrap">
                                 <input class="field-input" type="text" name="username" />
                             </div>
