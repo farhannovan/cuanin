@@ -1,6 +1,7 @@
 <?php
 include 'connection.php';
 session_start();
+
 $id = $_SESSION['id'];
 $query = mysqli_query($db, "SELECT * FROM user where id='$id'") or die(mysqli_error($db));
 $row = mysqli_fetch_array($query);
@@ -19,6 +20,13 @@ if (isset($_POST['update'])) {
             window.location = 'setting.php';
         </script>
     ";
+}
+
+if (empty($_SESSION['id'])) {
+    echo '<script language="javascript">';
+    echo 'alert("belum login bro ?")';
+    header("Refresh:0; url=signin.php");
+    echo '</script>';
 }
 ?>
 
