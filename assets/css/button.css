@@ -10,6 +10,28 @@
     transition: all 0.2s;
 }
 
+.button {
+    padding: 8px;
+    border-radius: 8px;
+    color: var(--color-white) !important;
+}
+
+.button.green {
+    background: #3dbaa2;
+}
+
+.button.green:hover {
+    background: #329a86;
+}
+
+.button.red {
+    background: #ff7a68;
+}
+
+.button.red:hover {
+    background: #ff5943;
+}
+
 .btn-primary {
     background: var(--color-primary);
     color: var(--color-white);
@@ -27,6 +49,10 @@
 .btn-right {
     margin-top: 32px;
     text-align: right;
+}
+
+a {
+    color: inherit;
 }
 
 

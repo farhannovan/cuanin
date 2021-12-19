@@ -182,6 +182,12 @@ table tr:hover td {
     background: #f2f2f2;
 }
 
+img.icon-action {
+    width: 24px !important;
+    height: 24px !important;
+    vertical-align: middle;
+}
+
 
 /* -------------- TABLET -------------- */
 

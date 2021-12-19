@@ -122,6 +122,12 @@ select:focus {
         display: block;
         margin: 0 -8px;
     }
+    .input-row .input-field {
+        width: 100% !important;
+    }
+    .input-row:not(:last-child) {
+        margin-bottom: 0 !important;
+    }
     .popup {
         width: 90%;
     }
@@ -131,6 +137,12 @@ select:focus {
     .input-row {
         display: block;
         margin: 0 -8px;
+    }
+    .input-row .input-field {
+        width: 100% !important;
+    }
+    .input-row:not(:last-child) {
+        margin-bottom: 0 !important;
     }
     .popup {
         width: 70%;
