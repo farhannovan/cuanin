@@ -130,17 +130,27 @@ if (empty($_SESSION['id'])) {
                                     <img src="assets/img/widget-revenue.png" alt="" />
                                 </div>
                                 <div class="widget-details">
-                                    <div class="widget-category">Admin</div>
+                                    <div class="widget-category">Revenue</div>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-body">
                             <div class="widget-line">
                                 <?php
-                                $admin = "SELECT id FROM user ORDER BY id";
+                                // Jumlah Admin
+                                /* $admin = "SELECT id FROM user ORDER BY id";
                                 $adm = mysqli_query($conn, $admin);
                                 $jml = mysqli_num_rows($adm);
-                                echo "<div class='h4'>$jml Admin</div>";
+                                echo "<div class='h4'>$jml Admin</div>"; */
+                                ?>
+                                <?php
+                                error_reporting(0);
+                                $pemasukan = mysqli_query($conn, "SELECT jumlah FROM transaksi WHERE tipe = 'pemasukan'");
+                                while ($revenue = mysqli_fetch_array($pemasukan)) {
+                                    $total_revenue += $revenue['jumlah'];
+                                    $rupiah = rupiah($total_revenue);
+                                }
+                                echo "<div class='h4'>$rupiah</div>";
                                 ?>
                             </div>
                         </div>
