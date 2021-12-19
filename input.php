@@ -1,5 +1,5 @@
 <?php
-require 'function.php';
+require 'config/function.php';
 
 /* ------------- SESSION ------------ */
 session_start();

@@ -1,5 +1,5 @@
 <?php
-require 'function.php';
+require 'config/function.php';
 
 $id = $_GET["id"];
 $ambildata = mysqli_query($conn, "SELECT * FROM transaksi WHERE id = $id");

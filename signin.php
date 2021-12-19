@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include 'config/connection.php';
 error_reporting(0);
 session_start();
 if (isset($_POST['submit'])) {

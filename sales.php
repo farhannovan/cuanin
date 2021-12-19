@@ -1,5 +1,5 @@
 <?php
-require 'function.php';
+require 'config/function.php';
 
 /* ------------- SESSION ------------ */
 session_start();
@@ -128,7 +128,7 @@ if (isset($_POST["tambah"])) {
                                     <td data-label="Amount" class="index"><?= rupiah($row["jumlah"]); ?></td>
                                     <td data-label="Action">
                                         <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> |
-                                        <a href="delete.php?id=<?= $row["id"]; ?>" onclick=" return confirm('Yakin ingin menghapus data?')">Delete</a>
+                                        <a href="config/delete.php?id=<?= $row["id"]; ?>" onclick=" return confirm('Yakin ingin menghapus data?')">Delete</a>
                                     </td>
                                 </tr>
                             </tbody>

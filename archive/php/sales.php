@@ -1,5 +1,5 @@
 <?php
-require 'function.php';
+require 'config/function.php';
 
 $transaksi = query("SELECT * FROM transaksi");
 
@@ -106,7 +106,7 @@ if (isset($_POST["tambah"])) {
                                 <td class="index"><?= $row["jumlah"]; ?></td>
                                 <td>
                                     <a href="edit.php?id=<?= $row["id"] ?>">Edit</a> |
-                                    <a href="delete.php?id=<?= $row["id"]; ?>" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
+                                    <a href="config/delete.php?id=<?= $row["id"]; ?>" onclick="return confirm('Yakin ingin menghapus data?')">Delete</a>
                                 </td>
                             </tr>
                             <?php $i++; ?>
