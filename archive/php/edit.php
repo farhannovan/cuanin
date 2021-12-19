@@ -17,7 +17,7 @@ if (isset($_POST["update"])) {
     echo "
         <script>
             alert('Data berhasil diedit!');
-            document.location.href = 'Sales.php';
+            document.location.href = 'transaction.php';
         </script>
     ";
 }
@@ -49,7 +49,7 @@ if (isset($_POST["update"])) {
             <aside>
                 <ul>
                     <li><a href="dashboard.php">Dashboard</a></li>
-                    <li><a href="sales.php">Sales</a></li>
+                    <li><a href="transaction.php">Sales</a></li>
                 </ul>
             </aside>
             <div class="form">

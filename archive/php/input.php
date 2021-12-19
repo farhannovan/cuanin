@@ -6,7 +6,7 @@ if (isset($_POST["submit"])) {
         echo "
             <script>
                 alert('Data berhasil ditambahkan!');
-                document.location.href = 'sales.php';
+                document.location.href = 'transaction.php';
             </script>
         ";
     } else {
@@ -47,7 +47,7 @@ if (isset($_POST["submit"])) {
                 <ul>
                     <li><a href="#">Input</a></li>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="sales.php">Sales</a></li>
+                    <li><a href="transaction.php">Sales</a></li>
                     <li><a href="#">Setting</a></li>
                 </ul>
             </aside>

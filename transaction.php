@@ -17,7 +17,7 @@ if (isset($_POST["tambah"])) {
         echo "
             <script>
                 alert('Data berhasil ditambahkan!');
-                document.location.href = 'sales.php';
+                document.location.href = 'transaction.php';
             </script>
         ";
     } else {
@@ -63,7 +63,7 @@ if (isset($_POST["tambah"])) {
                         </div>
                         <div class="sidebar-text">Home</div>
                     </a>
-                    <a class="sidebar-item active" href="sales.php">
+                    <a class="sidebar-item active" href="transaction.php">
                         <div class="sidebar-icon">
                             <svg class="icon icon-sale">
                                 <use xlink:href="assets/img/sprite.svg#icon-activity"></use>

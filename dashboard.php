@@ -44,7 +44,7 @@ if (empty($_SESSION['id'])) {
                         </div>
                         <div class="sidebar-text">Home</div>
                     </a>
-                    <a class="sidebar-item" href="sales.php">
+                    <a class="sidebar-item" href="transaction.php">
                         <div class="sidebar-icon">
                             <svg class="icon icon-sale">
                                 <use xlink:href="assets/img/sprite.svg#icon-activity"></use>

@@ -16,7 +16,7 @@ if (isset($_POST['update'])) {
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
     echo "
         <script type='text/javascript'>;
-            alert('Update berhasil');
+            alert('Update berhasil😀');
             window.location = 'setting.php';
         </script>
     ";
@@ -24,7 +24,7 @@ if (isset($_POST['update'])) {
 
 if (empty($_SESSION['id'])) {
     echo '<script language="javascript">';
-    echo 'alert("belum login bro ?")';
+    echo 'alert("Belum login bro?🥺")';
     header("Refresh:0; url=signin.php");
     echo '</script>';
 }
@@ -63,7 +63,7 @@ if (empty($_SESSION['id'])) {
                         </div>
                         <div class="sidebar-text">Home</div>
                     </a>
-                    <a class="sidebar-item" href="sales.php">
+                    <a class="sidebar-item" href="transaction.php">
                         <div class="sidebar-icon">
                             <svg class="icon icon-sale">
                                 <use xlink:href="assets/img/sprite.svg#icon-activity"></use>

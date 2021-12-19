@@ -12,7 +12,6 @@ if (isset($_POST['submit'])) {
     if ($num_rows > 0) {
         echo "
             <script>
-                alert('Berhasil Login');
                 document.location = 'dashboard.php'
             </script>
         ";
