@@ -3,7 +3,7 @@ require 'function.php';
 
 /* ------------- SESSION ------------ */
 session_start();
-if (empty($_SESSION['username'])) {
+if (empty($_SESSION['id'])) {
     echo '<script language="javascript">';
     echo 'alert("belum login bro ?")';
     header("Refresh:0; url=signin.php");
