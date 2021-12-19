@@ -31,7 +31,7 @@ if (empty($_SESSION['id'])) {
         <div class="sidebar">
             <div class="sidebar-head">
                 <!-- <a class="sidebar-logo" href="index.html"> -->
-                <img src="assets/img/logo-black.png" alt="Cuanin" />
+                <img src="assets/img/logo-black.png" class="sidebar-logo" alt="Cuanin" />
                 <!-- </a> -->
             </div>
             <div class="sidebar-body">

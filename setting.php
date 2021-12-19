@@ -51,7 +51,7 @@ if (empty($_SESSION['id'])) {
     <div class="page">
         <div class="sidebar">
             <div class="sidebar-head">
-                <img src="assets/img/logo-black.png" alt="Cuanin" />
+                <img src="assets/img/logo-black.png" class="sidebar-logo" alt="Cuanin" />
             </div>
             <div class="sidebar-body">
                 <nav class="sidebar-nav">
