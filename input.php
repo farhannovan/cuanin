@@ -77,7 +77,7 @@ if (isset($_POST["tambah"])) {
                                 <use xlink:href="assets/img/sprite.svg#icon-settings"></use>
                             </svg>
                         </div>
-                        <div class="sidebar-text">Settings</div>
+                        <div class="sidebar-text">Setting</div>
                     </a>
                     <a class="sidebar-item" href="signout.php">
                         <div class="sidebar-icon">
