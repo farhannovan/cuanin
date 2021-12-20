@@ -145,7 +145,7 @@ if (empty($_SESSION['id'])) {
                                 ?>
                                 <?php
                                 error_reporting(0);
-                                $pemasukan = mysqli_query($conn, "SELECT jumlah FROM transaksi WHERE tipe = 'pemasukan'");
+                                $pemasukan = mysqli_query($conn, "SELECT jumlah FROM transaksi WHERE tipe IN ('pemasukan', 'hutang')");
                                 while ($revenue = mysqli_fetch_array($pemasukan)) {
                                     $total_revenue += $revenue['jumlah'];
                                     $rupiah = rupiah($total_revenue);
@@ -162,17 +162,26 @@ if (empty($_SESSION['id'])) {
                                     <img src="assets/img/widget-customer.png" alt="" />
                                 </div>
                                 <div class="widget-details">
-                                    <div class="widget-category">Transaction</div>
+                                    <div class="widget-category">Expense</div>
                                 </div>
                             </div>
                         </div>
                         <div class="widget-body">
                             <div class="widget-line">
                                 <?php
-                                $transaksi = "SELECT id FROM transaksi ORDER BY id";
+                                /* $transaksi = "SELECT id FROM transaksi ORDER BY id";
                                 $trans = mysqli_query($conn, $transaksi);
                                 $jml = mysqli_num_rows($trans);
-                                echo "<div class='h4'>$jml Transaction</div>";
+                                echo "<div class='h4'>$jml Transaction</div>"; */
+                                ?>
+                                <?php
+                                error_reporting(0);
+                                $pengeluaran = mysqli_query($conn, "SELECT jumlah FROM transaksi WHERE tipe IN ('pengeluaran', 'piutang')");
+                                while ($expense = mysqli_fetch_array($pengeluaran)) {
+                                    $total_expense += $expense['jumlah'];
+                                    $rupiah = rupiah($total_expense);
+                                }
+                                echo "<div class='h4'>$rupiah</div>";
                                 ?>
                             </div>
                         </div>
