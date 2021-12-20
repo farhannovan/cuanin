@@ -4,7 +4,7 @@ require 'config/function.php';
 session_start();
 if (empty($_SESSION['id'])) {
     echo '<script language="javascript">';
-    echo 'alert("belum login bro ?")';
+    echo 'alert("Maaf, anda belum login")';
     header("Refresh:0; url=signin.php");
     echo '</script>';
 }

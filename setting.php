@@ -24,7 +24,7 @@ if (isset($_POST['update'])) {
 
 if (empty($_SESSION['id'])) {
     echo '<script language="javascript">';
-    echo 'alert("Belum login bro?🥺")';
+    echo 'alert("Maaf, anda belum login")';
     header("Refresh:0; url=signin.php");
     echo '</script>';
 }

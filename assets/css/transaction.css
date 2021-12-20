@@ -173,6 +173,10 @@ table tbody tr:nth-child(even) {
     background-color: #d1e8f5;
 }
 
+table thead th:first-child {
+    max-width: 5%;
+}
+
 table td {
     padding: 16px 36px;
     background: #fafafa;
