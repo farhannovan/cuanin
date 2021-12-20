@@ -3,7 +3,7 @@ require 'config/function.php';
 
 /* ------------- SESSION ------------ */
 session_start();
-if (empty($_SESSION['id'])) {
+if (empty($_SESSION['username'])) {
     echo '<script language="javascript">';
     echo 'alert("Maaf, anda belum login")';
     header("Refresh:0; url=signin.php");
@@ -101,7 +101,7 @@ if (isset($_POST["tambah"])) {
         <div class="page-content">
             <header>
                 <a class="header-logo" href=""><img src="assets/img/logo-sm.svg" alt="" /></a>
-                <a class="header-user" href="setting.php"><img src="assets/img/ava-header.png" alt="" /></a>
+                <a class="header-ava" href="setting.php"><img src="assets/img/ava-header.png" alt="" /></a>
             </header>
 
             <!-- Content -->

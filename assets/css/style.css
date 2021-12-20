@@ -674,14 +674,14 @@ header {
     width: 60px;
 }
 
-.header-user {
+.header-ava {
     -ms-flex-negative: 0;
     flex-shrink: 0;
     width: 48px;
     margin-left: 36px;
 }
 
-.header-user img {
+.header-ava img {
     min-width: 100%;
     height: 48px;
     border-radius: 50%;
@@ -1400,7 +1400,7 @@ screen and (max-height: 300px) {
     .header-logo img {
         width: 46px;
     }
-    .header-user {
+    .header-ava {
         display: none;
     }
     .widget-item {

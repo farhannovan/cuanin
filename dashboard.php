@@ -2,7 +2,7 @@
 require 'config/function.php';
 /* ------------- SESSION ------------ */
 session_start();
-if (empty($_SESSION['id'])) {
+if (empty($_SESSION['username'])) {
     echo '<script language="javascript">';
     echo 'alert("Maaf, anda belum login")';
     header("Refresh:0; url=signin.php");
@@ -81,7 +81,8 @@ if (empty($_SESSION['id'])) {
         <div class="page-content">
             <header>
                 <a class="header-logo" href=""><img src="assets/img/logo-sm.svg" alt="logo" /></a>
-                <a class="header-user" href="setting.php"><img src="assets/img/ava-header.png" alt="avatar" /></a>
+                <h3 class="header-username">Hello, <?php echo $_SESSION['username'] ?> </h3>
+                <a class="header-ava" href="setting.php"><img src="assets/img/ava-header.png" alt="avatar" /></a>
             </header>
 
             <!-- Content -->

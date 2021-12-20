@@ -79,7 +79,7 @@ if (isset($_POST["tambah"])) {
         <div class="page-content">
             <header>
                 <a class="header-logo" href="index.html"><img src="assets/img/logo-sm.svg" alt="" /></a>
-                <a class="header-user" href="sign-in.html"><img src="assets/img/ava-header.png" alt="" /></a>
+                <a class="header-ava" href="sign-in.html"><img src="assets/img/ava-header.png" alt="" /></a>
             </header>
 
             <!-- Content -->

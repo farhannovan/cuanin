@@ -2,8 +2,8 @@
 include 'config/connection.php';
 session_start();
 
-$id = $_SESSION['id'];
-$query = mysqli_query($db, "SELECT * FROM user where id='$id'") or die(mysqli_error($db));
+$username = $_SESSION['username'];
+$query = mysqli_query($db, "SELECT * FROM user where username='$username'") or die(mysqli_error($db));
 $row = mysqli_fetch_array($query);
 
 if (isset($_POST['update'])) {
@@ -22,7 +22,7 @@ if (isset($_POST['update'])) {
     ";
 }
 
-if (empty($_SESSION['id'])) {
+if (empty($_SESSION['username'])) {
     echo '<script language="javascript">';
     echo 'alert("Maaf, anda belum login")';
     header("Refresh:0; url=signin.php");
@@ -100,7 +100,7 @@ if (empty($_SESSION['id'])) {
         <div class="page-content">
             <header>
                 <a class="header-logo" href=""><img src="assets/img/logo-sm.svg" alt="" /></a>
-                <a class="header-user" href="setting.php"><img src="assets/img/ava-header.png" alt="" /></a>
+                <a class="header-ava" href="setting.php"><img src="assets/img/ava-header.png" alt="" /></a>
             </header>
 
             <!-- Content -->

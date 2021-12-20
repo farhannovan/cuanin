@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $query = mysqli_query($db, "SELECT * FROM user WHERE username = '$username' AND password = '$password'");
     $num_rows = mysqli_num_rows($query);
     $row = mysqli_fetch_array($query);
-    $_SESSION["id"] = $row['id'];
+    $_SESSION['username'] = $row['username'];
     if ($num_rows > 0) {
         echo "
             <script>
