@@ -2,12 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Cuanin</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#fff">
-    <link rel="stylesheet" media="all" href="assets/css/landing.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#fff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+    <link rel="stylesheet" media="all" href="assets/css/landing.css" />
     <script src="https://kit.fontawesome.com/42db164d21.js" crossorigin="anonymous"></script>
 </head>
 
@@ -19,12 +22,12 @@
                     <a class="header-logo" href="#"><img class="header-pic" src="assets/img/logo-black.png" alt=""></a>
                     <div class="header-wrap">
                         <nav class="header-nav">
-                            <a class="header-link" href="#about">About</a>
-                            <a class="header-link" href="#details">Features</a>
-                            <a class="header-link" href="#team">Team</a></nav>
+                            <a class="header-link" href="#about">Tentang</a>
+                            <a class="header-link" href="#details">Fitur</a>
+                            <a class="header-link" href="#team">Tim</a></nav>
                         <div class="header-btns">
-                            <button class="header-btn btn btn-header-secondary">Masuk</button>
-                            <button class="header-btn btn btn-header-primary">Daftar</button>
+                            <button class="header-btn btn btn-header-secondary" onclick="window.location.href='signin.php'">Masuk</button>
+                            <button class="header-btn btn btn-header-primary" onclick="window.location.href='signup.php'">Daftar</button>
                         </div>
                     </div>
                 </div>
@@ -35,7 +38,10 @@
                     <h1 class="main-title">Yuk gabung bersama UKM lainnya.</h1>
                     <div class="main-info">Aplikasi pengelolaan keuangan untuk tingkatkan usaha kamu. Cuanin Mudah dan Aman!
                     </div>
-                    <div class="main-btn"><button class="btn btn-primary">Gabung Sekarang</button></div>
+                    <div class="main-btn">
+                        <button class="btn btn-primary" onclick="window.location.href='signup.php'">Gabung
+                            Sekarang</button>
+                    </div>
                 </div>
             </div>
             <div class="main-bg">
@@ -117,7 +123,8 @@
                     <div class="team-container">
                         <article class="team-card">
                             <div class="team-profile">
-                                <img src="https://picsum.photos/300/200" alt="photo profile">
+                                <!-- <img src="https://picsum.photos/300/200" alt="photo profile"> -->
+                                <img src="assets/img/ava-header.png" alt="photo profile">
                                 <h3>Dicky Galuh</h3>
                                 <p>Project Manager</p>
                             </div>
@@ -133,7 +140,7 @@
 
                         <article class="team-card">
                             <div class="team-profile">
-                                <img src="https://picsum.photos/300/200" alt="photo profile">
+                                <img src="assets/img/ava-header.png" alt="photo profile">
                                 <h3>Farhan Novan</h3>
                                 <p>Full Stack Developer</p>
                             </div>
@@ -149,7 +156,7 @@
 
                         <article class="team-card">
                             <div class="team-profile">
-                                <img src="https://picsum.photos/300/200" alt="photo profile">
+                                <img src="assets/img/ava-header.png" alt="photo profile">
                                 <h3>Refo Tri Putra</h3>
                                 <p>Back End Developer</p>
                             </div>
@@ -165,7 +172,7 @@
 
                         <article class="team-card">
                             <div class="team-profile">
-                                <img src="https://picsum.photos/300/200" alt="photo profile">
+                                <img src="assets/img/ava-header.png" alt="photo profile">
                                 <h3>Zaenal Muttaqin</h3>
                                 <p>Designer</p>
                             </div>
@@ -199,7 +206,7 @@
                         <div class="footer-item">
                             <div class="footer-category">Tim</div>
                             <div class="footer-menu">
-                                <a class="footer-link" href="#">Tim Kami</a>
+                                <a class="footer-link" href="#team">Tim Kami</a>
                                 <a class="footer-link" href="#">Kontak</a>
                             </div>
                         </div>
@@ -222,17 +229,17 @@
                         <div class="footer-social social_dark">
                             <a class="social__link" href="#">
                                 <svg class="icon icon-facebook">
-                                    <use xlink:href="assets/img/sprite.svg#icon-facebook"></use>
+                                    <use xlink:href="assets/img/sprite2.svg#icon-facebook"></use>
                                 </svg>
                             </a>
                             <a class="social__link" href="#">
                                 <svg class="icon icon-twitter">
-                                    <use xlink:href="assets/img/sprite.svg#icon-twitter"></use>
+                                    <use xlink:href="assets/img/sprite2.svg#icon-twitter"></use>
                                 </svg>
                             </a>
                             <a class="social__link" href="#">
                                 <svg class="icon icon-instagram">
-                                    <use xlink:href="assets/img/sprite.svg#icon-instagram"></use>
+                                    <use xlink:href="assets/img/sprite2.svg#icon-instagram"></use>
                                 </svg>
                             </a>
                         </div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#fff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;800&display=swap" rel="stylesheet">
+    <title>Cuanin</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="logo">
+                <p>Cuan<span>in</span></p>
+            </div>
+            <div class="links">
+                <!-- Mas Refo -->
+                <!--                 <a href="login.html">Sign In - V1</a>
+                <a href="register.html">Sign Up - V1</a> -->
+                <!-- Farhan -->
+                <a href="signin.php">Sign In</a>
+                <a href="signup.php">Sign Up</a>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="tulisan">
+                <h3> Halo Sobat!</h3>
+                <h5> Yuk gabung bersama ribuan UKM lainnya bersama kami</h5>
+                <p>Aplikasi pengelolaan keuangan untuk tingkatkan usaha kamu. <br> Cuanin Mudah dan Aman!</p>
+            </div>
+            <div class="gambar">
+                <img src="assets/img/bg1.png" alt="gambar1">
+            </div>
+        </div>
+        <div class="signup">
+            <input type="submit" value="Join" onclick="goTo()">
+        </div>
+        <div class="foot">
+            <div class="icon">
+                <a href="#">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function goTo() {
+            location.replace("signup.php");
+        }
+    </script>
+</body>
+
+</html>
