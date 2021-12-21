@@ -1,7 +1,7 @@
 <?php
 include "function.php";
-include "database.php";
-$select = mysqli_query($koneksi, 'SELECT * FROM transaksi where id = ' . $_GET['id']);
+include "function.php";
+$select = mysqli_query($conn, 'SELECT * FROM transaksi where id = ' . $_GET['id']);
 $data = mysqli_fetch_array($select);
 
 session_start();
@@ -15,7 +15,7 @@ if (empty($_SESSION['username'])) {
 }
 
 $username = $_SESSION['username'];
-$query = mysqli_query($koneksi, "SELECT * FROM user where username='$username'") or die(mysqli_error($koneksi));
+$query = mysqli_query($conn, "SELECT * FROM user where username='$username'") or die(mysqli_error($conn));
 $row = mysqli_fetch_array($query);
 ?>
 

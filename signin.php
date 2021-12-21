@@ -1,11 +1,11 @@
 <?php
-include 'config/connection.php';
+include 'config/function.php';
 error_reporting(0);
 session_start();
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $query = mysqli_query($db, "SELECT * FROM user WHERE username = '$username' AND password = '$password'");
+    $query = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username' AND password = '$password'");
     $num_rows = mysqli_num_rows($query);
     $row = mysqli_fetch_array($query);
     $_SESSION['username'] = $row['username'];

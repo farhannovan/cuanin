@@ -1,6 +1,6 @@
 <?php
 
-$koneksi = mysqli_connect("localhost", "root", "", "cuanin");
+$conn = mysqli_connect("localhost", "root", "", "cuanin");
 
 // Check connection
 if (mysqli_connect_errno()) {

@@ -3,10 +3,10 @@ session_start();
 $namaServer = "localhost";
 $namaPengguna = "root";
 $password = "";
-$db_name = "cuanin";
+$conn_name = "cuanin";
 
 $link = mysqli_connect($namaServer, $namaPengguna, $password);
-mysqli_select_db($link, $db_name);
+mysqli_select_db($link, $conn_name);
 
 // menangkap data yang dikirim dari form login
 $username = $_POST['username'];

@@ -1,5 +1,5 @@
 <?php
-require 'config/function.php';
+include 'config/function.php';
 
 if (isset($_POST["submit"])) {
     if (input($_POST) > 0) {

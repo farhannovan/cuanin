@@ -1,9 +1,9 @@
 <?php
-include 'config/connection.php';
+include 'config/function.php';
 session_start();
 
 $username = $_SESSION['username'];
-$query = mysqli_query($db, "SELECT * FROM user where username='$username'") or die(mysqli_error($db));
+$query = mysqli_query($conn, "SELECT * FROM user where username='$username'") or die(mysqli_error($conn));
 $row = mysqli_fetch_array($query);
 
 if (isset($_POST['update'])) {
@@ -13,7 +13,7 @@ if (isset($_POST['update'])) {
     $no_hp = $_POST['no_hp'];
     $password = $_POST['password'];
     $query = "UPDATE user SET fullname = '$fullname', username = '$username', email = '$email', no_hp = $no_hp, password = '$password' WHERE id = '$id'";
-    $result = mysqli_query($db, $query) or die(mysqli_error($db));
+    $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     echo "
         <script type='text/javascript'>;
             alert('Update berhasil😀');

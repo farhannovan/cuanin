@@ -1,5 +1,5 @@
 <?php
-require 'config/function.php';
+include 'config/function.php';
 
 $transaksi = query("SELECT * FROM transaksi");
 

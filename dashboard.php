@@ -1,5 +1,5 @@
 <?php
-require 'config/function.php';
+include 'config/function.php';
 /* ------------- SESSION ------------ */
 session_start();
 if (empty($_SESSION['username'])) {
