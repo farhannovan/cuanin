@@ -10,6 +10,7 @@ if (empty($_SESSION['username'])) {
     echo '</script>';
 }
 
+/* ------------- UPDATE ------------- */
 $id = $_GET["id"];
 $update = mysqli_query($conn, "SELECT * FROM transaksi WHERE id = $id");
 $upd = mysqli_fetch_array($update);
