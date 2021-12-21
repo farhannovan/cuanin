@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1026" height="720" viewBox="0 0 1026 720">
+  <defs>
+    <linearGradient id="browser-a" x1="0%" x2="100%" y1="29.837%" y2="70.163%">
+      <stop offset="0%" stop-color="#5F8CFF"/>
+      <stop offset="100%" stop-color="#45D4FF"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(1)">
+    <rect width="1023.5" height="719.5" x=".25" y=".25" fill="#FFF" stroke="#CFCFCF" stroke-width=".5" rx="8"/>
+    <path fill="url(#browser-a)" d="M0,71 L1022,71 L1022,712 C1022,716.418278 1018.41828,720 1014,720 L8,720 C3.581722,720 5.41083001e-16,716.418278 0,712 L0,71 L0,71 Z"/>
+    <g transform="translate(0 11)">
+      <line x2="1024" y1="60.25" y2="60.25" stroke="#CFCFCF" stroke-linecap="square" stroke-width=".5"/>
+      <rect width="934" height="30" x="70" y="20" fill="#E0E2E5" fill-opacity=".3" rx="4"/>
+      <g fill="#E0E2E5" transform="translate(20 29)">
+        <polygon points="24 11.4 22.6 10 26.6 6 22.6 2 24 .6 29.4 6"/>
+        <polygon points="2 11.4 .6 10 4.6 6 .6 2 2 .6 7.4 6" transform="matrix(-1 0 0 1 8 0)"/>
+      </g>
+      <path fill="#E0E2E5" d="M16,0 C18.7614237,0 21,2.23857625 21,5 C21,7.76142375 18.7614237,10 16,10 C13.2385763,10 11,7.76142375 11,5 C11,2.23857625 13.2385763,0 16,0 Z M31,0 C33.7614237,0 36,2.23857625 36,5 C36,7.76142375 33.7614237,10 31,10 C28.2385763,10 26,7.76142375 26,5 C26,2.23857625 28.2385763,0 31,0 Z M46,0 C48.7614237,0 51,2.23857625 51,5 C51,7.76142375 48.7614237,10 46,10 C43.2385763,10 41,7.76142375 41,5 C41,2.23857625 43.2385763,0 46,0 Z"/>
+    </g>
+  </g>
+</svg>
