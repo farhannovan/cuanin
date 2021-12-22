@@ -1,5 +1,8 @@
 <?php
+include 'config/function.php';
+/* ------------- SESSION ------------ */
 session_start();
+/* 
 $namaServer = "localhost";
 $namaPengguna = "root";
 $password = "";
@@ -31,6 +34,17 @@ if (isset($_POST['submit'])) {
         } else {
             echo "Cek data anda";
         }
+    }
+} */
+
+if (isset($_POST["submit"])) {
+
+    if (registrasi($_POST) > 0) {
+        echo "<script>
+				alert('user baru berhasil ditambahkan!');
+			  </script>";
+    } else {
+        echo mysqli_error($conn);
     }
 }
 ?>
