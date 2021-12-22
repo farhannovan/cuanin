@@ -91,7 +91,7 @@ if (empty($_SESSION['username'])) {
                     <div class="banner-container">
                         <div class="banner-wrap">
                             <div class="banner-title h2">Dashboard</div>
-                            <div class="banner-info h5">Look what you have made today!</div>
+                            <div class="banner-info h5">Atur keuanganmu sekarang juga!</div>
                         </div>
                         <div class="banner-preview"><img src="assets/img/figures-2.png" alt="" /></div>
                     </div>
@@ -106,7 +106,7 @@ if (empty($_SESSION['username'])) {
                                     <img src="assets/img/widget-transaction.png" alt="" />
                                 </div>
                                 <div class="widget-details">
-                                    <div class="widget-category">Total Transaction</div>
+                                    <div class="widget-category">Total Transaksi</div>
                                 </div>
                             </div>
                         </div>
@@ -131,7 +131,7 @@ if (empty($_SESSION['username'])) {
                                     <img src="assets/img/widget-revenue.png" alt="" />
                                 </div>
                                 <div class="widget-details">
-                                    <div class="widget-category">Revenue</div>
+                                    <div class="widget-category">Pendapatan</div>
                                 </div>
                             </div>
                         </div>
@@ -163,7 +163,7 @@ if (empty($_SESSION['username'])) {
                                     <img src="assets/img/widget-customer.png" alt="" />
                                 </div>
                                 <div class="widget-details">
-                                    <div class="widget-category">Expense</div>
+                                    <div class="widget-category">Pengeluaran</div>
                                 </div>
                             </div>
                         </div>

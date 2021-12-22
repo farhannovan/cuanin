@@ -107,16 +107,16 @@ if (empty($_SESSION['username'])) {
             <!-- Content -->
             <div class="transaction">
                 <div class="transaction-container">
-                    <div class="transaction-stage h5 mobile-show"><strong>User Profile</strong></div>
+                    <div class="transaction-stage h5 mobile-show"><strong>Profil Pengguna</strong></div>
                     <form action="#" method="post">
                         <div class="input-fieldset">
                             <div class="input-row">
                                 <div class="input-field">
-                                    <div class="input-label">Full Name</div>
+                                    <div class="input-label">Nama Lengkap</div>
                                     <div class="input-wrap"><input type="text" name="fullname" id="fullname" required value="<?php echo $row['fullname']; ?>"></div>
                                 </div>
                                 <div class=" input-field">
-                                    <div class="input-label">User Name</div>
+                                    <div class="input-label">Nama Pengguna</div>
                                     <div class="input-wrap"><input type="text" name="username" id="username" required value="<?php echo $row['username']; ?>"></div>
                                 </div>
                             </div>
@@ -132,12 +132,12 @@ if (empty($_SESSION['username'])) {
                             </div>
                             <div class="input-row">
                                 <div class="input-field">
-                                    <div class="input-label">Password</div>
+                                    <div class="input-label">Kata Sandi</div>
                                     <div class="input-wrap"><input type="password" name="password" id="password" required value="<?php echo $row['password']; ?>"></div>
                                 </div>
                             </div>
                             <div class="btn-right">
-                                <button class="btn btn-primary" type="submit" name="update" value="">Save</button>
+                                <button class="btn btn-primary" type="submit" name="update" value="">Simpan</button>
                             </div>
                         </div>
                     </form>

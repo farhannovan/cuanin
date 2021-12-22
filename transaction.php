@@ -108,15 +108,15 @@ if (isset($_POST["tambah"])) {
             <!-- Content -->
             <div class="transaction">
                 <div class="transaction-container">
-                    <div class="transaction-stage h5 mobile-show">History Transaction</div>
+                    <div class="transaction-stage h5 mobile-show">Riwayat Transaksi</div>
                     <table cellspacing="0" cellpadding="0">
                         <thead>
                             <th>No. </th>
-                            <th>Name</th>
-                            <th>Date</th>
-                            <th>Type</th>
-                            <th>Amount</th>
-                            <th>Action</th>
+                            <th>Nama Transaksi</th>
+                            <th>Tanggal</th>
+                            <th>Tipe</th>
+                            <th>Jumlah</th>
+                            <th>Aksi</th>
                         </thead>
 
                         <?php $i = 1 ?>
@@ -140,7 +140,7 @@ if (isset($_POST["tambah"])) {
                     </table>
 
                     <div class="btn-center">
-                        <button class="btn btn-primary" onclick=" window.location.href='input.php'">Add Transaction</button>
+                        <button class="btn btn-primary" onclick=" window.location.href='input.php'">Tambah Transaksi</button>
                     </div>
                 </div>
             </div>

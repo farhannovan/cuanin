@@ -109,28 +109,28 @@ if (isset($_POST["update"])) {
             <!-- Content -->
             <div class="transaction">
                 <div class="transaction-container">
-                    <div class="transaction-stage h5 mobile-show"><strong>Edit Transaction</strong></div>
+                    <div class="transaction-stage h5 mobile-show"><strong>Edit Transaksi</strong></div>
                     <form action="" method="post">
                         <input type="hidden" name="id" value="<?php echo $upd["id"] ?>">
                         <div class="input-fieldset">
                             <div class="input-row">
                                 <div class="input-field">
-                                    <div class="input-label">Name</div>
+                                    <div class="input-label">Nama Transaksi</div>
                                     <div class="input-wrap"><input type="text" name="nama" id="nama" required value="<?php echo $upd["nama"] ?>"></div>
                                 </div>
                                 <div class="input-field">
-                                    <div class="input-label">Amount</div>
+                                    <div class="input-label">Jumlah</div>
                                     <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required value="<?php echo $upd["jumlah"] ?>"></div>
                                 </div>
                             </div>
                             <div class="input-row">
                                 <div class="input-field">
-                                    <div class="input-label">Date</div>
+                                    <div class="input-label">Tanggal</div>
                                     <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required value="<?php echo $upd["tanggal"] ?>">
                                     </div>
                                 </div>
                                 <div class="input-field">
-                                    <div class="input-label">Type</div>
+                                    <div class="input-label">Tipe</div>
                                     <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required value="<?php echo $upd["tipe"] ?>">
                                             <!-- <option value="none" selected disabled hidden>Select a type</option> -->
                                             <option value="Pengeluaran">Pengeluaran</option>
@@ -142,7 +142,7 @@ if (isset($_POST["update"])) {
                                 </div>
                             </div>
                             <div class="btn-right">
-                                <button class="btn btn-primary" type="submit" name="update" value="update">Save</button>
+                                <button class="btn btn-primary" type="submit" name="update" value="update">Simpan</button>
                             </div>
                         </div>
                     </form>
