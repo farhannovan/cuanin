@@ -101,6 +101,7 @@ if (isset($_POST["tambah"])) {
         <div class="page-content">
             <header>
                 <a class="header-logo" href=""><img src="assets/img/logo-sm.svg" alt="" /></a>
+                <h3 class="header-username">Hi, <?php echo $_SESSION['username'] ?> </h3>
                 <a class="header-ava" href="setting.php"><img src="assets/img/ava-header.png" alt="" /></a>
             </header>
 
