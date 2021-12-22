@@ -82,7 +82,7 @@ if (isset($_POST["update"])) {
                         </div>
                         <div class="sidebar-text">Setting</div>
                     </a>
-                    <a class="sidebar-item" href="signout.php">
+                    <a class="sidebar-item" href="signout.php" onclick="return confirm('Apakah kamu yakin untuk keluar?');">
                         <div class="sidebar-icon">
                             <svg class="icon icon-home" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
                                 <g>
