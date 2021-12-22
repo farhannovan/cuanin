@@ -18,7 +18,7 @@ if (isset($_POST['update'])) {
     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     echo "
         <script type='text/javascript'>;
-            alert('Update berhasil😀');
+            alert('Update berhasil!');
             window.location = 'setting.php';
         </script>
     ";
@@ -26,7 +26,7 @@ if (isset($_POST['update'])) {
 
 if (empty($_SESSION['username'])) {
     echo '<script language="javascript">';
-    echo 'alert("Maaf, anda belum login")';
+    echo 'alert("Maaf, anda belum login. Silakan login terlebih dahulu.")';
     header("Refresh:0; url=signin.php");
     echo '</script>';
 }

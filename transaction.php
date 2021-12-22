@@ -6,7 +6,7 @@ session_start();
 
 if (empty($_SESSION['username'])) {
     echo '<script language="javascript">';
-    echo 'alert("Maaf, anda belum login")';
+    echo 'alert("Maaf, anda belum login. Silakan login terlebih dahulu.")';
     header("Refresh:0; url=signin.php");
     echo '</script>';
 }

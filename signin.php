@@ -65,13 +65,13 @@ if (isset($_POST['submit'])) {
             die();
         } else {
             echo '<script language="javascript">
-                    window.alert("LOGIN GAGAL! Silakan coba lagi");
+                    window.alert("Login gagal! Silakan coba lagi.");
                     window.location.href="signin.php";
                   </script>';
         }
     } else {
         echo '<script language="javascript">
-                window.alert("LOGIN GAGAL! Silakan coba lagi");
+                window.alert("Login gagal! Silakan coba lagi.");
                 window.location.href="signin.php";
              </script>';
     }
