@@ -20,6 +20,14 @@
     transition: 0.3s;
 }
 
+.button.blue {
+    background: #3d8bff;
+}
+
+.button.blue:hover {
+    background: #0a6cff;
+}
+
 .button.green {
     background: #3dbaa2;
 }
