@@ -1,7 +1,10 @@
 <?php
 include 'config/function.php';
-/* ------------- SESSION ------------ */
+
+error_reporting(0);
 session_start();
+
+/* ---------- DAFTAR BIASA ---------- */
 /* 
 $namaServer = "localhost";
 $namaPengguna = "root";
@@ -37,8 +40,8 @@ if (isset($_POST['submit'])) {
     }
 } */
 
+/* --- DAFTAR DENGAN PASSWORD HASH -- */
 if (isset($_POST["submit"])) {
-
     if (registrasi($_POST) > 0) {
         echo "<script>
 				alert('user baru berhasil ditambahkan!');

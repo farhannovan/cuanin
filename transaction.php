@@ -1,8 +1,9 @@
 <?php
 include 'config/function.php';
 
-/* ------------- SESSION ------------ */
+error_reporting(0);
 session_start();
+
 if (empty($_SESSION['username'])) {
     echo '<script language="javascript">';
     echo 'alert("Maaf, anda belum login")';

@@ -1,10 +1,13 @@
 <?php
 include 'config/function.php';
+
 error_reporting(0);
 session_start();
-if (isset($_POST['submit'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+
+/* ----------- LOGIN BIASA ---------- */
+/* if (isset($_POST['submit'])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
     $query = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username' AND password = '$password'");
     $num_rows = mysqli_num_rows($query);
     $row = mysqli_fetch_array($query);
@@ -22,6 +25,55 @@ if (isset($_POST['submit'])) {
                 document.location = 'signin.php'
             </script>
         ";
+    }
+} */
+
+/* --- LOGIN DENGAN PASSWORD HASH --- */
+// Jika ditemukan session, maka user akan otomatis dialihkan ke halaman admin.
+if (isset($_SESSION['username'])) {
+    header("location: dashboard.php");
+}
+
+// Jika tombol login ditekan, maka akan mengirimkan variabel yang berisi username dan password.
+if (isset($_POST['submit'])) {
+
+    $username = $_POST['username'];
+    $pass = $_POST['password']; // password yang di inputkan oleh user lewat form login.
+
+    // Query ke database.
+    $sql = mysqli_query($conn, "SELECT username, password FROM user WHERE username = '$username'");
+
+    list($username, $password) = mysqli_fetch_array($sql);
+
+    // Jika data ditemukan dalam database, maka akan melakukan validasi dengan password_verify.
+    if (mysqli_num_rows($sql) > 0) {
+
+        /*
+            Validasi login dengan password_verify
+            $userpass -----> diambil dari password yang diinputkan user lewat form login
+            $password -----> diambil dari password dalam database
+        */
+        if (password_verify($pass, $password)) {
+
+            // Buat session baru.
+            session_start();
+            $_SESSION['username'] = $username;
+            // $_SESSION['nama']     = $nama;
+
+            // Jika login berhasil, user akan diarahkan ke halaman admin.
+            header("location: signin.php");
+            die();
+        } else {
+            echo '<script language="javascript">
+                    window.alert("LOGIN GAGAL! Silakan coba lagi");
+                    window.location.href="signin.php";
+                  </script>';
+        }
+    } else {
+        echo '<script language="javascript">
+                window.alert("LOGIN GAGAL! Silakan coba lagi");
+                window.location.href="signin.php";
+             </script>';
     }
 }
 ?>
