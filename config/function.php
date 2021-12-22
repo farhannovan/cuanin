@@ -63,3 +63,45 @@ function rupiah($angka)
     $rupiah = "Rp" . number_format($angka, 0, ".", ".");
     return $rupiah;
 }
+
+function registrasi($data)
+{
+    global $conn;
+
+    $fullname = mysqli_real_escape_string($conn, $data['fullname']);
+    // $username = mysqli_real_escape_string($conn, $data['username']);
+    $email = mysqli_real_escape_string($conn, $data['email']);
+    $no_hp = mysqli_real_escape_string($conn, $data['no_hp']);
+
+    $username = strtolower(stripslashes($data["username"]));
+    $pass = mysqli_real_escape_string($conn, $data["pass"]);
+    $repass = mysqli_real_escape_string($conn, $data["repass"]);
+
+    // cek username sudah ada atau belum
+    $result = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
+
+    if (mysqli_fetch_assoc($result)) {
+        echo "<script>
+				alert('username sudah terdaftar!')
+		      </script>";
+        return false;
+    }
+
+
+    // cek konfirmasi password
+    if ($pass !== $repass) {
+        echo "<script>
+				alert('konfirmasi password tidak sesuai!');
+		      </script>";
+        return false;
+    }
+
+    // enkripsi password
+    $pass = password_hash($pass, PASSWORD_DEFAULT);
+
+    // tambahkan userbaru ke database
+    // mysqli_query($conn, "INSERT INTO user VALUES('', '$username', '$pass')");
+    mysqli_query($conn, "INSERT INTO user (fullname,username,no_hp,email,password) VALUES ('$fullname','$username','$no_hp','$email','$pass')");
+
+    return mysqli_affected_rows($conn);
+}
