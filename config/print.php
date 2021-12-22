@@ -1,6 +1,5 @@
 <?php
 include "function.php";
-include "function.php";
 $select = mysqli_query($conn, 'SELECT * FROM transaksi where id = ' . $_GET['id']);
 $data = mysqli_fetch_array($select);
 
@@ -15,8 +14,8 @@ if (empty($_SESSION['username'])) {
 }
 
 $username = $_SESSION['username'];
-$query = mysqli_query($conn, "SELECT * FROM user where username='$username'") or die(mysqli_error($conn));
-$row = mysqli_fetch_array($query);
+$que = mysqli_query($conn, "SELECT * FROM user where username='$username'") or die(mysqli_error($conn));
+$row = mysqli_fetch_array($que);
 ?>
 
 <!DOCTYPE html>
@@ -94,7 +93,12 @@ $row = mysqli_fetch_array($query);
         </table>
     </div>
     <script>
-        window.print()
+        window.print();
+        window.onafterprint = back;
+
+        function back() {
+            window.history.back();
+        }
     </script>
 </body>
 

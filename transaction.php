@@ -131,7 +131,7 @@ if (isset($_POST["tambah"])) {
                                     <td data-label="Action">
                                         <a class="button green" href="edit.php?id=<?= $row["id"] ?>"><img class="icon-action" src="assets/img/edit.svg" alt=""></a>
                                         <a class="button red" href="config/delete.php?id=<?= $row["id"]; ?>" onclick=" return confirm('Yakin ingin menghapus data?')"><img class="icon-action" src="assets/img/delete.svg" alt=""></a>
-                                        <a class="button green" href="config/print.php?id=<?= $row["id"] ?>"><img class="icon-action" src="assets/img/edit.svg" alt="">print</a>
+                                        <a class="button green" href="config/print.php?id=<?= $row["id"] ?>"><img class="icon-action" src="assets/img/edit.svg" alt=""></a>
                                     </td>
                                 </tr>
                             </tbody>
