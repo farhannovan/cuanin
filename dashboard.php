@@ -103,7 +103,7 @@ if (empty($_SESSION['username'])) {
                         <div class="widget-head">
                             <div class="widget-type">
                                 <div class="widget-logo">
-                                    <img src="assets/img/widget-transaction.png" alt="" />
+                                    <img src="assets/img/widget-transaksi.png" alt="" />
                                 </div>
                                 <div class="widget-details">
                                     <div class="widget-category">Total Transaksi</div>
@@ -128,7 +128,7 @@ if (empty($_SESSION['username'])) {
                         <div class="widget-head">
                             <div class="widget-type">
                                 <div class="widget-logo">
-                                    <img src="assets/img/widget-revenue.png" alt="" />
+                                    <img src="assets/img/widget-pendapatan.png" alt="" />
                                 </div>
                                 <div class="widget-details">
                                     <div class="widget-category">Pendapatan</div>
@@ -160,7 +160,7 @@ if (empty($_SESSION['username'])) {
                         <div class="widget-head">
                             <div class="widget-type">
                                 <div class="widget-logo">
-                                    <img src="assets/img/widget-customer.png" alt="" />
+                                    <img src="assets/img/widget-pengeluaran.png" alt="" />
                                 </div>
                                 <div class="widget-details">
                                     <div class="widget-category">Pengeluaran</div>

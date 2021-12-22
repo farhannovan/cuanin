@@ -1038,6 +1038,12 @@ article:hover {
     .team-wrapper {
         max-width: 100%;
     }
+    .team-container {
+        display: block !important;
+    }
+    .team-card {
+        width: 100%;
+    }
     .btn-header-primary {
         margin: 0;
     }
