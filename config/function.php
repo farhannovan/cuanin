@@ -82,7 +82,7 @@ function registrasi($data)
 
     if (mysqli_fetch_assoc($result)) {
         echo "<script>
-				alert('username sudah terdaftar!')
+				alert('Username sudah terdaftar!')
 		      </script>";
         return false;
     }
@@ -91,7 +91,7 @@ function registrasi($data)
     // cek konfirmasi password
     if ($pass !== $repass) {
         echo "<script>
-				alert('konfirmasi password tidak sesuai!');
+				alert('Konfirmasi password tidak sesuai!');
 		      </script>";
         return false;
     }
