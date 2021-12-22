@@ -44,8 +44,9 @@ if (isset($_POST['submit'])) {
 if (isset($_POST["submit"])) {
     if (registrasi($_POST) > 0) {
         echo "<script>
-				alert('user baru berhasil ditambahkan!');
+				alert('User baru berhasil ditambahkan!');
 			  </script>";
+        echo header("Refresh:0; url=signin.php");
     } else {
         echo mysqli_error($conn);
     }

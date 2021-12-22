@@ -17,14 +17,14 @@ if (isset($_POST["tambah"])) {
     if (input($_POST) > 0) {
         echo "
             <script>
-                alert('Transaksi berhasil ditambahkan😀');
+                alert('Transaksi berhasil ditambahkan');
                 document.location.href = 'transaction.php';
             </script>
         ";
     } else {
         echo "
             <script>
-                alert('Transaksi gagal ditambahkan😥');
+                alert('Transaksi gagal ditambahkan');
                 document.location.href = 'input.php';
             </script>
         ";
@@ -108,27 +108,27 @@ if (isset($_POST["tambah"])) {
             <!-- Content -->
             <div class="transaction">
                 <div class="transaction-container">
-                    <div class="transaction-stage h5 mobile-show"><strong>Input Transaction</strong></div>
+                    <div class="transaction-stage h5 mobile-show"><strong>Input Transaksi</strong></div>
                     <form action="" method="post">
                         <div class="input-fieldset">
                             <div class="input-row">
                                 <div class="input-field">
-                                    <div class="input-label">Name</div>
+                                    <div class="input-label">Nama Transaksi</div>
                                     <div class="input-wrap"><input type="text" name="nama" id="nama" required></div>
                                 </div>
                                 <div class="input-field">
-                                    <div class="input-label">Amount</div>
+                                    <div class="input-label">Jumlah</div>
                                     <div class="input-wrap"><input type="number" name="jumlah" id="jumlah" required></div>
                                 </div>
                             </div>
                             <div class="input-row">
                                 <div class="input-field">
-                                    <div class="input-label">Date</div>
+                                    <div class="input-label">Tanggal</div>
                                     <div class="input-wrap"><input type="date" name="tanggal" id="tanggal" required>
                                     </div>
                                 </div>
                                 <div class="input-field">
-                                    <div class="input-label">Type</div>
+                                    <div class="input-label">Tipe</div>
                                     <div class="input-wrap"><select name="tipe" value="tipe" id="tipe" required>
                                             <!-- <option value="none" selected disabled hidden>Select a type</option> -->
                                             <option value="Pengeluaran">Pengeluaran</option>
@@ -140,7 +140,7 @@ if (isset($_POST["tambah"])) {
                                 </div>
                             </div>
                             <div class="btn-right">
-                                <button class="btn btn-primary" type="submit" name="tambah" value="tambah">Add Transaction</button>
+                                <button class="btn btn-primary" type="submit" name="tambah" value="tambah">Tambah Transaksi</button>
                             </div>
                         </div>
                     </form>

@@ -148,7 +148,7 @@ if (empty($_SESSION['username'])) {
                                 ?>
                                 <?php
                                 error_reporting(0);
-                                $pemasukan = mysqli_query($conn, "SELECT jumlah FROM transaksi WHERE tipe IN ('pemasukan', 'hutang')");
+                                $pemasukan = mysqli_query($conn, "SELECT jumlah FROM transaksi WHERE tipe IN ('pemasukan', 'piutang')");
                                 while ($revenue = mysqli_fetch_array($pemasukan)) {
                                     $total_revenue += $revenue['jumlah'];
                                     $rupiah = rupiah($total_revenue);
@@ -179,7 +179,7 @@ if (empty($_SESSION['username'])) {
                                 ?>
                                 <?php
                                 error_reporting(0);
-                                $pengeluaran = mysqli_query($conn, "SELECT jumlah FROM transaksi WHERE tipe IN ('pengeluaran', 'piutang')");
+                                $pengeluaran = mysqli_query($conn, "SELECT jumlah FROM transaksi WHERE tipe IN ('pengeluaran', 'hutang')");
                                 while ($expense = mysqli_fetch_array($pengeluaran)) {
                                     $total_expense += $expense['jumlah'];
                                     $rupiah = rupiah($total_expense);
