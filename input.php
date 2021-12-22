@@ -140,7 +140,8 @@ if (isset($_POST["tambah"])) {
                                 </div>
                             </div>
                             <div class="btn-right">
-                                <button class="btn btn-primary" type="submit" name="tambah" value="tambah">Tambah Transaksi</button>
+                                <button class="btn btn-secondary" type="submit" name="batal" value="batal" onclick="window.location.href='transaction.php'">Batal</button>
+                                <button class=" btn btn-primary" type="submit" name="tambah" value="tambah">Tambah</button>
                             </div>
                         </div>
                     </form>
