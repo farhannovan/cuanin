@@ -14,7 +14,7 @@ if (isset($_POST['update'])) {
     $email = $_POST['email'];
     $no_hp = $_POST['no_hp'];
     $password = $_POST['password'];
-    $query = "UPDATE user SET fullname = '$fullname', username = '$username', email = '$email', no_hp = $no_hp, password = '$password' WHERE id = '$id'";
+    $query = "UPDATE user SET fullname = '$fullname', username = '$username', email = '$email', no_hp = $no_hp, password = '$password' WHERE username = '$username'";
     $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     echo "
         <script type='text/javascript'>;
