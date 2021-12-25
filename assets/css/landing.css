@@ -1177,6 +1177,30 @@ article:hover {
         padding: 64px 0 50px;
         text-align: center;
     }
+    .footer-body {
+        display: block;
+        text-align: start;
+    }
+    .footer-list {
+        display: block;
+        text-align: start;
+    }
+    .footer-item {
+        margin-bottom: 24px;
+    }
+    .footer-category {
+        margin-bottom: 0 !important;
+    }
+    .footer-box {
+        width: auto;
+    }
+    .footer-bottom {
+        display: block;
+        text-align: start;
+    }
+    .footer-social {
+        display: none !important;
+    }
 }
 
 @media only screen and (max-width: 474px) {
