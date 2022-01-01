@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2021 at 04:58 PM
+-- Generation Time: Dec 30, 2021 at 04:00 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -45,8 +45,9 @@ INSERT INTO `transaksi` (`id`, `nama`, `tanggal`, `tipe`, `jumlah`) VALUES
 (26, 'Tambah Investasi', '2021-11-11', 'Pemasukan', 5650000),
 (27, 'Biaya Gaji', '2021-11-30', 'Pengeluaran', 6207000),
 (28, 'Token Listrik', '2021-11-28', 'Pengeluaran', 450000),
-(29, 'Penjualan', '2021-12-01', 'Pengeluaran', 1500000),
-(30, 'Pembelian ATK', '2021-12-22', 'Pengeluaran', 650000);
+(29, 'Penjualan Produk B', '2021-12-01', 'Pemasukan', 1500000),
+(32, 'Pembelian ATK', '2021-12-23', 'Pengeluaran', 1750000),
+(34, 'Tes', '2021-12-29', 'Pengeluaran', 16000000);
 
 -- --------------------------------------------------------
 
@@ -68,7 +69,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `fullname`, `username`, `password`, `no_hp`, `email`) VALUES
-(70, 'Admin', 'admin', '$2y$10$Ql1kxvgn41SryZPujO0N6.Lg60efH8Bxrva2xfP.mQgQvBxrVQnb6', '08123456789', 'admin@cuanin.com');
+(74, 'Novan', 'novan', '$2y$10$R.OKULMSms7A64habQCkwe2vLIEdKFZos0fJ1LGYu8zw1v/MBq3o2', '0812345678', 'novan@gmail.com'),
+(75, 'Admin', 'admin', '$2y$10$piv6gVup6mRn7Fwi2ph/2OiHX5irXJ.TS5h/9k/BlfX09a8lQ60BC', '0812345678', 'admin@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -94,13 +96,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
