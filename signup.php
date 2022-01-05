@@ -100,7 +100,7 @@ if (isset($_POST["submit"])) {
                         <div class="login-field">
                             <div class="field-label">No. HP</div>
                             <div class="field-wrap">
-                                <input class="field-input" type="text" name="no_hp" />
+                                <input class="field-input" type="number" name="no_hp" />
                             </div>
                         </div>
                         <div class="login-field">

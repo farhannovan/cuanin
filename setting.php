@@ -129,7 +129,7 @@ if (empty($_SESSION['username'])) {
                                 </div>
                                 <div class=" input-field">
                                     <div class="input-label">No. Hp</div>
-                                    <div class="input-wrap"><input type="text" name="no_hp" id="no_hp" required value="<?php echo $row['no_hp']; ?>"></div>
+                                    <div class="input-wrap"><input type="number" name="no_hp" id="no_hp" required value="<?php echo $row['no_hp']; ?>"></div>
                                 </div>
                             </div>
                             <div class="input-row">
