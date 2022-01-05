@@ -5,7 +5,6 @@ error_reporting(0);
 session_start();
 
 /* ---------- DAFTAR BIASA ---------- */
-
 $namaServer = "localhost";
 $namaPengguna = "root";
 $password = "";
@@ -33,10 +32,14 @@ if (isset($_POST['submit'])) {
         if ($result) {
             session_start();
             $_SESSION['username'] = $username;
-            echo '<script> alert ("Berhasil mendaftar")</script>';
-            header('location:signin.php');
+            echo "
+                <script>
+                    alert('Berhasil mendaftar. Silakan login');
+                    document.location.href = 'signin.php';
+                </script>
+    ";
         } else {
-            echo "Cek data anda";
+            echo '<script> alert ("Cek data anda")</script>';
         }
     }
 }
