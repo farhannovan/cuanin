@@ -5,7 +5,7 @@ error_reporting(0);
 session_start();
 
 /* ----------- LOGIN BIASA ---------- */
-/* if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
     $query = mysqli_query($conn, "SELECT * FROM user WHERE username = '$username' AND password = '$password'");
@@ -26,56 +26,56 @@ session_start();
             </script>
         ";
     }
-} */
-
-/* --- LOGIN DENGAN PASSWORD HASH --- */
-// Jika ditemukan session, maka user akan otomatis dialihkan ke halaman admin.
-if (isset($_SESSION['username'])) {
-    header("location: dashboard.php");
 }
 
-// Jika tombol login ditekan, maka akan mengirimkan variabel yang berisi username dan password.
-if (isset($_POST['submit'])) {
+// /* --- LOGIN DENGAN PASSWORD HASH --- */
+// // Jika ditemukan session, maka user akan otomatis dialihkan ke halaman admin.
+// if (isset($_SESSION['username'])) {
+//     header("location: dashboard.php");
+// }
 
-    $username = $_POST['username'];
-    $pass = $_POST['password']; // password yang di inputkan oleh user lewat form login.
+// // Jika tombol login ditekan, maka akan mengirimkan variabel yang berisi username dan password.
+// if (isset($_POST['submit'])) {
 
-    // Query ke database.
-    $sql = mysqli_query($conn, "SELECT username, password FROM user WHERE username = '$username'");
+//     $username = $_POST['username'];
+//     $pass = $_POST['password']; // password yang di inputkan oleh user lewat form login.
 
-    list($username, $password) = mysqli_fetch_array($sql);
+//     // Query ke database.
+//     $sql = mysqli_query($conn, "SELECT username, password FROM user WHERE username = '$username'");
 
-    // Jika data ditemukan dalam database, maka akan melakukan validasi dengan password_verify.
-    if (mysqli_num_rows($sql) > 0) {
+//     list($username, $password) = mysqli_fetch_array($sql);
 
-        /*
-            Validasi login dengan password_verify
-            $userpass -----> diambil dari password yang diinputkan user lewat form login
-            $password -----> diambil dari password dalam database
-        */
-        if (password_verify($pass, $password)) {
+//     // Jika data ditemukan dalam database, maka akan melakukan validasi dengan password_verify.
+//     if (mysqli_num_rows($sql) > 0) {
 
-            // Buat session baru.
-            session_start();
-            $_SESSION['username'] = $username;
-            // $_SESSION['nama']     = $nama;
+//         /*
+//             Validasi login dengan password_verify
+//             $userpass -----> diambil dari password yang diinputkan user lewat form login
+//             $password -----> diambil dari password dalam database
+//         */
+//         if (password_verify($pass, $password)) {
 
-            // Jika login berhasil, user akan diarahkan ke halaman admin.
-            header("location: signin.php");
-            die();
-        } else {
-            echo '<script language="javascript">
-                    window.alert("Login gagal! Silakan coba lagi.");
-                    window.location.href="signin.php";
-                  </script>';
-        }
-    } else {
-        echo '<script language="javascript">
-                window.alert("Login gagal! Silakan coba lagi.");
-                window.location.href="signin.php";
-             </script>';
-    }
-}
+//             // Buat session baru.
+//             session_start();
+//             $_SESSION['username'] = $username;
+//             // $_SESSION['nama']     = $nama;
+
+//             // Jika login berhasil, user akan diarahkan ke halaman admin.
+//             header("location: signin.php");
+//             die();
+//         } else {
+//             echo '<script language="javascript">
+//                     window.alert("Login gagal! Silakan coba lagi.");
+//                     window.location.href="signin.php";
+//                   </script>';
+//         }
+//     } else {
+//         echo '<script language="javascript">
+//                 window.alert("Login gagal! Silakan coba lagi.");
+//                 window.location.href="signin.php";
+//              </script>';
+//     }
+// }
 ?>
 
 <!DOCTYPE html>

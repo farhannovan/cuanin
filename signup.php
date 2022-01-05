@@ -5,7 +5,7 @@ error_reporting(0);
 session_start();
 
 /* ---------- DAFTAR BIASA ---------- */
-/* 
+
 $namaServer = "localhost";
 $namaPengguna = "root";
 $password = "";
@@ -33,15 +33,16 @@ if (isset($_POST['submit'])) {
         if ($result) {
             session_start();
             $_SESSION['username'] = $username;
+            echo '<script> alert ("Berhasil mendaftar")</script>';
             header('location:signin.php');
         } else {
             echo "Cek data anda";
         }
     }
-} */
+}
 
 /* --- DAFTAR DENGAN PASSWORD HASH -- */
-if (isset($_POST["submit"])) {
+/* if (isset($_POST["submit"])) {
     if (registrasi($_POST) > 0) {
         echo "<script>
 				alert('User baru berhasil ditambahkan!');
@@ -50,7 +51,7 @@ if (isset($_POST["submit"])) {
     } else {
         echo mysqli_error($conn);
     }
-}
+} */
 ?>
 
 <!DOCTYPE html>
