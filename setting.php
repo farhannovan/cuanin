@@ -5,7 +5,7 @@ error_reporting(0);
 session_start();
 
 $username = $_SESSION['username'];
-$query = mysqli_query($conn, "SELECT * FROM user where username='$username'") or die(mysqli_error($conn));
+$query = mysqli_query($conn, "SELECT * FROM user WHERE username='$username'") or die(mysqli_error($conn));
 $row = mysqli_fetch_array($query);
 
 if (isset($_POST['update'])) {
@@ -119,7 +119,7 @@ if (empty($_SESSION['username'])) {
                                 </div>
                                 <div class=" input-field">
                                     <div class="input-label">Nama Pengguna</div>
-                                    <div class="input-wrap"><input type="text" name="username" id="username" required value="<?php echo $row['username']; ?>" disabled></div>
+                                    <div class="input-wrap"><input type="text" name="username" id="username" required value="<?php echo $row['username']; ?>"></div>
                                 </div>
                             </div>
                             <div class="input-row">
