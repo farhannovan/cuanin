@@ -119,7 +119,7 @@ if (empty($_SESSION['username'])) {
                                 </div>
                                 <div class=" input-field">
                                     <div class="input-label">Nama Pengguna</div>
-                                    <div class="input-wrap"><input type="text" name="username" id="username" required value="<?php echo $row['username']; ?>"></div>
+                                    <div class="input-wrap"><input style="pointer-events: none;" type="text" name="username" id="username" required value="<?php echo $row['username']; ?>"></div>
                                 </div>
                             </div>
                             <div class="input-row">
